@@ -1,4 +1,28 @@
+body {
+    font-family: 'Telex', sans-serif;
+}
+
 #particles-js {
-    background: #222;
+    background: #283759;
     height: 100vh;
+}
+
+.intro-content {
+    position: absolute;
+    z-index: 10;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.text-shadow-black {
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+.profile-img {
+    height: 300px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
 }

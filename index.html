@@ -3,46 +3,85 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>Szymon Miks - my personal website</title>
   <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
   <link rel="icon" href="img/favicon.ico" type="image/x-icon">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
-        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
+
+  <link href="https://fonts.googleapis.com/css?family=Telex&amp;subset=latin-ext" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
         integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
-  <link href="css/style.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/vendors/nucleo.css">
+  <link rel="stylesheet" href="css/vendors/argon.min.css">
+
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<nav class="navbar navbar-expand-lg fixed-top navbar-light bg-light">
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
+<header class="main-header">
+  <nav class="navbar navbar-main navbar-expand-lg navbar-transparent navbar-light">
+    <div class="container">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Link</a>
-      </li>
-    </ul>
-  </div>
-</nav>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
 
 <div class="main-contaier">
-  <div id="particles-js"></div>
+  <section class="introduction">
+    <div id="particles-js"></div>
+    <div class="intro-content">
+      <h1 class="display-1 text-white font-weight-bold text-shadow-black">Szymon Miks</h1>
+      <h2 class="text-muted font-weight-light text-shadow-black">Full Stack Developer</h2>
+      <button type="button" class="btn btn-outline-info mt-4"><a href="#" class="text-white">Download Resume</a>
+      </button>
+    </div>
+  </section>
+
+  <section class="section about-me">
+    <div class="container">
+      <div class="card bg-gradient-blue shadow-lg border-0">
+        <div class="row">
+          <div class="col-lg-4 col-md-4 col-sm-12">
+            <h3 class="text-white text-center">About me</h3>
+          </div>
+          <div class="col-lg-8 col-md-8 col-sm-12">
+            <p class="text-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras odio urna,
+              pellentesque non varius et,
+              tempor sed est. Curabitur mollis purus enim, eget viverra dolor iaculis eu. Aliquam et mattis elit. Morbi
+              in mattis sapien.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 </div>
 
 <footer>
-  Copyright 2018 - Szymon Miks
+  <p>Copyright 2018 - Szymon Miks</p>
 </footer>
 
-<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-<script src="js/particles.min.js"></script>
+<script src="js/vendors/jquery.min.js"></script>
+<script src="js/vendors/popper.min.js"></script>
+<script src="js/vendors/particles.min.js"></script>
+<script src="js/vendors/bootstrap.min.js"></script>
+<script src="js/vendors/argon.min.js"></script>
+
 <script src="js/script.js"></script>
+
 </body>
 </html>
