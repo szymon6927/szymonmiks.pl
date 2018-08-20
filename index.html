@@ -20,20 +20,48 @@
 </head>
 <body>
 <header class="main-header">
-  <nav class="navbar navbar-main navbar-expand-lg navbar-transparent navbar-light">
+  <nav id="nav-bar" class="navbar navbar-main navbar-expand-lg navbar-transparent navbar-light">
     <div class="container">
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-              aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <a class="navbar-brand" href="#">szymonmiks.pl</a>
+      <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbar-default"
+              aria-controls="navbar-default" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
 
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      <div class="collapse navbar-collapse" id="navbar-default">
+        <div class="navbar-collapse-header">
+          <div class="row">
+            <div class="col-6 collapse-brand">
+              <a class="navbar-brand text-default" href="/">szymonmiks.pl</a>
+            </div>
+            <div class="col-6 collapse-close">
+              <button type="button" class="navbar-toggler collapsed" data-toggle="collapse"
+                      data-target="#navbar-default" aria-controls="navbar-default" aria-expanded="false"
+                      aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
+            <a class="nav-link" href="#">About me</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Experience</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Education</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Projects</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Skills</a>
           </li>
         </ul>
       </div>
@@ -183,9 +211,9 @@
       <div class="row row-grid align-items-center">
         <div class="card shadow shadow-lg--hover mt-5">
           <div class="card-body">
-            <div class="d-flex">
+            <div class="row">
               <div class="col-lg-4 col-md-12">
-                <div class="img-thumbnail img-fluid">
+                <div class="img-thumbnail img-fluid shadow-lg">
                   <img class="projects__img" src="img/coding.jpg"/>
                 </div>
               </div>
@@ -213,10 +241,81 @@
                       <li>Polymorphic information content and heterozygosity calculator</li>
                     </ul>
                   </div>
+                  <div class="btn btn-primary">
+                    <i class="fab fa-github"></i>
+                    <a class="text-white" href="https://github.com/szymon6927/bio-gen-calc" target="_blank">See on
+                      GitHub</a>
+                  </div>
+                  <div class="btn btn-default">
+                    <i class="far fa-window-maximize"></i>
+                    <a class="text-white" data-toggle="tooltip"
+                       data-original-title="https://gene-calc.pl/" href="https://gene-calc.pl/" target="_blank">See
+                      project website</a>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
+        </div>
+
+        <div class="card shadow shadow-lg--hover mt-5">
+          <div class="card-body">
+            <div class="row">
+              <div class="pl-3">
+                <div class="icon icon-shape bg-gradient-blue rounded-circle text-white">
+                  <i class="fas fa-terminal"></i>
+                </div>
+              </div>
+
+              <div class="col-lg-4 col-md-12">
+                <div class="img-thumbnail img-fluid shadow-lg">
+                  <img class="projects__img" src="img/coding.jpg"/>
+                </div>
+              </div>
+
+              <div class="col-lg-7 col-md-12">
+                <div class="project__content">
+                  <h4 class="title text-default">
+                    <span class="project__content--title">Bonanza SMS</span>
+                  </h4>
+                  <div class="project__desc text-muted">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc a urna tortor. Cras at vestibulum
+                      augue. Nam quis pellentesque tortor. Phasellus ac libero eget justo rutrum volutpat in ac
+                      nunc. </p>
+                  </div>
+                  <div class="btn btn-primary">
+                    <i class="fab fa-github"></i>
+                    <a class="text-white" href="https://github.com/szymon6927/bonanza-sms" target="_blank">See on
+                      GitHub</a>
+                  </div>
+                  <div class="btn btn-default">
+                    <i class="far fa-window-maximize"></i>
+                    <a class="text-white" data-toggle="tooltip"
+                       data-original-title="https://pyszne.barbonanza.pl/#/" href="https://pyszne.barbonanza.pl/#/"
+                       target="_blank">See
+                      project website</a>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section skills">
+    <h2 class="text-center display-2">Skills</h2>
+    <div class="container">
+      <div class="col-md-12 col-sm-12">
+        <h4 class="text-left mb-3">Which I know the best:</h4>
+        <div class="skill-list p-0">
+          <span class="badge bg-secondary shadow shadow-lg--hover skill-item">Python</span>
+          <span class="badge bg-secondary shadow shadow-lg--hover skill-item">Flask</span>
+          <span class="badge bg-secondary shadow shadow-lg--hover skill-item">JavaScript</span>
+          <span class="badge bg-secondary shadow shadow-lg--hover skill-item">jQuery</span>
+          <span class="badge bg-secondary shadow shadow-lg--hover skill-item">PHP</span>
         </div>
       </div>
     </div>

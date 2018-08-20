@@ -62,7 +62,7 @@ body {
     width: 3px;
     height: 40px;
     background: #3498db;
-    background: linear-gradient(to bottom, #3498db, rgba(52,152,219,0));
+    background: linear-gradient(to bottom, #3498db, rgba(52, 152, 219, 0));
     top: 100%;
     left: 303px
 }
@@ -147,9 +147,15 @@ body {
     width: 100%;
 }
 
+.skill-item {
+    font-size: 16px;
+    margin: 0 10px;
+    padding: 0.7em 1.7em;
+}
+
 @media only screen and (max-width: 750px) {
     .experience-timeline:before, .experience-timeline:after {
-        left:23px
+        left: 23px
     }
 
     .vtimeline-date {
