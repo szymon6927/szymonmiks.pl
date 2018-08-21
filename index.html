@@ -45,23 +45,26 @@
           </div>
         </div>
         <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
+          <li class="nav-item" data-goto="home">
             <a class="nav-link" href="#">Home</a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item" data-goto="about-me">
             <a class="nav-link" href="#">About me</a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item" data-goto="experience">
             <a class="nav-link" href="#">Experience</a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item" data-goto="education">
             <a class="nav-link" href="#">Education</a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item" data-goto="projects">
             <a class="nav-link" href="#">Projects</a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item" data-goto="skills">
             <a class="nav-link" href="#">Skills</a>
+          </li>
+          <li class="nav-item" data-goto="contact">
+            <a class="nav-link" href="#">Contact</a>
           </li>
         </ul>
       </div>
@@ -70,7 +73,7 @@
 </header>
 
 <div class="main-contaier">
-  <section class="introduction">
+  <section class="home">
     <div id="particles-js"></div>
     <div class="intro-content">
       <h1 class="display-1 text-white font-weight-bold text-shadow-black">Szymon Miks</h1>
@@ -308,19 +311,139 @@
   <section class="section skills">
     <h2 class="text-center display-2">Skills</h2>
     <div class="container">
-      <div class="col-md-12 col-sm-12">
+      <div class="col-md-12 col-sm-12 mb-4">
         <h4 class="text-left mb-3">Which I know the best:</h4>
         <div class="skill-list p-0">
-          <span class="badge bg-secondary shadow shadow-lg--hover skill-item">Python</span>
-          <span class="badge bg-secondary shadow shadow-lg--hover skill-item">Flask</span>
-          <span class="badge bg-secondary shadow shadow-lg--hover skill-item">JavaScript</span>
-          <span class="badge bg-secondary shadow shadow-lg--hover skill-item">jQuery</span>
-          <span class="badge bg-secondary shadow shadow-lg--hover skill-item">PHP</span>
+          <span class="badge bg-success text-white shadow shadow-lg--hover skill-item">
+            <i class="fab fa-python"></i>
+            <span>Python</span>
+          </span>
+          <span class="badge bg-success text-white shadow shadow-lg--hover skill-item">Flask</span>
+          <span class="badge bg-success text-white shadow shadow-lg--hover skill-item">
+            <i class="fab fa-js-square"></i>
+            <span>JavaScript</span>
+          </span>
+          <span class="badge bg-success text-white shadow shadow-lg--hover skill-item">jQuery</span>
+          <span class="badge bg-success text-white shadow shadow-lg--hover skill-item">
+            <i class="fab fa-html5"></i>
+            <span>HTML5</span>
+          </span>
+          <span class="badge bg-success text-white shadow shadow-lg--hover skill-item">
+            <i class="fab fa-css3-alt"></i>
+            <span>CSS3</span>
+          </span>
+          <span class="badge bg-success text-white shadow shadow-lg--hover skill-item">Bootstrap</span>
+          <span class="badge bg-success text-white shadow shadow-lg--hover skill-item">RWD</span>
+          <span class="badge bg-success text-white shadow shadow-lg--hover skill-item">
+            <i class="fab fa-php"></i>
+            <span>PHP</span>
+          </span>
+          <span class="badge bg-success text-white shadow shadow-lg--hover skill-item">MySQL</span>
+        </div>
+      </div>
+      <div class="col-md-12 col-sm-12 mb-4">
+        <h4 class="text-left mb-3">Knowledge of:</h4>
+        <div class="skill-list p-0">
+          <span class="badge bg-primary text-white shadow shadow-lg--hover skill-item">
+            <i class="fas fa-code-branch"></i>
+            <span>Git</span>
+          </span>
+          <span class="badge bg-primary text-white shadow shadow-lg--hover skill-item">
+            <i class="fab fa-js"></i>
+            <span>ES6</span>
+          </span>
+          <span class="badge bg-primary text-white shadow shadow-lg--hover skill-item">
+            <i class="fab fa-node"></i>
+            <span>Node.js</span>
+          </span>
+          <span class="badge bg-primary text-white shadow shadow-lg--hover skill-item">Express.js</span>
+          <span class="badge bg-primary text-white shadow shadow-lg--hover skill-item">
+            <i class="fab fa-vuejs"></i>
+            <span>Vue.js</span>
+          </span>
+          <span class="badge bg-primary text-white shadow shadow-lg--hover skill-item">REST API</span>
+          <span class="badge bg-primary text-white shadow shadow-lg--hover skill-item">
+            <i class="fab fa-react"></i>
+            <span>React</span>
+          </span>
+          <span class="badge bg-primary text-white shadow shadow-lg--hover skill-item">Material Design</span>
+          <span class="badge bg-primary text-white shadow shadow-lg--hover skill-item">
+            <i class="fab fa-wordpress"></i>
+            <span>WordPress</span>
+          </span>
+        </div>
+      </div>
+      <div class="col-md-12 col-sm-12 mb-4">
+        <h4 class="text-left mb-3">Basic knowledge of:</h4>
+        <div class="skill-list p-0">
+          <span class="badge bg-secondary shadow shadow-lg--hover skill-item">C++</span>
+          <span class="badge bg-secondary shadow shadow-lg--hover skill-item">Django CMS</span>
+          <span class="badge bg-secondary shadow shadow-lg--hover skill-item">webpack</span>
+          <span class="badge bg-secondary shadow shadow-lg--hover skill-item">
+            <i class="fab fa-gulp"></i>
+            <span>Gulp</span>
+          </span>
+          <span class="badge bg-secondary shadow shadow-lg--hover skill-item">
+            <i class="fab fa-grunt"></i>
+            <span>Grunt</span>
+          </span>
+          <span class="badge bg-secondary shadow shadow-lg--hover skill-item">three.js</span>
+          <span class="badge bg-secondary shadow shadow-lg--hover skill-item">SAAS</span>
+          <span class="badge bg-secondary shadow shadow-lg--hover skill-item">LEES</span>
+          <span class="badge bg-secondary shadow shadow-lg--hover skill-item">MS SQL</span>
+          <span class="badge bg-secondary shadow shadow-lg--hover skill-item">Bash</span>
+          <span class="badge bg-secondary shadow shadow-lg--hover skill-item">
+            <i class="fab fa-java"></i>
+            <span>Java</span>
+          </span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section contact section-shaped m-0">
+    <div class="shape shape-style-1 bg-gradient-default">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <h2 class="text-center text-white display-2 mb-4">Contact</h2>
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-8 col-md-12 col-sm-12">
+          <div class="card bg-secondary shadow border-0">
+            <div class="card-body">
+              <form role="form">
+                <div class="form-group mb-3">
+                  <div class="input-group input-group-alternative">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text"><i class="far fa-envelope"></i></span>
+                    </div>
+                    <input class="form-control" placeholder="Email" type="email" required>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <textarea class="form-control form-control-alternative" rows="4" placeholder="Message: "
+                            required></textarea>
+                </div>
+                <div class="text-center">
+                  <button type="submit" class="btn btn-primary btn-block my-4">Send</button>
+                </div>
+              </form>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </section>
 </div>
+
+<p id="back-top" class="bg-gradient-default"><a href="/" title="Go to top">Go to top</a></p>
 
 <footer class="footer">
   <div class="container">
