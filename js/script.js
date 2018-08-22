@@ -3,6 +3,10 @@ particlesJS.load('particles-js', 'js/vendors/particles.json', function () {
   console.log('callback - particles.js config loaded');
 });
 
+window.FontAwesomeConfig = {
+  searchPseudoElements: true
+};
+
 function goToByScroll(className) {
   if (!className.includes('.')) {
     className = "." + className
@@ -45,6 +49,10 @@ $(document).ready(function () {
       }, 1500);
       return false;
     });
+  });
+
+  $('.scroll-btn').click(() => {
+    goToByScroll('.about-me')
   });
 
 });

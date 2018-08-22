@@ -40,6 +40,11 @@ gulp.task('scripts', function () {
     .pipe(gulp.dest('./js'));
 });
 
+gulp.task('watch', function() {
+    gulp.watch(styles, ['styles']);
+    gulp.watch(scripts, ['scripts']);
+});
+
 // Clean output directory
 gulp.task('clean', () => del(['dist']));
 
@@ -47,6 +52,7 @@ gulp.task('clean', () => del(['dist']));
 gulp.task('default', ['clean'], function () {
   runSequence(
     'styles',
-    'scripts'
+    'scripts',
+    'watch'
   );
 });
