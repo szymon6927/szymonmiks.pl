@@ -75,9 +75,16 @@
 <div class="main-contaier">
   <section class="home">
     <div id="particles-js"></div>
+    <div class="intro-video">
+      <video autoplay loop muted>
+        <source src="video/aloha-mundo.webm" type="video/webm">
+      </video>
+    </div>
     <div class="intro-content">
+      <img class="profile-img opacity-8 rounded-circle img-center img-fluid" src="img/mx2.jpg" />
       <h1 class="display-1 text-white font-weight-bold text-shadow-black">Szymon Miks</h1>
       <h2 class="text-muted font-weight-light text-shadow-black">Full Stack Developer</h2>
+      <h4 class="text-muted font-weight-light text-shadow-black">Python Lover ❤</h4>
       <button type="button" class="btn btn-outline-info mt-4">
         <span class="pdf-icon text-white"><i class="far fa-file-pdf"></i></span>
         <a href="#" class="text-white">Download Resume</a>
@@ -92,7 +99,7 @@
           <div class="col-lg-4 col-md-4 col-sm-12">
             <h3 class="text-white text-center">About me:</h3>
           </div>
-          <div class="col-lg-8 col-md-8 col-sm-12 pt-4 pb-4">
+          <div class="col-lg-8 col-md-8 col-sm-12 pt-4 pb-4 pl-3 pr-3">
             <p class="text-white mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras odio urna,
               pellentesque non varius et,
               tempor sed est. Curabitur mollis purus enim, eget viverra dolor iaculis eu. Aliquam et mattis elit. Morbi
@@ -264,15 +271,16 @@
         <div class="card shadow shadow-lg--hover mt-5">
           <div class="card-body">
             <div class="row">
-              <div class="pl-3">
-                <div class="icon icon-shape bg-gradient-blue rounded-circle text-white">
-                  <i class="fas fa-terminal"></i>
-                </div>
-              </div>
 
               <div class="col-lg-4 col-md-12">
                 <div class="img-thumbnail img-fluid shadow-lg">
                   <img class="projects__img" src="img/coding.jpg"/>
+                </div>
+              </div>
+
+              <div class="pl-3">
+                <div class="icon icon-shape bg-gradient-blue rounded-circle text-white">
+                  <i class="fas fa-terminal"></i>
                 </div>
               </div>
 
@@ -376,8 +384,9 @@
       <div class="col-md-12 col-sm-12 mb-4">
         <h4 class="text-left mb-3">Basic knowledge of:</h4>
         <div class="skill-list p-0">
-          <span class="badge bg-secondary shadow shadow-lg--hover skill-item">C++</span>
+          <span class="badge bg-secondary shadow shadow-lg--hover skill-item">Django</span>
           <span class="badge bg-secondary shadow shadow-lg--hover skill-item">Django CMS</span>
+          <span class="badge bg-secondary shadow shadow-lg--hover skill-item">C++</span>
           <span class="badge bg-secondary shadow shadow-lg--hover skill-item">webpack</span>
           <span class="badge bg-secondary shadow shadow-lg--hover skill-item">
             <i class="fab fa-gulp"></i>
@@ -448,18 +457,18 @@
 <footer class="footer">
   <div class="container">
     <div class="row align-items-center justify-content-md-between">
-      <div class="col-md-5">
+      <div class="col-md-5 col-sm-4 col-12 mb-sm-3 text-sm-center">
         <div class="copyright">
-          Copyright © 2018
-          <a href="https://szymonmiks.pl" target="_blank">Szymon Miks</a>.
+          <span>Copyright © 2018</span>
+          <a href="mailto:contact@szymonmiks.pl">Szymon Miks</a>
         </div>
       </div>
-      <div class="col-md-1 text-center">
+      <div class="col-md-1 col-sm-2 col-12 text-center">
         <div class="go-to-top" data-toggle="tooltip" data-original-title="Go to top">
           <i class="fas fa-angle-up"></i>
         </div>
       </div>
-      <div class="col-md-5 text-lg-center btn-wrapper">
+      <div class="col-md-5 col-sm-4 col-12 text-lg-center btn-wrapper">
         <a target="_blank" href="https://www.linkedin.com/in/szymon-miks/"
            class="btn btn-neutral btn-icon-only btn-linkedin btn-round btn-lg" data-toggle="tooltip"
            data-original-title="LinkedIn">
