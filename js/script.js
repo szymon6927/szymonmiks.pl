@@ -55,4 +55,13 @@ $(document).ready(function () {
     goToByScroll('.about-me')
   });
 
+  $(window).scroll(function(event){
+     var scrollTop = $(this).scrollTop();
+     if (scrollTop > 600){
+         console.log("grater than 600")
+     } else {
+        console.log("less than 600")
+     }
+  });
+
 });

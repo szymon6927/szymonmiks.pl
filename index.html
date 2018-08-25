@@ -239,6 +239,12 @@
     </div>
     <div class="container py-0">
       <h2 class="text-center text-white display-2">Projects</h2>
+      <h4 class="text-center text-white">Rest of my projects are available on my
+        <a class="text-white" href="https://github.com/szymon6927" target="_blank" data-toggle="tooltip"
+           data-original-title="Check my Github">
+          <i class="fab fa-github"></i><span>GitHub</span>
+        </a>
+      </h4>
 
       <div class="row row-grid align-items-center">
         <div class="card shadow shadow-lg--hover mt-5">
@@ -605,18 +611,19 @@
         <div class="col-lg-8 col-md-12 col-sm-12">
           <div class="card bg-secondary shadow border-0">
             <div class="card-body">
-              <form role="form">
+              <form role="form" action="https://formspree.io/contact@szymonmiks.pl" method="POST">
+                <input type="hidden" name="_subject" value="Contact request from szymonmiks.pl">
                 <div class="form-group mb-3">
                   <div class="input-group input-group-alternative">
                     <div class="input-group-prepend">
                       <span class="input-group-text"><i class="far fa-envelope"></i></span>
                     </div>
-                    <input class="form-control" placeholder="Email" type="email" required>
+                    <input class="form-control" placeholder="Email" type="email" name="_replyto" required>
                   </div>
                 </div>
                 <div class="form-group">
-                  <textarea class="form-control form-control-alternative" rows="4" placeholder="Message: "
-                            required></textarea>
+                  <textarea class="form-control form-control-alternative" name="message" rows="4" placeholder="Message: "
+                            required=""></textarea>
                 </div>
                 <div class="text-center">
                   <button type="submit" class="btn btn-primary btn-block my-4">Send</button>
@@ -635,7 +642,7 @@
 <footer class="footer">
   <div class="container">
     <div class="row align-items-center justify-content-md-between">
-      <div class="col-md-5 col-sm-4 col-12 mb-sm-3 text-sm-center">
+      <div class="col-md-5 col-sm-4 col-12 mb-md-0 mb-sm-3 text-sm-center">
         <div class="copyright">
           <span>Copyright © 2018</span>
           <a href="mailto:contact@szymonmiks.pl">Szymon Miks - contact@szymonmiks.pl</a>
