@@ -303,7 +303,8 @@ textarea::placeholder {
 }
 
 .fixed-navbar-helper {
-    
+    position: fixed;
+    background: rgba(24, 39, 77, 0.6);
 }
 
 @-webkit-keyframes pulsar {
