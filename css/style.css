@@ -39,7 +39,7 @@ body {
 }
 
 .profile-img {
-    width: 50%;
+    width: 40%;
 }
 
 .experience {
@@ -361,6 +361,18 @@ textarea::placeholder {
     }
 }
 
+@media (max-width: 1500px) {
+    .profile-img {
+        width: 35%;
+    }
+}
+
+@media (max-width: 991px) and (orientation: landscape) {
+  .profile-img {
+    display: none;
+  }
+}
+
 @media (min-width: 768px) {
     .navbar-transparent .navbar-nav .nav-link {
         font-size: 1rem;
@@ -388,6 +400,34 @@ textarea::placeholder {
 
     .about-me-content {
         padding: 0 2rem !important;
+    }
+
+    .profile-img {
+        width: 50%;
+    }
+
+    .display-1 {
+        font-size: 2.3rem;
+    }
+
+    .h2, h2 {
+        font-size: 1.3rem;
+    }
+
+    .h4, h4 {
+        font-size: 1.0rem;
+    }
+
+    body {
+        font-size: 0.8rem;
+    }
+
+    p {
+        font-size: 0.8rem;
+    }
+
+    .card-body {
+        padding: 1.5rem 0.5rem;
     }
 }
 
@@ -425,31 +465,5 @@ textarea::placeholder {
 }
 
 @media (max-width: 480px) {
-    .profile-img {
-        width: 50%;
-    }
 
-    .display-1 {
-        font-size: 2.3rem;
-    }
-
-    .h2, h2 {
-        font-size: 1.3rem;
-    }
-
-    .h4, h4 {
-        font-size: 1.0rem;
-    }
-
-    body {
-        font-size: 0.8rem;
-    }
-
-    p {
-        font-size: 0.8rem;
-    }
-
-    .card-body {
-        padding: 1.5rem 0.5rem;
-    }
 }
