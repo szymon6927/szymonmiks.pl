@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -14,7 +15,7 @@
 
   <link href="https://fonts.googleapis.com/css?family=Telex&amp;subset=latin-ext" rel="stylesheet">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
-        integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
 
   <!--<link rel="stylesheet" href="css/vendors/nucleo.css">-->
   <!--<link rel="stylesheet" href="css/vendors/argon.min.css">-->
@@ -25,671 +26,775 @@
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-122028664-2"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
     gtag('js', new Date());
 
     gtag('config', 'UA-122028664-2');
   </script>
 
 </head>
+
 <body>
-<header class="main-header">
-  <nav id="nav-bar" class="navbar navbar-main navbar-expand-lg navbar-transparent">
-    <div class="container">
-      <a class="navbar-brand" href="#">szymonmiks.pl</a>
-      <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbar-default"
-              aria-controls="navbar-default" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+  <header class="main-header">
+    <nav id="nav-bar" class="navbar navbar-main navbar-expand-lg navbar-transparent">
+      <div class="container">
+        <a class="navbar-brand" href="#">szymonmiks.pl</a>
+        <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbar-default"
+          aria-controls="navbar-default" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
-      <div class="collapse navbar-collapse" id="navbar-default">
-        <div class="navbar-collapse-header">
-          <div class="row">
-            <div class="col-6 collapse-brand">
-              <a class="navbar-brand text-default" href="/">szymonmiks.pl</a>
-            </div>
-            <div class="col-6 collapse-close">
-              <button type="button" class="navbar-toggler collapsed" data-toggle="collapse"
-                      data-target="#navbar-default" aria-controls="navbar-default" aria-expanded="false"
-                      aria-label="Toggle navigation">
-                <span></span>
-                <span></span>
-              </button>
-            </div>
-          </div>
-        </div>
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item" data-goto="home">
-            <a class="nav-link" href="#">Home</a>
-          </li>
-          <li class="nav-item" data-goto="about-me">
-            <a class="nav-link" href="#">About me</a>
-          </li>
-          <li class="nav-item" data-goto="experience">
-            <a class="nav-link" href="#">Experience</a>
-          </li>
-          <li class="nav-item" data-goto="education">
-            <a class="nav-link" href="#">Education</a>
-          </li>
-          <li class="nav-item" data-goto="projects">
-            <a class="nav-link" href="#">Projects</a>
-          </li>
-          <li class="nav-item" data-goto="skills">
-            <a class="nav-link" href="#">Skills</a>
-          </li>
-          <li class="nav-item" data-goto="contact">
-            <a class="nav-link" href="#">Contact</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-</header>
-
-<div class="main-contaier">
-  <section class="home">
-    <div id="particles-js"></div>
-    <div class="intro-video">
-      <video autoplay loop muted>
-        <source src="video/aloha-mundo.webm" type="video/webm">
-      </video>
-    </div>
-    <div class="intro-content">
-      <img class="profile-img opacity-8 rounded-circle img-center img-fluid" src="img/mx2.jpg"/>
-      <h1 class="display-1 text-white font-weight-bold text-shadow-black">Szymon Miks</h1>
-      <h2 class="text-muted font-weight-light text-shadow-black">Full Stack Developer</h2>
-      <h4 class="text-muted font-weight-light text-shadow-black">Python Lover ❤</h4>
-      <button type="button" class="btn btn-outline-info mt-4">
-        <span class="pdf-icon text-white"><i class="far fa-file-pdf"></i></span>
-        <a href="/szymon_miks_cv.pdf" class="text-white">Download Resume</a>
-      </button>
-    </div>
-    <div class="scroll-btn"><span class="goto-next"></span></div>
-  </section>
-
-  <section class="section about-me">
-    <div class="container">
-      <div class="card bg-gradient-blue shadow-lg border-0">
-        <div class="row align-items-center">
-          <div class="col-lg-4 col-md-4 col-sm-12 about-me-title">
-            <h3 class="text-white text-center">About me:</h3>
-          </div>
-          <div class="col-lg-8 col-md-8 col-sm-12 pt-4 pb-4 pl-3 pr-4 about-me-content">
-            <p class="text-white mb-1">Hi, I'm Szymon Miks Full Stack Developer based in Lębork, Poland.</p>
-            <p class="text-white">I'm still learning and developing my soft and programming skills.
-              I'm always looking for new opportunities and challenges to growing up my skills.
-              I love Python and the whole environment and community around this language</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section experience bg-gradient-lighter">
-    <h2 class="text-center display-2">Experience</h2>
-    <div class="experience-timeline">
-      <div class="vtimeline-point">
-        <div class="vtimeline-icon"><i class="fa fa-map-marker"></i></div>
-        <div class="vtimeline-block"><span class="vtimeline-date">November 2016 – now</span>
-          <div data-date="September 2015 – September 2016" class="vtimeline-content shadow shadow-lg--hover">
-            <h3>MiroArt</h3>
-            <h4>Full Stack Developer</h4>
-            <p>
-            <ul>
-              <li>PHP, JS, HTML, CSS, SMARTY, MYSQL, GIT</li>
-              <li>creating web applications</li>
-              <li>developing company version of CMS</li>
-              <li>creating PYTHON scripts for job automation</li>
-              <li>working with facebook API, youtube API</li>
-              <li>creating large websites</li>
-              <li>creating reservation systems</li>
-              <li>creating PYTHON web scraping scripts for moving content from one website to another</li>
-              <li>optimization of JS, CSS, HTML for better website performance</li>
-              <li>maintenance of the virtual private server, working with the Linux operating system, updating and
-                installing GCC, PYTHON, WKHTMTOPDF, NODE.JS, PHP and other tools necessary to web development
-              </li>
-            </ul>
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="vtimeline-point">
-        <div class="vtimeline-icon"><i class="fa fa-map-marker"></i></div>
-        <div class="vtimeline-block"><span class="vtimeline-date">September 2016 – October 2016</span>
-          <div data-date="September 2015 – September 2016" class="vtimeline-content shadow shadow-lg--hover">
-            <h3>Aplitt Sp. z o.o.</h3>
-            <h4>Junior Monitoring Administrator, System & IT Infrastructure</h4>
-            <p>
-            <ul>
-              <li>PYTHON, BASH, LINUX</li>
-              <li>maintenance of existing monitoring mechanisms</li>
-              <li>development and supporting of Zabbix reports system</li>
-              <li>monitoring company infrastructure</li>
-            </ul>
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="vtimeline-point">
-        <div class="vtimeline-icon"><i class="fa fa-map-marker"></i></div>
-        <div class="vtimeline-block"><span class="vtimeline-date">June 2016 – September 2016</span>
-          <div data-date="September 2015 – September 2016" class="vtimeline-content shadow shadow-lg--hover">
-            <h3>MiroArt</h3>
-            <h4>Web Developer</h4>
-            <p>
-            <ul>
-              <li>HTML, JS, CSS</li>
-              <li>creating websites</li>
-              <li>working with CMS</li>
-              <li>creating HTML templates (SMARTY)</li>
-              <li>creating new features in company version of CMS</li>
-            </ul>
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section education">
-    <h2 class="text-center display-2">Education</h2>
-    <div class="col-xl-6 offset-xl-3 col-lg-8 offset-lg-2 col-md-12 col-sm-12">
-      <div class="card shadow shadow-lg--hover mt-5">
-        <div class="card-body">
-          <div class="d-flex px-3">
-            <div>
-              <div class="icon icon-shape bg-gradient-success rounded-circle text-white">
-                <i class="fas fa-graduation-cap"></i>
+        <div class="collapse navbar-collapse" id="navbar-default">
+          <div class="navbar-collapse-header">
+            <div class="row">
+              <div class="col-6 collapse-brand">
+                <a class="navbar-brand text-default" href="/">szymonmiks.pl</a>
+              </div>
+              <div class="col-6 collapse-close">
+                <button type="button" class="navbar-toggler collapsed" data-toggle="collapse"
+                  data-target="#navbar-default" aria-controls="navbar-default" aria-expanded="false"
+                  aria-label="Toggle navigation">
+                  <span></span>
+                  <span></span>
+                </button>
               </div>
             </div>
-            <div class="pl-4">
-              <h5 class="title text-success">
-                <span class="title__school">Gdańsk University of Technology</span>
-                <span class="education-date">(Oct 2016 - now)</span>
-              </h5>
-              <p class="text-muted">Faculty of Electronics, Telecommunications and Informatics, Gdańsk, Poland</p>
-              <p>Bachelor of Engineering, Computer Science</p>
+          </div>
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item" data-goto="home">
+              <a class="nav-link" href="#">Home</a>
+            </li>
+            <li class="nav-item" data-goto="about-me">
+              <a class="nav-link" href="#">About me</a>
+            </li>
+            <li class="nav-item" data-goto="experience">
+              <a class="nav-link" href="#">Experience</a>
+            </li>
+            <li class="nav-item" data-goto="education">
+              <a class="nav-link" href="#">Education</a>
+            </li>
+            <li class="nav-item" data-goto="projects">
+              <a class="nav-link" href="#">Projects</a>
+            </li>
+            <li class="nav-item" data-goto="skills">
+              <a class="nav-link" href="#">Skills</a>
+            </li>
+            <li class="nav-item" data-goto="contact">
+              <a class="nav-link" href="#">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <div class="main-contaier">
+    <section class="home">
+      <div id="particles-js"></div>
+      <div class="intro-video">
+        <video autoplay loop muted>
+          <source src="video/aloha-mundo.webm" type="video/webm">
+        </video>
+      </div>
+      <div class="intro-content">
+        <img class="profile-img opacity-8 rounded-circle img-center img-fluid" src="img/mx2.jpg" />
+        <h1 class="display-1 text-white font-weight-bold text-shadow-black">Szymon Miks</h1>
+        <h2 class="text-muted font-weight-light text-shadow-black">Full Stack Developer</h2>
+        <h4 class="text-muted font-weight-light text-shadow-black">Python Lover ❤</h4>
+
+        <div class="col-md-12 col-sm-12 col-12 text-center btn-wrapper mt-2">
+          <a target="_blank" href="https://www.linkedin.com/in/szymon-miks/"
+            class="btn btn-neutral btn-icon-only btn-linkedin btn-round btn-lg" data-toggle="tooltip"
+            data-original-title="LinkedIn">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a target="_blank" href="https://www.facebook.com/szymon.miks"
+            class="btn btn-neutral btn-icon-only btn-facebook btn-round btn-lg" data-toggle="tooltip"
+            data-original-title="Facebook">
+            <i class="fab fa-facebook-square"></i>
+          </a>
+          <a target="_blank" href="https://github.com/szymon6927"
+            class="btn btn-neutral btn-icon-only btn-github btn-round btn-lg" data-toggle="tooltip"
+            data-original-title="Check my Github">
+            <i class="fab fa-github"></i>
+          </a>
+        </div>
+
+        <button type="button" class="btn btn-outline-info mt-4">
+          <span class="pdf-icon text-white"><i class="far fa-file-pdf"></i></span>
+          <a href="/szymon_miks_cv.pdf" class="text-white">Download Resume</a>
+        </button>
+
+      </div>
+      <div class="scroll-btn"><span class="goto-next"></span></div>
+    </section>
+
+    <section class="section about-me">
+      <div class="container">
+        <div class="card bg-gradient-blue shadow-lg border-0">
+          <div class="row align-items-center">
+            <div class="col-lg-4 col-md-4 col-sm-12 about-me-title">
+              <h3 class="text-white text-center">About me:</h3>
+            </div>
+            <div class="col-lg-8 col-md-8 col-sm-12 pt-4 pb-4 pl-3 pr-4 about-me-content">
+              <p class="text-white mb-1">Hi, I'm Szymon Miks Full Stack Developer based in Lębork, Poland.</p>
+              <p class="text-white">I'm still learning and developing my soft and programming skills.
+                I'm always looking for new opportunities and challenges to growing up my skills.
+                I love Python and the whole environment and community around this language</p>
             </div>
           </div>
         </div>
       </div>
-    </div>
-    <div class="col-xl-6 offset-xl-3 col-lg-8 offset-lg-2 col-md-12 col-sm-12">
-      <div class="card shadow shadow-lg--hover mt-5">
-        <div class="card-body">
-          <div class="d-flex px-3">
-            <div>
-              <div class="icon icon-shape bg-gradient-success rounded-circle text-white">
-                <i class="fas fa-graduation-cap"></i>
-              </div>
+    </section>
+
+    <section class="section experience bg-gradient-lighter">
+      <h2 class="text-center display-2">Experience</h2>
+      <div class="experience-timeline">
+        <div class="vtimeline-point">
+          <div class="vtimeline-icon"><i class="fa fa-map-marker"></i></div>
+          <div class="vtimeline-block"><span class="vtimeline-date">March 2019 – now</span>
+            <div class="vtimeline-content shadow shadow-lg--hover">
+              <h3>DLabs sp. z o.o.</h3>
+              <h4>Python Developer</h4>
+              <p>
+                <ul>
+                  <li>PYTHON, DJANGO, JS, DOCKER</li>
+                  <li>developing web application using DJANGO</li>
+                  <li>working mainly with <strong>data science</strong> projects - preparing backend code for data science components</li>
+                </ul>
+              </p>
             </div>
-            <div class="pl-4">
-              <h5 class="title text-success">
-                <span class="title__school">Zespół Szkół Łączności w Gdańsku</span>
-                <span class="education-date">(Sep 2012 - June 2016)</span>
-              </h5>
-              <p class="text-muted">High School Centre of Communication and Technology in Gdansk, Poland</p>
-              <p>IT technician, Information Technology</p>
+          </div>
+        </div>
+        <div class="vtimeline-point">
+          <div class="vtimeline-icon"><i class="fa fa-map-marker"></i></div>
+          <div class="vtimeline-block"><span class="vtimeline-date">November 2016 – March 2019</span>
+            <div class="vtimeline-content shadow shadow-lg--hover">
+              <h3>MiroArt</h3>
+              <h4>Full Stack Developer</h4>
+              <p>
+                <ul>
+                  <li>PHP, JS, HTML, CSS, SMARTY, MYSQL, GIT</li>
+                  <li>creating web applications</li>
+                  <li>developing company version of CMS</li>
+                  <li>creating PYTHON scripts for job automation</li>
+                  <li>working with facebook API, youtube API</li>
+                  <li>creating large websites</li>
+                  <li>creating reservation systems</li>
+                  <li>creating PYTHON web scraping scripts for moving content from one website to another</li>
+                  <li>optimization of JS, CSS, HTML for better website performance</li>
+                  <li>maintenance of the virtual private server, working with the Linux operating system, updating and
+                    installing GCC, PYTHON, WKHTMTOPDF, NODE.JS, PHP and other tools necessary to web development
+                  </li>
+                </ul>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="vtimeline-point">
+          <div class="vtimeline-icon"><i class="fa fa-map-marker"></i></div>
+          <div class="vtimeline-block"><span class="vtimeline-date">September 2016 – October 2016</span>
+            <div class="vtimeline-content shadow shadow-lg--hover">
+              <h3>Aplitt Sp. z o.o.</h3>
+              <h4>Junior Monitoring Administrator, System & IT Infrastructure</h4>
+              <p>
+                <ul>
+                  <li>PYTHON, BASH, LINUX</li>
+                  <li>maintenance of existing monitoring mechanisms</li>
+                  <li>development and supporting of Zabbix reports system</li>
+                  <li>monitoring company infrastructure</li>
+                </ul>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="vtimeline-point">
+          <div class="vtimeline-icon"><i class="fa fa-map-marker"></i></div>
+          <div class="vtimeline-block"><span class="vtimeline-date">June 2016 – September 2016</span>
+            <div class="vtimeline-content shadow shadow-lg--hover">
+              <h3>MiroArt</h3>
+              <h4>Web Developer</h4>
+              <p>
+                <ul>
+                  <li>HTML, JS, CSS</li>
+                  <li>creating websites</li>
+                  <li>working with CMS</li>
+                  <li>creating HTML templates (SMARTY)</li>
+                  <li>creating new features in company version of CMS</li>
+                </ul>
+              </p>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="section projects section section-shaped my-0 overflow-hidden">
-    <div class="shape shape-style-1 bg-gradient-blue shape-skew">
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
-    <div class="container py-0">
-      <h2 class="text-center text-white display-2">Projects</h2>
-      <h4 class="text-center text-white">Rest of my projects are available on my
-        <a class="text-white" href="https://github.com/szymon6927" target="_blank" data-toggle="tooltip"
-           data-original-title="Check my Github">
-          <i class="fab fa-github"></i><span>GitHub</span>
-        </a>
-      </h4>
-
-      <div class="row row-grid align-items-center">
+    <section class="section education">
+      <h2 class="text-center display-2">Education</h2>
+      <div class="col-xl-6 offset-xl-3 col-lg-8 offset-lg-2 col-md-12 col-sm-12">
         <div class="card shadow shadow-lg--hover mt-5">
           <div class="card-body">
-            <div class="row">
-              <div class="col-lg-4 col-md-12">
-                <div class="img-thumbnail img-fluid shadow-lg">
-                  <img class="projects__img" src="img/gene-calc.pl.png"/>
+            <div class="d-flex px-3">
+              <div>
+                <div class="icon icon-shape bg-gradient-success rounded-circle text-white">
+                  <i class="fas fa-graduation-cap"></i>
                 </div>
               </div>
-
-              <div class="pl-3 project-icon-wrapper">
-                <div class="icon icon-shape bg-gradient-blue rounded-circle text-white">
-                  <i class="fas fa-terminal"></i>
-                </div>
-              </div>
-
-              <div class="col-lg-7 col-md-12">
-                <div class="project__content">
-                  <h4 class="title text-default">
-                    <span class="project__content--title">Gene Calc</span>
-                  </h4>
-                  <div class="project__desc text-muted">
-                    <p>The Gene-Calc is a constantly developed tool dedicated for calculations related to biological
-                      sciences, especially focused in field of genetics. Application offers couple of tools such as:</p>
-                    <ul>
-                      <li>Hardy–Weinberg equilibrium calculator</li>
-                      <li>Chi-square tests:</li>
-                      <li>Independence (Associations) chi-square</li>
-                      <li>Chi-square goodness of fit test:</li>
-                      <li>Estimator of genetic distance</li>
-                      <li>Polymorphic information content and heterozygosity calculator</li>
-                    </ul>
-                    <p>Admin panel for content management created with Flask-Login and Flask-Admin with DB on MYSQL</p>
-                    <div class="technologies-wrapper mb-3">
-                      <h5>Technologies:</h5>
-                      <span class="technologies python">FLASK</span>
-                      <span class="technologies">Flask-Admin</span>
-                      <span class="technologies">Flask-Login</span>
-                      <span class="technologies java-script"></span>
-                      <span class="technologies">ES6</span>
-                      <span class="technologies">jQuery</span>
-                      <span class="technologies html"></span>
-                      <span class="technologies css"></span>
-                      <span class="technologies">MYSQL</span>
-                      <span class="technologies">NumPy</span>
-                      <span class="technologies">SciPy</span>
-                      <span class="technologies">BioPython</span>
-                    </div>
-                  </div>
-                  <div class="btn btn-primary mb-3">
-                    <i class="fab fa-github"></i>
-                    <a class="text-white" href="https://github.com/szymon6927/bio-gen-calc" target="_blank">See on
-                      GitHub</a>
-                  </div>
-                  <div class="btn btn-default mb-3">
-                    <i class="far fa-window-maximize"></i>
-                    <a class="text-white" data-toggle="tooltip"
-                       data-original-title="https://gene-calc.pl/" href="https://gene-calc.pl/" target="_blank">See
-                      project website</a>
-                  </div>
-                </div>
+              <div class="pl-4">
+                <h5 class="title text-success">
+                  <span class="title__school">Gdańsk University of Technology</span>
+                  <span class="education-date">(Oct 2016 - now)</span>
+                </h5>
+                <p class="text-muted">Faculty of Electronics, Telecommunications and Informatics, Gdańsk, Poland</p>
+                <p>Bachelor of Engineering, Computer Science</p>
               </div>
             </div>
           </div>
         </div>
-
+      </div>
+      <div class="col-xl-6 offset-xl-3 col-lg-8 offset-lg-2 col-md-12 col-sm-12">
         <div class="card shadow shadow-lg--hover mt-5">
           <div class="card-body">
-            <div class="row">
-
-              <div class="col-lg-4 col-md-12">
-                <div class="img-thumbnail img-fluid shadow-lg">
-                  <img class="projects__img" src="img/pyszne.barbonanza.pl.png"/>
+            <div class="d-flex px-3">
+              <div>
+                <div class="icon icon-shape bg-gradient-success rounded-circle text-white">
+                  <i class="fas fa-graduation-cap"></i>
                 </div>
               </div>
-
-              <div class="pl-3 project-icon-wrapper">
-                <div class="icon icon-shape bg-gradient-blue rounded-circle text-white">
-                  <i class="fas fa-terminal"></i>
-                </div>
+              <div class="pl-4">
+                <h5 class="title text-success">
+                  <span class="title__school">Zespół Szkół Łączności w Gdańsku</span>
+                  <span class="education-date">(Sep 2012 - June 2016)</span>
+                </h5>
+                <p class="text-muted">High School Centre of Communication and Technology in Gdansk, Poland</p>
+                <p>IT technician, Information Technology</p>
               </div>
-
-              <div class="col-lg-7 col-md-12">
-                <div class="project__content">
-                  <h4 class="title text-default">
-                    <span class="project__content--title">Bonanza SMS</span>
-                  </h4>
-                  <div class="project__desc text-muted">
-                    <p>Marketing application created for restaurant
-                      <a href="https://www.facebook.com/BarBonanza1/" target="_blank">Bar Bonanza Łeba</a>
-                    </p>
-                    <p>Created for sending promo SMS every day to people who registered in app.
-                      Daily discount or promotion on the selected product like: drinks, food, fast-food etc.</p>
-                    <p>Integrated with <a href="https://www.smsapi.pl/" target="_blank">smsapi.pl</a> for sending SMS
-                      messages</p>
-                    <p>Admin panel for content management and app created with Vue.js and REST API</p>
-                    <div class="technologies-wrapper mb-3">
-                      <h5>Technologies:</h5>
-                      <span class="technologies python">FLASK</span>
-                      <span class="technologies vuejs"></span>
-                      <span class="technologies java-script"></span>
-                      <span class="technologies">REST API</span>
-                      <span class="technologies">SPA</span>
-                      <span class="technologies html"></span>
-                      <span class="technologies css"></span>
-                      <span class="technologies">MYSQL</span>
-                      <span class="technologies">JWT</span>
-                    </div>
-                  </div>
-                  <div class="btn btn-primary mb-3">
-                    <i class="fab fa-github"></i>
-                    <a class="text-white" href="https://github.com/szymon6927/bonanza-sms" target="_blank">See on
-                      GitHub</a>
-                  </div>
-                  <div class="btn btn-default mb-3">
-                    <i class="far fa-window-maximize"></i>
-                    <a class="text-white" data-toggle="tooltip"
-                       data-original-title="https://pyszne.barbonanza.pl/#/" href="https://pyszne.barbonanza.pl/#/"
-                       target="_blank">See
-                      project website</a>
-                  </div>
-                </div>
-              </div>
-
             </div>
           </div>
         </div>
-
-        <div class="card shadow shadow-lg--hover mt-5">
-          <div class="card-body">
-            <div class="row">
-
-              <div class="col-lg-4 col-md-12">
-                <div class="img-thumbnail img-fluid shadow-lg">
-                  <img class="projects__img" src="img/sekow.ski.png"/>
-                </div>
-              </div>
-
-              <div class="pl-3 project-icon-wrapper">
-                <div class="icon icon-shape bg-gradient-blue rounded-circle text-white">
-                  <i class="fas fa-terminal"></i>
-                </div>
-              </div>
-
-              <div class="col-lg-7 col-md-12">
-                <div class="project__content">
-                  <h4 class="title text-default">
-                    <span class="project__content--title">url-shortener</span>
-                  </h4>
-                  <div class="project__desc text-muted">
-                    <p>Marketing application created for kayaking company
-                      <a href="https://kajakisekowski.pl/" target="_blank">kajakisekowski.pl</a>
-                    </p>
-                    <p>Application isn't available without authentication for obvious reasons. It's used internally in
-                      company</p>
-                    <p>The main idea of ​​this app is to catch GA-client-id during redirection. Admin is giving a client
-                      phone number and URL which is going to be shortened. Shortener URL is sent to the client. It means
-                      when client click shortener link, he sees redirection screen but under the hood application give
-                      him a ga-client-id and after that app will redirect him to previously entered URL</p>
-                    <p>App hosted at <a href="https://www.heroku.com/" target="_blank">heroku</a> with CI supported by
-                      <a href="https://circleci.com/" target="_blank">CircleCI</a></p>
-                    <div class="technologies-wrapper mb-3">
-                      <h5>Technologies:</h5>
-                      <span class="technologies python">FLASK</span>
-                      <span class="technologies java-script"></span>
-                      <span class="technologies">jQuery</span>
-                      <span class="technologies html"></span>
-                      <span class="technologies css"></span>
-                      <span class="technologies">MYSQL</span>
-                      <span class="technologies">MaterializeCSS</span>
-                      <span class="technologies">CI</span>
-                      <span class="technologies">CircleCI</span>
-                    </div>
-                  </div>
-                  <div class="btn btn-primary mb-3">
-                    <i class="fab fa-github"></i>
-                    <a class="text-white" href="https://github.com/szymon6927/url-shortener" target="_blank">See on
-                      GitHub</a>
-                  </div>
-                  <div class="btn btn-default mb-3">
-                    <i class="far fa-window-maximize"></i>
-                    <a class="text-white" data-toggle="tooltip"
-                       data-original-title="http://sekow.ski/" href="http://sekow.ski/"
-                       target="_blank">See
-                      project website</a>
-                  </div>
-                </div>
-              </div>
-
-            </div>
-          </div>
-        </div>
-
-        <div class="card shadow shadow-lg--hover mt-5">
-          <div class="card-body">
-            <div class="row">
-
-              <div class="col-lg-4 col-md-12">
-                <div class="img-thumbnail img-fluid shadow-lg">
-                  <img class="projects__img" src="img/wmf.szymonmiks.pl.png"/>
-                </div>
-              </div>
-
-              <div class="pl-3 project-icon-wrapper">
-                <div class="icon icon-shape bg-gradient-blue rounded-circle text-white">
-                  <i class="fas fa-terminal"></i>
-                </div>
-              </div>
-
-              <div class="col-lg-7 col-md-12">
-                <div class="project__content">
-                  <h4 class="title text-default">
-                    <span class="project__content--title">wmf-service</span>
-                  </h4>
-                  <div class="project__desc text-muted">
-                    <p>The website for selling and service WMF coffee machines</p>
-                    <p>Created with Django-CMS</p>
-                    <p>Just for now website is hosted at my personal subdomain but ultimately it will be hosted on a
-                      separate domain</p>
-                    <div class="technologies-wrapper mb-3">
-                      <h5>Technologies:</h5>
-                      <span class="technologies python">Django-CMS</span>
-                      <span class="technologies java-script"></span>
-                      <span class="technologies">jQuery</span>
-                      <span class="technologies html"></span>
-                      <span class="technologies css"></span>
-                      <span class="technologies">MYSQL</span>
-                    </div>
-                  </div>
-                  <div class="btn btn-primary mb-3">
-                    <i class="fab fa-github"></i>
-                    <a class="text-white" href="https://github.com/szymon6927/wmf-service" target="_blank">See on
-                      GitHub</a>
-                  </div>
-                  <div class="btn btn-default mb-3">
-                    <i class="far fa-window-maximize"></i>
-                    <a class="text-white" data-toggle="tooltip"
-                       data-original-title="http://wmf.szymonmiks.pl/pl/" href="http://wmf.szymonmiks.pl/pl/"
-                       target="_blank">See project website</a>
-                  </div>
-                </div>
-              </div>
-
-            </div>
-          </div>
-        </div>
-
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="section skills">
-    <h2 class="text-center display-2">Skills</h2>
-    <div class="container">
-      <div class="col-md-12 col-sm-12 mb-4">
-        <h4 class="text-left mb-3">Which I know the best:</h4>
-        <div class="skill-list p-0">
-          <span class="badge bg-success text-white shadow shadow-lg--hover skill-item">
-            <i class="fab fa-python"></i>
-            <span>Python</span>
-          </span>
-          <span class="badge bg-success text-white shadow shadow-lg--hover skill-item">Flask</span>
-          <span class="badge bg-success text-white shadow shadow-lg--hover skill-item">
-            <i class="fab fa-js-square"></i>
-            <span>JavaScript</span>
-          </span>
-          <span class="badge bg-success text-white shadow shadow-lg--hover skill-item">jQuery</span>
-          <span class="badge bg-success text-white shadow shadow-lg--hover skill-item">AJAX</span>
-          <span class="badge bg-success text-white shadow shadow-lg--hover skill-item">
-            <i class="fab fa-html5"></i>
-            <span>HTML5</span>
-          </span>
-          <span class="badge bg-success text-white shadow shadow-lg--hover skill-item">
-            <i class="fab fa-css3-alt"></i>
-            <span>CSS3</span>
-          </span>
-          <span class="badge bg-success text-white shadow shadow-lg--hover skill-item">Bootstrap</span>
-          <span class="badge bg-success text-white shadow shadow-lg--hover skill-item">RWD</span>
-          <span class="badge bg-success text-white shadow shadow-lg--hover skill-item">
-            <i class="fab fa-php"></i>
-            <span>PHP</span>
-          </span>
-          <span class="badge bg-success text-white shadow shadow-lg--hover skill-item">MySQL</span>
-        </div>
+    <section class="section projects section section-shaped my-0 overflow-hidden">
+      <div class="shape shape-style-1 bg-gradient-blue shape-skew">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
       </div>
-      <div class="col-md-12 col-sm-12 mb-4">
-        <h4 class="text-left mb-3">Knowledge of:</h4>
-        <div class="skill-list p-0">
-          <span class="badge bg-primary text-white shadow shadow-lg--hover skill-item">
-            <i class="fas fa-code-branch"></i>
-            <span>Git</span>
-          </span>
-          <span class="badge bg-primary text-white shadow shadow-lg--hover skill-item">
-            <i class="fab fa-js"></i>
-            <span>ES6</span>
-          </span>
-          <span class="badge bg-primary text-white shadow shadow-lg--hover skill-item">
-            <i class="fab fa-node"></i>
-            <span>Node.js</span>
-          </span>
-          <span class="badge bg-primary text-white shadow shadow-lg--hover skill-item">Express.js</span>
-          <span class="badge bg-primary text-white shadow shadow-lg--hover skill-item">
-            <i class="fab fa-vuejs"></i>
-            <span>Vue.js</span>
-          </span>
-          <span class="badge bg-primary text-white shadow shadow-lg--hover skill-item">REST API</span>
-          <span class="badge bg-primary text-white shadow shadow-lg--hover skill-item">
-            <i class="fab fa-react"></i>
-            <span>React</span>
-          </span>
-          <span class="badge bg-primary text-white shadow shadow-lg--hover skill-item">PWA</span>
-          <span class="badge bg-primary text-white shadow shadow-lg--hover skill-item">MONGODB</span>
-          <span class="badge bg-primary text-white shadow shadow-lg--hover skill-item">Material Design</span>
-          <span class="badge bg-primary text-white shadow shadow-lg--hover skill-item">
-            <i class="fab fa-wordpress"></i>
-            <span>WordPress</span>
-          </span>
-        </div>
-      </div>
-      <div class="col-md-12 col-sm-12 mb-4">
-        <h4 class="text-left mb-3">Basic knowledge of:</h4>
-        <div class="skill-list p-0">
-          <span class="badge bg-secondary shadow shadow-lg--hover skill-item">Django</span>
-          <span class="badge bg-secondary shadow shadow-lg--hover skill-item">Django CMS</span>
-          <span class="badge bg-secondary shadow shadow-lg--hover skill-item">C++</span>
-          <span class="badge bg-secondary shadow shadow-lg--hover skill-item">webpack</span>
-          <span class="badge bg-secondary shadow shadow-lg--hover skill-item">
-            <i class="fab fa-gulp"></i>
-            <span>Gulp</span>
-          </span>
-          <span class="badge bg-secondary shadow shadow-lg--hover skill-item">
-            <i class="fab fa-grunt"></i>
-            <span>Grunt</span>
-          </span>
-          <span class="badge bg-secondary shadow shadow-lg--hover skill-item">three.js</span>
-          <span class="badge bg-secondary shadow shadow-lg--hover skill-item">SAAS</span>
-          <span class="badge bg-secondary shadow shadow-lg--hover skill-item">LEES</span>
-          <span class="badge bg-secondary shadow shadow-lg--hover skill-item">MS SQL</span>
-          <span class="badge bg-secondary shadow shadow-lg--hover skill-item">Bash</span>
-          <span class="badge bg-secondary shadow shadow-lg--hover skill-item">
-            <i class="fab fa-java"></i>
-            <span>Java</span>
-          </span>
-        </div>
-      </div>
-    </div>
-  </section>
+      <div class="container py-0">
+        <h2 class="text-center text-white display-2">Projects</h2>
+        <h4 class="text-center text-white">Rest of my projects are available on my
+          <a class="text-white" href="https://github.com/szymon6927" target="_blank" data-toggle="tooltip"
+            data-original-title="Check my Github">
+            <i class="fab fa-github"></i><span>GitHub</span>
+          </a>
+        </h4>
 
-  <section class="section contact section-shaped m-0">
-    <div class="shape shape-style-1 bg-gradient-default">
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
-    <h2 class="text-center text-white display-2 mb-4">Contact</h2>
-    <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-lg-8 col-md-12 col-sm-12">
-          <div class="card bg-secondary shadow border-0">
+        <div class="row row-grid align-items-center">
+          <div class="card shadow shadow-lg--hover mt-5">
             <div class="card-body">
-              <form role="form" action="https://formspree.io/contact@szymonmiks.pl" method="POST">
-                <input type="hidden" name="_subject" value="Contact request from szymonmiks.pl">
-                <div class="form-group mb-3">
-                  <div class="input-group input-group-alternative">
-                    <div class="input-group-prepend">
-                      <span class="input-group-text"><i class="far fa-envelope"></i></span>
-                    </div>
-                    <input class="form-control" placeholder="Email" type="email" name="_replyto" required>
+              <div class="row">
+                <div class="col-lg-4 col-md-12">
+                  <div class="img-thumbnail img-fluid shadow-lg">
+                    <img class="projects__img" src="img/jfs-banner.jpg" />
                   </div>
                 </div>
-                <div class="form-group">
-                  <textarea class="form-control form-control-alternative" name="message" rows="4" placeholder="Message: "
-                            required=""></textarea>
+
+                <div class="pl-3 project-icon-wrapper">
+                  <div class="icon icon-shape bg-gradient-blue rounded-circle text-white">
+                    <i class="fas fa-terminal"></i>
+                  </div>
                 </div>
-                <div class="text-center">
-                  <button type="submit" class="btn btn-primary btn-block my-4">Send</button>
+
+                <div class="col-lg-7 col-md-12">
+                  <div class="project__content">
+                    <h4 class="title text-default">
+                      <span class="project__content--title">Job for specialist</span>
+                    </h4>
+                    <div class="project__desc text-muted">
+                      <p>Job For Specialist is a portal which enable free publication of job advertisements. Service is
+                        dedicated to specialists in various fields, including agriculture, chemistry, programming,
+                        engineering, medicine, science etc.</p>
+                      <div class="technologies-wrapper mb-3">
+                        <h5>Technologies:</h5>
+                        <span class="technologies python">Django</span>
+                        <span class="technologies python">Django Rest Framework</span>
+                        <span class="technologies java-script"></span>
+                        <span class="technologies">PostgreSQL</span>
+                        <span class="technologies">ES6</span>
+                        <span class="technologies">REST API</span>
+                        <span class="technologies">webpack</span>
+                        <span class="technologies">jQuery</span>
+                        <span class="technologies html"></span>
+                        <span class="technologies css"></span>
+                      </div>
+                    </div>
+                    <div class="btn btn-primary mb-3">
+                      <i class="fab fa-github"></i>
+                      <a class="text-white" href="https://github.com/szymon6927/" target="_blank">Private repo</a>
+                    </div>
+                    <div class="btn btn-default mb-3">
+                      <i class="far fa-window-maximize"></i>
+                      <a class="text-white" data-toggle="tooltip" data-original-title="https://spec-jobs.pl/"
+                        href="https://spec-jobs.pl/" target="_blank">See
+                        project website</a>
+                    </div>
+                  </div>
                 </div>
-              </form>
+              </div>
+            </div>
+          </div>
+
+          <div class="card shadow shadow-lg--hover mt-5">
+            <div class="card-body">
+              <div class="row">
+                <div class="col-lg-4 col-md-12">
+                  <div class="img-thumbnail img-fluid shadow-lg">
+                    <img class="projects__img" src="img/gene-calc.pl.png" />
+                  </div>
+                </div>
+
+                <div class="pl-3 project-icon-wrapper">
+                  <div class="icon icon-shape bg-gradient-blue rounded-circle text-white">
+                    <i class="fas fa-terminal"></i>
+                  </div>
+                </div>
+
+                <div class="col-lg-7 col-md-12">
+                  <div class="project__content">
+                    <h4 class="title text-default">
+                      <span class="project__content--title">Gene Calc</span>
+                    </h4>
+                    <div class="project__desc text-muted">
+                      <p>The Gene-Calc is a constantly developed tool dedicated for calculations related to biological
+                        sciences, especially focused in field of genetics. Application offers couple of tools such as:
+                      </p>
+                      <ul>
+                        <li>Hardy–Weinberg equilibrium calculator</li>
+                        <li>Chi-square tests:</li>
+                        <li>Independence (Associations) chi-square</li>
+                        <li>Chi-square goodness of fit test:</li>
+                        <li>Estimator of genetic distance</li>
+                        <li>Polymorphic information content and heterozygosity calculator</li>
+                      </ul>
+                      <p>Admin panel for content management created with Flask-Login and Flask-Admin with DB on MYSQL
+                      </p>
+                      <div class="technologies-wrapper mb-3">
+                        <h5>Technologies:</h5>
+                        <span class="technologies python">FLASK</span>
+                        <span class="technologies">Flask-Admin</span>
+                        <span class="technologies">Flask-Login</span>
+                        <span class="technologies java-script"></span>
+                        <span class="technologies">ES6</span>
+                        <span class="technologies">jQuery</span>
+                        <span class="technologies html"></span>
+                        <span class="technologies css"></span>
+                        <span class="technologies">MYSQL</span>
+                        <span class="technologies">NumPy</span>
+                        <span class="technologies">SciPy</span>
+                        <span class="technologies">BioPython</span>
+                      </div>
+                    </div>
+                    <div class="btn btn-primary mb-3">
+                      <i class="fab fa-github"></i>
+                      <a class="text-white" href="https://github.com/szymon6927/bio-gen-calc" target="_blank">See on
+                        GitHub</a>
+                    </div>
+                    <div class="btn btn-default mb-3">
+                      <i class="far fa-window-maximize"></i>
+                      <a class="text-white" data-toggle="tooltip" data-original-title="https://gene-calc.pl/"
+                        href="https://gene-calc.pl/" target="_blank">See
+                        project website</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card shadow shadow-lg--hover mt-5">
+            <div class="card-body">
+              <div class="row">
+
+                <div class="col-lg-4 col-md-12">
+                  <div class="img-thumbnail img-fluid shadow-lg">
+                    <img class="projects__img" src="img/pyszne.barbonanza.pl.png" />
+                  </div>
+                </div>
+
+                <div class="pl-3 project-icon-wrapper">
+                  <div class="icon icon-shape bg-gradient-blue rounded-circle text-white">
+                    <i class="fas fa-terminal"></i>
+                  </div>
+                </div>
+
+                <div class="col-lg-7 col-md-12">
+                  <div class="project__content">
+                    <h4 class="title text-default">
+                      <span class="project__content--title">Bonanza SMS</span>
+                    </h4>
+                    <div class="project__desc text-muted">
+                      <p>Marketing application created for restaurant
+                        <a href="https://www.facebook.com/BarBonanza1/" target="_blank">Bar Bonanza Łeba</a>
+                      </p>
+                      <p>Created for sending promo SMS every day to people who registered in app.
+                        Daily discount or promotion on the selected product like: drinks, food, fast-food etc.</p>
+                      <p>Integrated with <a href="https://www.smsapi.pl/" target="_blank">smsapi.pl</a> for sending SMS
+                        messages</p>
+                      <p>Admin panel for content management and app created with Vue.js and REST API</p>
+                      <div class="technologies-wrapper mb-3">
+                        <h5>Technologies:</h5>
+                        <span class="technologies python">FLASK</span>
+                        <span class="technologies vuejs"></span>
+                        <span class="technologies java-script"></span>
+                        <span class="technologies">REST API</span>
+                        <span class="technologies">SPA</span>
+                        <span class="technologies html"></span>
+                        <span class="technologies css"></span>
+                        <span class="technologies">MYSQL</span>
+                        <span class="technologies">JWT</span>
+                      </div>
+                    </div>
+                    <div class="btn btn-primary mb-3">
+                      <i class="fab fa-github"></i>
+                      <a class="text-white" href="https://github.com/szymon6927/bonanza-sms" target="_blank">See on
+                        GitHub</a>
+                    </div>
+                    <div class="btn btn-default mb-3">
+                      <i class="far fa-window-maximize"></i>
+                      <a class="text-white" data-toggle="tooltip" data-original-title="https://pyszne.barbonanza.pl/#/"
+                        href="https://pyszne.barbonanza.pl/#/" target="_blank">See
+                        project website</a>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+          <div class="card shadow shadow-lg--hover mt-5">
+            <div class="card-body">
+              <div class="row">
+
+                <div class="col-lg-4 col-md-12">
+                  <div class="img-thumbnail img-fluid shadow-lg">
+                    <img class="projects__img" src="img/sekow.ski.png" />
+                  </div>
+                </div>
+
+                <div class="pl-3 project-icon-wrapper">
+                  <div class="icon icon-shape bg-gradient-blue rounded-circle text-white">
+                    <i class="fas fa-terminal"></i>
+                  </div>
+                </div>
+
+                <div class="col-lg-7 col-md-12">
+                  <div class="project__content">
+                    <h4 class="title text-default">
+                      <span class="project__content--title">url-shortener</span>
+                    </h4>
+                    <div class="project__desc text-muted">
+                      <p>Marketing application created for kayaking company
+                        <a href="https://kajakisekowski.pl/" target="_blank">kajakisekowski.pl</a>
+                      </p>
+                      <p>Application isn't available without authentication for obvious reasons. It's used internally in
+                        company</p>
+                      <p>The main idea of ​​this app is to catch GA-client-id during redirection. Admin is giving a
+                        client
+                        phone number and URL which is going to be shortened. Shortener URL is sent to the client. It
+                        means
+                        when client click shortener link, he sees redirection screen but under the hood application give
+                        him a ga-client-id and after that app will redirect him to previously entered URL</p>
+                      <p>App hosted at <a href="https://www.heroku.com/" target="_blank">heroku</a> with CI supported by
+                        <a href="https://circleci.com/" target="_blank">CircleCI</a></p>
+                      <div class="technologies-wrapper mb-3">
+                        <h5>Technologies:</h5>
+                        <span class="technologies python">FLASK</span>
+                        <span class="technologies java-script"></span>
+                        <span class="technologies">jQuery</span>
+                        <span class="technologies html"></span>
+                        <span class="technologies css"></span>
+                        <span class="technologies">MYSQL</span>
+                        <span class="technologies">MaterializeCSS</span>
+                        <span class="technologies">CI</span>
+                        <span class="technologies">CircleCI</span>
+                      </div>
+                    </div>
+                    <div class="btn btn-primary mb-3">
+                      <i class="fab fa-github"></i>
+                      <a class="text-white" href="https://github.com/szymon6927/url-shortener" target="_blank">See on
+                        GitHub</a>
+                    </div>
+                    <div class="btn btn-default mb-3">
+                      <i class="far fa-window-maximize"></i>
+                      <a class="text-white" data-toggle="tooltip" data-original-title="http://sekow.ski/"
+                        href="http://sekow.ski/" target="_blank">See
+                        project website</a>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+          <div class="card shadow shadow-lg--hover mt-5">
+            <div class="card-body">
+              <div class="row">
+
+                <div class="col-lg-4 col-md-12">
+                  <div class="img-thumbnail img-fluid shadow-lg">
+                    <img class="projects__img" src="img/wmf.szymonmiks.pl.png" />
+                  </div>
+                </div>
+
+                <div class="pl-3 project-icon-wrapper">
+                  <div class="icon icon-shape bg-gradient-blue rounded-circle text-white">
+                    <i class="fas fa-terminal"></i>
+                  </div>
+                </div>
+
+                <div class="col-lg-7 col-md-12">
+                  <div class="project__content">
+                    <h4 class="title text-default">
+                      <span class="project__content--title">wmf-service</span>
+                    </h4>
+                    <div class="project__desc text-muted">
+                      <p>The website for selling and service WMF coffee machines</p>
+                      <p>Created with Django-CMS</p>
+                      <p>Just for now website is hosted at my personal subdomain but ultimately it will be hosted on a
+                        separate domain</p>
+                      <div class="technologies-wrapper mb-3">
+                        <h5>Technologies:</h5>
+                        <span class="technologies python">Django-CMS</span>
+                        <span class="technologies java-script"></span>
+                        <span class="technologies">jQuery</span>
+                        <span class="technologies html"></span>
+                        <span class="technologies css"></span>
+                        <span class="technologies">MYSQL</span>
+                      </div>
+                    </div>
+                    <div class="btn btn-primary mb-3">
+                      <i class="fab fa-github"></i>
+                      <a class="text-white" href="https://github.com/szymon6927/wmf-service" target="_blank">See on
+                        GitHub</a>
+                    </div>
+                    <div class="btn btn-default mb-3">
+                      <i class="far fa-window-maximize"></i>
+                      <a class="text-white" data-toggle="tooltip" data-original-title="http://wmf.szymonmiks.pl/pl/"
+                        href="http://wmf.szymonmiks.pl/pl/" target="_blank">See project website</a>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="section skills">
+      <h2 class="text-center display-2">Skills</h2>
+      <div class="container">
+        <div class="col-md-12 col-sm-12 mb-4">
+          <h4 class="text-left mb-3">Which I know the best:</h4>
+          <div class="skill-list p-0">
+            <span class="badge bg-success text-white shadow shadow-lg--hover skill-item">
+              <i class="fab fa-python"></i>
+              <span>Python</span>
+            </span>
+            <span class="badge bg-success text-white shadow shadow-lg--hover skill-item">Django</span>
+            <span class="badge bg-success text-white shadow shadow-lg--hover skill-item">Flask</span>
+            <span class="badge bg-success text-white shadow shadow-lg--hover skill-item">
+              <i class="fab fa-js-square"></i>
+              <span>JavaScript</span>
+            </span>
+            <span class="badge bg-success text-white shadow shadow-lg--hover skill-item">jQuery</span>
+            <span class="badge bg-success text-white shadow shadow-lg--hover skill-item">AJAX</span>
+            <span class="badge bg-success text-white shadow shadow-lg--hover skill-item">
+              <i class="fab fa-html5"></i>
+              <span>HTML5</span>
+            </span>
+            <span class="badge bg-success text-white shadow shadow-lg--hover skill-item">
+              <i class="fab fa-css3-alt"></i>
+              <span>CSS3</span>
+            </span>
+            <span class="badge bg-success text-white shadow shadow-lg--hover skill-item">Bootstrap</span>
+            <span class="badge bg-success text-white shadow shadow-lg--hover skill-item">RWD</span>
+            <span class="badge bg-success text-white shadow shadow-lg--hover skill-item">
+              <i class="fab fa-php"></i>
+              <span>PHP</span>
+            </span>
+            <span class="badge bg-success text-white shadow shadow-lg--hover skill-item">MySQL</span>
+          </div>
+        </div>
+
+        <div class="col-md-12 col-sm-12 mb-4">
+          <h4 class="text-left mb-3">Knowledge of:</h4>
+          <div class="skill-list p-0">
+            <span class="badge bg-primary text-white shadow shadow-lg--hover skill-item">
+              <i class="fas fa-code-branch"></i>
+              <span>Git</span>
+            </span>
+            <span class="badge bg-primary text-white shadow shadow-lg--hover skill-item">Docker</span>
+            <span class="badge bg-primary text-white shadow shadow-lg--hover skill-item">Docker Compose</span>
+            <span class="badge bg-primary text-white shadow shadow-lg--hover skill-item">Django Rest Framework</span>
+            <span class="badge bg-secondary shadow shadow-lg--hover skill-item">Celery</span>
+            <span class="badge bg-secondary shadow shadow-lg--hover skill-item">RabbitMQ</span>
+            <span class="badge bg-secondary shadow shadow-lg--hover skill-item">webpack</span>
+            <span class="badge bg-primary text-white shadow shadow-lg--hover skill-item">
+              <i class="fab fa-js"></i>
+              <span>ES6</span>
+            </span>
+            <span class="badge bg-primary text-white shadow shadow-lg--hover skill-item">
+              <i class="fab fa-vuejs"></i>
+              <span>Vue.js</span>
+            </span>
+            <span class="badge bg-primary text-white shadow shadow-lg--hover skill-item">REST API</span>
+            <span class="badge bg-primary text-white shadow shadow-lg--hover skill-item">PWA</span>
+            <span class="badge bg-primary text-white shadow shadow-lg--hover skill-item">MONGODB</span>
+            <span class="badge bg-primary text-white shadow shadow-lg--hover skill-item">Material Design</span>
+            <span class="badge bg-primary text-white shadow shadow-lg--hover skill-item">
+              <i class="fab fa-wordpress"></i>
+              <span>WordPress</span>
+            </span>
+          </div>
+        </div>
+
+        <div class="col-md-12 col-sm-12 mb-4">
+          <h4 class="text-left mb-3">Basic knowledge of:</h4>
+          <div class="skill-list p-0">
+            <span class="badge bg-primary text-white shadow shadow-lg--hover skill-item">Elasticsearch</span>
+            <span class="badge bg-secondary shadow shadow-lg--hover skill-item">Django CMS</span>
+            <span class="badge bg-primary text-white shadow shadow-lg--hover skill-item">
+              <i class="fab fa-react"></i>
+              <span>React</span>
+            </span>
+            <span class="badge bg-primary text-white shadow shadow-lg--hover skill-item">
+              <i class="fab fa-node"></i>
+              <span>Node.js</span>
+            </span>
+            <span class="badge bg-primary text-white shadow shadow-lg--hover skill-item">Express.js</span>
+            <span class="badge bg-secondary shadow shadow-lg--hover skill-item">C++</span>
+            <span class="badge bg-secondary shadow shadow-lg--hover skill-item">
+              <i class="fab fa-gulp"></i>
+              <span>Gulp</span>
+            </span>
+            <span class="badge bg-secondary shadow shadow-lg--hover skill-item">
+              <i class="fab fa-grunt"></i>
+              <span>Grunt</span>
+            </span>
+            <span class="badge bg-secondary shadow shadow-lg--hover skill-item">three.js</span>
+            <span class="badge bg-secondary shadow shadow-lg--hover skill-item">SAAS</span>
+            <span class="badge bg-secondary shadow shadow-lg--hover skill-item">LEES</span>
+            <span class="badge bg-secondary shadow shadow-lg--hover skill-item">MS SQL</span>
+            <span class="badge bg-secondary shadow shadow-lg--hover skill-item">Bash</span>
+            <span class="badge bg-secondary shadow shadow-lg--hover skill-item">
+              <i class="fab fa-java"></i>
+              <span>Java</span>
+            </span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section contact section-shaped m-0">
+      <div class="shape shape-style-1 bg-gradient-default">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <h2 class="text-center text-white display-2 mb-4">Contact</h2>
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-8 col-md-12 col-sm-12">
+            <div class="card bg-secondary shadow border-0">
+              <div class="card-body">
+                <form role="form" action="https://formspree.io/contact@szymonmiks.pl" method="POST">
+                  <input type="hidden" name="_subject" value="Contact request from szymonmiks.pl">
+                  <div class="form-group mb-3">
+                    <div class="input-group input-group-alternative">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="far fa-envelope"></i></span>
+                      </div>
+                      <input class="form-control" placeholder="Email" type="email" name="_replyto" required>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <textarea class="form-control form-control-alternative" name="message" rows="4"
+                      placeholder="Message: " required=""></textarea>
+                  </div>
+                  <div class="text-center">
+                    <button type="submit" class="btn btn-primary btn-block my-4">Send</button>
+                  </div>
+                </form>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
-</div>
-
-<p id="back-top" class="bg-gradient-default"><a href="/" title="Go to top">Go to top</a></p>
-
-<footer class="footer">
-  <div class="container">
-    <div class="row align-items-center justify-content-md-between">
-      <div class="col-md-5 col-sm-4 col-12 mb-md-0 mb-sm-3 text-sm-center">
-        <div class="copyright">
-          <span>Copyright © 2018</span>
-          <a href="mailto:contact@szymonmiks.pl">Szymon Miks - contact@szymonmiks.pl</a>
-        </div>
-      </div>
-      <div class="col-md-1 col-sm-2 col-12 text-center">
-        <div class="go-to-top" data-toggle="tooltip" data-original-title="Go to top">
-          <i class="fas fa-angle-up"></i>
-        </div>
-      </div>
-      <div class="col-md-5 col-sm-4 col-12 text-lg-center btn-wrapper">
-        <a target="_blank" href="https://www.linkedin.com/in/szymon-miks/"
-           class="btn btn-neutral btn-icon-only btn-linkedin btn-round btn-lg" data-toggle="tooltip"
-           data-original-title="LinkedIn">
-          <i class="fab fa-linkedin"></i>
-        </a>
-        <a target="_blank" href="https://www.facebook.com/szymon.miks"
-           class="btn btn-neutral btn-icon-only btn-facebook btn-round btn-lg" data-toggle="tooltip"
-           data-original-title="Facebook">
-          <i class="fab fa-facebook-square"></i>
-        </a>
-        <a target="_blank" href="https://github.com/szymon6927"
-           class="btn btn-neutral btn-icon-only btn-github btn-round btn-lg" data-toggle="tooltip"
-           data-original-title="Check my Github">
-          <i class="fab fa-github"></i>
-        </a>
-      </div>
-    </div>
+    </section>
   </div>
-</footer>
 
-<script src="js/vendors/jquery.min.js"></script>
-<script src="js/vendors/popper.min.js"></script>
-<script src="js/vendors/particles.min.js"></script>
-<script src="js/vendors/bootstrap.min.js"></script>
-<script src="js/vendors/argon.min.js"></script>
+  <p id="back-top" class="bg-gradient-default"><a href="/" title="Go to top">Go to top</a></p>
 
-<script src="js/scripts.min.js?ver=1.01"></script>
+  <footer class="footer">
+    <div class="container">
+      <div class="row align-items-center justify-content-md-between">
+        <div class="col-md-5 col-sm-4 col-12 mb-md-0 mb-sm-3 text-sm-center">
+          <div class="copyright">
+            <span>Copyright © 2018</span>
+            <a href="mailto:contact@szymonmiks.pl">Szymon Miks - contact@szymonmiks.pl</a>
+          </div>
+        </div>
+        <div class="col-md-1 col-sm-2 col-12 text-center">
+          <div class="go-to-top" data-toggle="tooltip" data-original-title="Go to top">
+            <i class="fas fa-angle-up"></i>
+          </div>
+        </div>
+        <div class="col-md-5 col-sm-4 col-12 text-lg-center btn-wrapper">
+          <a target="_blank" href="https://www.linkedin.com/in/szymon-miks/"
+            class="btn btn-neutral btn-icon-only btn-linkedin btn-round btn-lg" data-toggle="tooltip"
+            data-original-title="LinkedIn">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a target="_blank" href="https://www.facebook.com/szymon.miks"
+            class="btn btn-neutral btn-icon-only btn-facebook btn-round btn-lg" data-toggle="tooltip"
+            data-original-title="Facebook">
+            <i class="fab fa-facebook-square"></i>
+          </a>
+          <a target="_blank" href="https://github.com/szymon6927"
+            class="btn btn-neutral btn-icon-only btn-github btn-round btn-lg" data-toggle="tooltip"
+            data-original-title="Check my Github">
+            <i class="fab fa-github"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/vendors/jquery.min.js"></script>
+  <script src="js/vendors/popper.min.js"></script>
+  <script src="js/vendors/particles.min.js"></script>
+  <script src="js/vendors/bootstrap.min.js"></script>
+  <script src="js/vendors/argon.min.js"></script>
+
+  <script src="js/scripts.min.js?ver=1.01"></script>
 
 </body>
+
 </html>
