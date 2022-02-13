@@ -2,6 +2,10 @@ body {
     font-family: 'Telex', sans-serif;
 }
 
+strong {
+    font-weight: 700;
+}
+
 #particles-js {
     background: rgba(40, 55, 89, 0.75);
     height: 100vh;

@@ -17,10 +17,11 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
     integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
 
-  <!--<link rel="stylesheet" href="css/vendors/nucleo.css">-->
-  <!--<link rel="stylesheet" href="css/vendors/argon.min.css">-->
+  <link rel="stylesheet" href="css/vendors/bootstrap.min.css">
+  <link rel="stylesheet" href="css/vendors/nucleo.css">
+  <link rel="stylesheet" href="css/vendors/argon.min.css">
 
-  <link rel="stylesheet" href="css/styles.min.css?ver=1.01">
+  <link rel="stylesheet" href="css/style.css?ver=1.02">
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-122028664-2"></script>
@@ -102,8 +103,8 @@
       <div class="intro-content">
         <img class="profile-img opacity-8 rounded-circle img-center img-fluid" src="img/mx2.jpg" />
         <h1 class="display-1 text-white font-weight-bold text-shadow-black">Szymon Miks</h1>
-        <h2 class="text-muted font-weight-light text-shadow-black">Full Stack Developer</h2>
-        <h4 class="text-muted font-weight-light text-shadow-black">Python Lover ❤</h4>
+        <h2 class="text-muted font-weight-light text-shadow-black">Software Engineer</h2>
+        <h4 class="text-muted font-weight-light text-shadow-black mb-4">Python Lover ❤ DDD enthusiast</h4>
 
         <div class="col-md-12 col-sm-12 col-12 text-center btn-wrapper mt-2">
           <a target="_blank" href="https://www.linkedin.com/in/szymon-miks/"
@@ -140,10 +141,20 @@
               <h3 class="text-white text-center">About me:</h3>
             </div>
             <div class="col-lg-8 col-md-8 col-sm-12 pt-4 pb-4 pl-3 pr-4 about-me-content">
-              <p class="text-white mb-1">Hi, I'm Szymon Miks Full Stack Developer based in Lębork, Poland.</p>
-              <p class="text-white">I'm still learning and developing my soft and programming skills.
-                I'm always looking for new opportunities and challenges to growing up my skills.
-                I love Python and the whole environment and community around this language</p>
+              <p class="text-white mb-1">
+                Hi, I'm Szymon Miks <strong>Software Engineer</strong> based in <strong>Lębork, Poland</strong>.
+              </p>
+              <p class="text-white mt-3">
+                I'm interested in <strong>software engineering, craftsmanship, clean architecture,
+                clean code, design patterns and pragmatism in software development.</strong></p>
+              <p class="text-white">
+                Occasionally, I blog about topics related to software engineering.
+              </p>
+              <p class="text-white">
+                I'm still learning and developing my soft and programming skills.
+                I'm always looking for new opportunities and challenges to grow up my skills.
+                I love Python and the whole environment and community around this language.
+              </p>
             </div>
           </div>
         </div>
@@ -155,20 +166,88 @@
       <div class="experience-timeline">
         <div class="vtimeline-point">
           <div class="vtimeline-icon"><i class="fa fa-map-marker"></i></div>
-          <div class="vtimeline-block"><span class="vtimeline-date">March 2019 – now</span>
+          <div class="vtimeline-block"><span class="vtimeline-date">July 2021 – now</span>
+            <div class="vtimeline-content shadow shadow-lg--hover">
+              <h3>Netguru S.A.</h3>
+              <h4>Senior Python Developer</h4>
+              <p>
+                <ul>
+                  <li>A Global Employee Engagement Platform (EEP) serving 50,000 companies with over 15 million users.</li>
+                  <ul>
+                    <li>Over ~100 microservices</li>
+                    <li>Implementation of the new features for the User Management & Onboarding Team</li>
+                    <li>Event-driven architecture</li>
+                    <li>Integration with external services</li>
+                    <li>API development</li>
+                    <li>Technologies: Python, Docker, AWS Lambda, AWS ECS, DynamoDB, AWS Step Functions, SNS, SQS, pytest, CircleCI</li>
+                  </ul>
+                  <li>A company aiming to make the flat rental a service based on cognitive ease, security and predictability for the client</li>
+                  <ul>
+                    <li>Integration with Polish Banks API like ING, PEKAO, Santander</li>
+                    <li>Working with SOAP API</li>
+                    <li>Development of new features like massive transactions, an account history report</li>
+                    <li>Technologies: Python, Docker, Django, pytest, CircleCI</li>
+                  </ul>
+                </ul>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="vtimeline-point">
+          <div class="vtimeline-icon"><i class="fa fa-map-marker"></i></div>
+          <div class="vtimeline-block"><span class="vtimeline-date">July 2019 – July 2021</span>
+            <div class="vtimeline-content shadow shadow-lg--hover">
+              <h3>Netguru S.A.</h3>
+              <h4>Python Developer</h4>
+              <p>
+                <ul>
+                  <li>A Global Employee Engagement Platform (EEP) serving 50,000 companies with over 15 million users.</li>
+                  <ul>
+                    <li>Participating in migration from monolith architecture to microservices architecture</li>
+                    <li>Proposed and convinced business to do <strong>Event Storming</strong> for migration purpose</li>
+                    <li>Developed new microservices in a way of hexagonal architecture with various patterns</li>
+                    <li>Event-driven architecture</li>
+                    <li>Integration with external services</li>
+                    <li>Technologies: Python, Docker, AWS Lambda, DynamoDB, AWS Step Functions, SNS, SQS, localstack, pytest, openapi, CircleCI, Bamboo</li>
+                  </ul>
+                  <li>A platform that helps property companies protect rental Income through advanced due diligence and fraud detection tests.</li>
+                  <ul>
+                    <li>Monolithic application written in Django</li>
+                    <li>Development of new features</li>
+                    <li>Migration some features to Serverless</li>
+                    <li>Integration with external services</li>
+                    <li>Technologies: Python, Docker, AWS, MySQL, Django, DRF, AWS SAM, AWS Lambda, SNS, SQS, pytest</li>
+                  </ul>
+                  <li>An application allowing to use the value of your Real Estate as an investment opportunity.</li>
+                  <ul>
+                    <li>Monolithic application written in Django</li>
+                    <li>Development of new features</li>
+                    <li>Technologies: Python, Docker, AWS, PostgreSQL, Django, DRF, pytest</li>
+                  </ul>
+                </ul>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="vtimeline-point">
+          <div class="vtimeline-icon"><i class="fa fa-map-marker"></i></div>
+          <div class="vtimeline-block"><span class="vtimeline-date">March 2019 – July 2019</span>
             <div class="vtimeline-content shadow shadow-lg--hover">
               <h3>DLabs sp. z o.o.</h3>
               <h4>Python Developer</h4>
               <p>
                 <ul>
                   <li>PYTHON, DJANGO, JS, DOCKER</li>
-                  <li>developing web application using DJANGO</li>
+                  <li>development of web application using DJANGO</li>
                   <li>working mainly with <strong>data science</strong> projects - preparing backend code for data science components</li>
                 </ul>
               </p>
             </div>
           </div>
         </div>
+
         <div class="vtimeline-point">
           <div class="vtimeline-icon"><i class="fa fa-map-marker"></i></div>
           <div class="vtimeline-block"><span class="vtimeline-date">November 2016 – March 2019</span>
@@ -178,13 +257,10 @@
               <p>
                 <ul>
                   <li>PHP, JS, HTML, CSS, SMARTY, MYSQL, GIT</li>
-                  <li>creating web applications</li>
-                  <li>developing company version of CMS</li>
+                  <li>development of web applications</li>
+                  <li>development of company version of CMS</li>
                   <li>creating PYTHON scripts for job automation</li>
-                  <li>working with facebook API, youtube API</li>
-                  <li>creating large websites</li>
-                  <li>creating reservation systems</li>
-                  <li>creating PYTHON web scraping scripts for moving content from one website to another</li>
+                  <li>created PYTHON web scraping scripts for moving content from one website to another</li>
                   <li>optimization of JS, CSS, HTML for better website performance</li>
                   <li>maintenance of the virtual private server, working with the Linux operating system, updating and
                     installing GCC, PYTHON, WKHTMTOPDF, NODE.JS, PHP and other tools necessary to web development
@@ -222,8 +298,8 @@
                   <li>HTML, JS, CSS</li>
                   <li>creating websites</li>
                   <li>working with CMS</li>
-                  <li>creating HTML templates (SMARTY)</li>
-                  <li>creating new features in company version of CMS</li>
+                  <li>development of HTML templates (SMARTY)</li>
+                  <li>development of new features in company version of CMS</li>
                 </ul>
               </p>
             </div>
@@ -246,7 +322,7 @@
               <div class="pl-4">
                 <h5 class="title text-success">
                   <span class="title__school">Gdańsk University of Technology</span>
-                  <span class="education-date">(Oct 2016 - now)</span>
+                  <span class="education-date">(Oct 2016 - July 2020)</span>
                 </h5>
                 <p class="text-muted">Faculty of Electronics, Telecommunications and Informatics, Gdańsk, Poland</p>
                 <p>Bachelor of Engineering, Computer Science</p>
@@ -593,11 +669,9 @@
                     </div>
                   </div>
                 </div>
-
               </div>
             </div>
           </div>
-
         </div>
       </div>
     </section>
@@ -612,95 +686,111 @@
               <i class="fab fa-python"></i>
               <span>Python</span>
             </span>
-            <span class="badge bg-success text-white shadow shadow-lg--hover skill-item">Django</span>
+            <span class="badge bg-success text-white shadow shadow-lg--hover skill-item">OOP</span>
+            <span class="badge bg-success text-white shadow shadow-lg--hover skill-item">Unit tests</span>
+            <span class="badge bg-success text-white shadow shadow-lg--hover skill-item">
+              <i class="fas fa-code-branch"></i>
+              <span>Git</span>
+            </span>
+            <span class="badge bg-success text-white shadow shadow-lg--hover skill-item">REST API</span>
+            <span class="badge bg-success text-white shadow shadow-lg--hover skill-item">Starlette</span>
             <span class="badge bg-success text-white shadow shadow-lg--hover skill-item">Flask</span>
-            <span class="badge bg-success text-white shadow shadow-lg--hover skill-item">
-              <i class="fab fa-js-square"></i>
-              <span>JavaScript</span>
-            </span>
-            <span class="badge bg-success text-white shadow shadow-lg--hover skill-item">jQuery</span>
-            <span class="badge bg-success text-white shadow shadow-lg--hover skill-item">AJAX</span>
-            <span class="badge bg-success text-white shadow shadow-lg--hover skill-item">
-              <i class="fab fa-html5"></i>
-              <span>HTML5</span>
-            </span>
-            <span class="badge bg-success text-white shadow shadow-lg--hover skill-item">
-              <i class="fab fa-css3-alt"></i>
-              <span>CSS3</span>
-            </span>
-            <span class="badge bg-success text-white shadow shadow-lg--hover skill-item">Bootstrap</span>
-            <span class="badge bg-success text-white shadow shadow-lg--hover skill-item">RWD</span>
-            <span class="badge bg-success text-white shadow shadow-lg--hover skill-item">
-              <i class="fab fa-php"></i>
-              <span>PHP</span>
-            </span>
-            <span class="badge bg-success text-white shadow shadow-lg--hover skill-item">MySQL</span>
+            <span class="badge bg-success text-white shadow shadow-lg--hover skill-item">Django</span>
+            <span class="badge bg-success text-white shadow shadow-lg--hover skill-item">Django Rest Framework</span>
+            <span class="badge bg-success text-white shadow shadow-lg--hover skill-item">Docker</span>
+            <span class="badge bg-success text-white shadow shadow-lg--hover skill-item">Docker Compose</span>
           </div>
         </div>
 
         <div class="col-md-12 col-sm-12 mb-4">
           <h4 class="text-left mb-3">Knowledge of:</h4>
           <div class="skill-list p-0">
-            <span class="badge bg-primary text-white shadow shadow-lg--hover skill-item">
-              <i class="fas fa-code-branch"></i>
-              <span>Git</span>
-            </span>
-            <span class="badge bg-primary text-white shadow shadow-lg--hover skill-item">Docker</span>
-            <span class="badge bg-primary text-white shadow shadow-lg--hover skill-item">Docker Compose</span>
-            <span class="badge bg-primary text-white shadow shadow-lg--hover skill-item">Django Rest Framework</span>
-            <span class="badge bg-secondary shadow shadow-lg--hover skill-item">Celery</span>
-            <span class="badge bg-secondary shadow shadow-lg--hover skill-item">RabbitMQ</span>
-            <span class="badge bg-secondary shadow shadow-lg--hover skill-item">webpack</span>
-            <span class="badge bg-primary text-white shadow shadow-lg--hover skill-item">
-              <i class="fab fa-js"></i>
-              <span>ES6</span>
-            </span>
-            <span class="badge bg-primary text-white shadow shadow-lg--hover skill-item">
-              <i class="fab fa-vuejs"></i>
-              <span>Vue.js</span>
-            </span>
-            <span class="badge bg-primary text-white shadow shadow-lg--hover skill-item">REST API</span>
-            <span class="badge bg-primary text-white shadow shadow-lg--hover skill-item">PWA</span>
-            <span class="badge bg-primary text-white shadow shadow-lg--hover skill-item">MONGODB</span>
-            <span class="badge bg-primary text-white shadow shadow-lg--hover skill-item">Material Design</span>
-            <span class="badge bg-primary text-white shadow shadow-lg--hover skill-item">
-              <i class="fab fa-wordpress"></i>
-              <span>WordPress</span>
-            </span>
+            <span class="badge bg-gradient-indigo text-white shadow shadow-lg--hover skill-item">DDD</span>
+            <span class="badge bg-gradient-indigo text-white shadow shadow-lg--hover skill-item">CQRS</span>
+            <span class="badge bg-gradient-indigo text-white shadow shadow-lg--hover skill-item">Hexagonal architecture</span>
+            <span class="badge bg-gradient-indigo text-white shadow shadow-lg--hover skill-item">SOLID</span>
+            <span class="badge bg-gradient-indigo text-white shadow shadow-lg--hover skill-item">Design patterns</span>
+            <span class="badge bg-gradient-indigo text-white shadow shadow-lg--hover skill-item">Modular monolith</span>
+            <span class="badge bg-gradient-indigo text-white shadow shadow-lg--hover skill-item">Event driven architecture</span>
+            <span class="badge bg-gradient-indigo text-white shadow shadow-lg--hover skill-item">Event Storming</span>
+            <span class="badge bg-gradient-indigo text-white shadow shadow-lg--hover skill-item">C4 model</span>
+            <span class="badge bg-gradient-indigo text-white shadow shadow-lg--hover skill-item">TDD</span>
+            <span class="badge bg-gradient-indigo text-white shadow shadow-lg--hover skill-item">CI/CD</span>
+            <span class="badge bg-gradient-indigo text-white shadow shadow-lg--hover skill-item">Terraform</span>
+            <span class="badge bg-gradient-indigo text-white shadow shadow-lg--hover skill-item">Celery</span>
+            <span class="badge bg-gradient-indigo text-white shadow shadow-lg--hover skill-item">RabbitMQ</span>
+            <span class="badge bg-gradient-indigo text-white shadow shadow-lg--hover skill-item">Serverless Framework</span>
+
           </div>
         </div>
 
         <div class="col-md-12 col-sm-12 mb-4">
           <h4 class="text-left mb-3">Basic knowledge of:</h4>
           <div class="skill-list p-0">
-            <span class="badge bg-primary text-white shadow shadow-lg--hover skill-item">Elasticsearch</span>
+            <span class="badge bg-secondary shadow shadow-lg--hover skill-item">Event sourcing</span>
+            <span class="badge bg-secondary shadow shadow-lg--hover skill-item">AWS CloudFormation</span>
             <span class="badge bg-secondary shadow shadow-lg--hover skill-item">Django CMS</span>
-            <span class="badge bg-primary text-white shadow shadow-lg--hover skill-item">
-              <i class="fab fa-react"></i>
-              <span>React</span>
-            </span>
-            <span class="badge bg-primary text-white shadow shadow-lg--hover skill-item">
-              <i class="fab fa-node"></i>
-              <span>Node.js</span>
-            </span>
-            <span class="badge bg-primary text-white shadow shadow-lg--hover skill-item">Express.js</span>
-            <span class="badge bg-secondary shadow shadow-lg--hover skill-item">C++</span>
-            <span class="badge bg-secondary shadow shadow-lg--hover skill-item">
-              <i class="fab fa-gulp"></i>
-              <span>Gulp</span>
-            </span>
-            <span class="badge bg-secondary shadow shadow-lg--hover skill-item">
-              <i class="fab fa-grunt"></i>
-              <span>Grunt</span>
-            </span>
-            <span class="badge bg-secondary shadow shadow-lg--hover skill-item">three.js</span>
-            <span class="badge bg-secondary shadow shadow-lg--hover skill-item">SAAS</span>
-            <span class="badge bg-secondary shadow shadow-lg--hover skill-item">LEES</span>
-            <span class="badge bg-secondary shadow shadow-lg--hover skill-item">MS SQL</span>
+            <span class="badge bg-secondary shadow shadow-lg--hover skill-item">PHP</span>
             <span class="badge bg-secondary shadow shadow-lg--hover skill-item">Bash</span>
-            <span class="badge bg-secondary shadow shadow-lg--hover skill-item">
-              <i class="fab fa-java"></i>
-              <span>Java</span>
+          </div>
+        </div>
+
+        <div class="col-md-12 col-sm-12 mb-4">
+          <h4 class="text-left mb-3">Databases:</h4>
+          <div class="skill-list p-0">
+            <span class="badge bg-primary text-white shadow shadow-lg--hover skill-item">MySQL</span>
+            <span class="badge bg-primary text-white shadow shadow-lg--hover skill-item">MongoDB</span>
+            <span class="badge bg-primary text-white shadow shadow-lg--hover skill-item">PostgreSQL</span>
+            <span class="badge bg-primary text-white shadow shadow-lg--hover skill-item">DynamoDB</span>
+            <span class="badge bg-primary text-white shadow shadow-lg--hover skill-item">Redis</span>
+            <span class="badge bg-primary text-white shadow shadow-lg--hover skill-item">Elasticsearch</span>
+          </div>
+        </div>
+
+        <div class="col-md-12 col-sm-12 mb-4">
+          <h4 class="text-left mb-3">Cloud Technologies:</h4>
+          <div class="skill-list p-0">
+            <span class="badge bg-gradient-gray-dark text-white shadow shadow-lg--hover skill-item">AWS Lambda Functions</span>
+            <span class="badge bg-gradient-gray-dark text-white shadow shadow-lg--hover skill-item">AWS Step Functions</span>
+            <span class="badge bg-gradient-gray-dark text-white shadow shadow-lg--hover skill-item">AWS S3</span>
+            <span class="badge bg-gradient-gray-dark text-white shadow shadow-lg--hover skill-item">AWS SNS</span>
+            <span class="badge bg-gradient-gray-dark text-white shadow shadow-lg--hover skill-item">AWS SQS</span>
+            <span class="badge bg-gradient-gray-dark text-white shadow shadow-lg--hover skill-item">AWS API Gateway</span>
+            <span class="badge bg-gradient-gray-dark text-white shadow shadow-lg--hover skill-item">AWS ECR</span>
+            <span class="badge bg-gradient-gray-dark text-white shadow shadow-lg--hover skill-item">AWS ECS</span>
+            <span class="badge bg-gradient-gray-dark text-white shadow shadow-lg--hover skill-item">AWS Fargate</span>
+            <span class="badge bg-gradient-gray-dark text-white shadow shadow-lg--hover skill-item">AWS Batch</span>
+            <span class="badge bg-gradient-gray-dark text-white shadow shadow-lg--hover skill-item">AWS RDS</span>
+            <span class="badge bg-gradient-gray-dark text-white shadow shadow-lg--hover skill-item">AWS Cloudwatch</span>
+            <span class="badge bg-gradient-gray-dark text-white shadow shadow-lg--hover skill-item">AWS Route53</span>
+            <span class="badge bg-gradient-gray-dark text-white shadow shadow-lg--hover skill-item">AWS DynamoDB</span>
+          </div>
+        </div>
+
+        <div class="col-md-12 col-sm-12 mb-4">
+          <h4 class="text-left mb-3">Front end technologies:</h4>
+          <div class="skill-list p-0">
+            <span class="badge bg-gradient-info text-white shadow shadow-lg--hover skill-item">
+              <i class="fab fa-js-square"></i>
+              <span>JavaScript</span>
+            </span>
+            <span class="badge bg-gradient-info text-white shadow shadow-lg--hover skill-item">
+              <i class="fab fa-html5"></i>
+              <span>HTML5</span>
+            </span>
+            <span class="badge bg-gradient-info text-white shadow shadow-lg--hover skill-item">
+              <i class="fab fa-css3-alt"></i>
+              <span>CSS3</span>
+            </span>
+            <span class="badge bg-gradient-info text-white shadow shadow-lg--hover skill-item">Bootstrap</span>
+            <span class="badge bg-gradient-info text-white shadow shadow-lg--hover skill-item">RWD</span>
+            <span class="badge bg-gradient-info text-white shadow shadow-lg--hover skill-item">
+              <i class="fab fa-js"></i>
+              <span>ES6</span>
+            </span>
+            <span class="badge bg-gradient-info text-white shadow shadow-lg--hover skill-item">
+              <i class="fab fa-vuejs"></i>
+              <span>Vue.js</span>
             </span>
           </div>
         </div>
@@ -757,7 +847,7 @@
       <div class="row align-items-center justify-content-md-between">
         <div class="col-md-5 col-sm-4 col-12 mb-md-0 mb-sm-3 text-sm-center">
           <div class="copyright">
-            <span>Copyright © 2018</span>
+            <span>Copyright © 2022</span>
             <a href="mailto:contact@szymonmiks.pl">Szymon Miks - contact@szymonmiks.pl</a>
           </div>
         </div>
@@ -793,7 +883,7 @@
   <script src="js/vendors/bootstrap.min.js"></script>
   <script src="js/vendors/argon.min.js"></script>
 
-  <script src="js/scripts.min.js?ver=1.01"></script>
+  <script src="js/script.js?ver=1.01"></script>
 
 </body>
 
