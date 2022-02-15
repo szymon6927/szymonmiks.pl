@@ -1,1 +1,0 @@
-wkhtmltopdf.exe -T 3 -R 3 -B 3 -L 3 --orientation Portrait --page-size A4 --encoding 'utf-8' https://szymonmiks.pl/cv/ szymon_miks_cv.pdf
