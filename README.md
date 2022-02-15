@@ -17,6 +17,7 @@ Make sure you have installed all the following prerequisites on your development
 - [GIT](https://git-scm.com/downloads)
 - [Make](http://gnuwin32.sourceforge.net/packages/make.htm)
 - [Python 3.9](https://www.python.org/downloads/)
+- [wkhtmltopdf](https://wkhtmltopdf.org/)
 
 ## Setup
 
@@ -42,6 +43,13 @@ $ poetry run pre-commit install
    - Select `python3`
    - Click `OK`
 4. Your IDE should be ready! Voilà!
+
+
+### Generate PDF
+
+```bash
+$ wkhtmltopdf -T 3 -R 3 -B 3 -L 3 --orientation Portrait --page-size A4 --encoding 'utf-8' https://szymonmiks.pl/cv/ szymon_miks_cv.pdf
+```
 
 #### Meta
 
