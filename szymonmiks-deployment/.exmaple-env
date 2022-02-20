@@ -1,0 +1,4 @@
+FTP_HOST=test_host
+FTP_USERNAME=test_user
+FTP_PASSWORD=test_password
+FTP_PATH=test/path/foo/bar
