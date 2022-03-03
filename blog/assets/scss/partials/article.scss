@@ -1,0 +1,7 @@
+@import "../../../themes/hugo-theme-stack/assets/scss/partials/article";
+
+.article-title {
+  @include respond(xl) {
+    font-size: 3.2rem;
+  }
+}
