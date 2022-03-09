@@ -2,8 +2,8 @@
 author = "Szymon Miks"
 title = "boto3 with type annotations"
 description = ""
-date = "2022-02-25"
-image = ""
+date = "2021-04-11"
+image = "annie-spratt-QckxruozjRg-unsplash.jpg"
 categories = [
      "Software Development", "Python"
 ]
@@ -13,24 +13,30 @@ tags = [
 draft = false
 +++
 
-AWS is one of the most popular cloud providers nowadays, which means that it's very possible that you will be working with AWS service or maybe you are already familiarised with them. 
+AWS is one of the most popular cloud providers nowadays, 
+which means that it's very possible that you will be working with AWS service or maybe you are already familiarised with them. 
 
-For Python Amazon provides the SDK library [Boto3](https://boto3.amazonaws.com/v1/documentation/api/latest/index.html). As you can read on their website
+For Python Amazon provides the SDK library [Boto3](https://boto3.amazonaws.com/v1/documentation/api/latest/index.html). 
+As you can read on their website
 
-> You use the AWS SDK for Python (Boto3) to create, configure, and manage AWS services, such as Amazon Elastic Compute Cloud (Amazon EC2) and Amazon Simple Storage Service (Amazon S3). The SDK provides an object-oriented API as well as low-level access to AWS services.
+> You use the AWS SDK for Python (Boto3) to create, configure, and manage AWS services, 
+> such as Amazon Elastic Compute Cloud (Amazon EC2) and Amazon Simple Storage Service (Amazon S3). 
+> The SDK provides an object-oriented API as well as low-level access to AWS services.
 
 But there is one problem with this library from a developer's point of view. As you can read here
 
-> All of Boto3's resource and client classes are generated at runtime. This means that you cannot directly inherit and then extend the functionality of these classes because they do not exist until the program actually starts running.
-However it is still possible to extend the functionality of classes through Boto3's event system.
+> All of Boto3's resource and client classes are generated at runtime. 
+> This means that you cannot directly inherit and then extend the functionality of these classes because they do not exist until the program actually starts running. 
+> However it is still possible to extend the functionality of classes through Boto3's event system.
 
-This means that it's not so easy to do annotations, IDE hints, and so on. During this blog post, we would try to take a look at how we can approach this problem.
+This means that it's not so easy to do annotations, IDE hints, and so on. 
+During this blog post, we would try to take a look at how we can approach this problem.
 
 ## Uncle Google - to the rescue
 
-![https://media.makeameme.org/created/we-get-paid-3dddd9d8ce.jpg](https://media.makeameme.org/created/we-get-paid-3dddd9d8ce.jpg)
-
-If you type `boto3 type annotations` in google the first result would be `boto3-type-annotations`. Cool, we resolved our problem 😄 Quick one right? Unfortunately but not, if you go to the project GitHub page you will see a big heading with the title **DEPRECATED** 😢
+If you type `boto3 type annotations` in google the first result would be `boto3-type-annotations`. 
+Cool, we resolved our problem 😄 Quick one right? 
+Unfortunately but not, if you go to the project GitHub page you will see a big heading with the title **DEPRECATED** 😢
 
 Are there any alternatives?
 
@@ -48,28 +54,32 @@ I've tested both of them and unfortunately but there are a couple of problems:
 - with `mypy_boto3_builder` you need to generate them manually and store them inside your project repo and configure your IDE to use them
 - PyCharm consumes too much CPU when it comes to using `boto3-stubs` which is precisely described [here](https://github.com/vemel/mypy_boto3_builder#pycharm-consumes-too-much-cpu)
 
-Because I was not satisfied with my findings I decided to take a deeper look. While searching on google I've found that each AWS service has its own annotation as a separate python package. Example [here](https://pypi.org/project/mypy-boto3-secretsmanager/)And yeah 🎉 it's working as expected!
+Because I was not satisfied with my findings I decided to take a deeper look. 
+While searching on google I've found that each AWS service has its own annotation as a separate python package. 
+Example [here](https://pypi.org/project/mypy-boto3-secretsmanager/)And yeah 🎉 it's working as expected!
 
 In my project, I'm using `dynamodb, s3, secretsmanager and stepfunctions`
 
-I didn't think long and I installed all of them
+I didn't think long, and I installed all of them
 
 ```bash
 poetry add mypy-boto3-dynamodb, mypy-boto3-s3, mypy-boto3-secretsmanager, mypy-boto3-stepfunctions
 ```
 
-![boto3%20with%20746a4/Screenshot_2021-04-06_at_10.59.52.png](boto3%20with%20746a4/Screenshot_2021-04-06_at_10.59.52.png)
+![screenshoot1.png](screenshoot1.png)
 
-And yeah 🎉  it's working as expected!
+And yeah 🎉 it's working as expected!
 
 With this approach there is no CPU problem inside PyCharm and I can enjoy this beautiful view 😄
 
-![boto3%20with%20746a4/Screenshot_2021-04-06_at_11.15.21.png](boto3%20with%20746a4/Screenshot_2021-04-06_at_11.15.21.png)
+![screen2.png](screen2.png)
 
-![boto3%20with%20746a4/Screenshot_2021-04-06_at_11.16.16.png](boto3%20with%20746a4/Screenshot_2021-04-06_at_11.16.16.png)
+![screen3.png](screen3.png)
 
-![boto3%20with%20746a4/Screenshot_2021-04-06_at_11.33.03.png](boto3%20with%20746a4/Screenshot_2021-04-06_at_11.33.03.png)
+![screen4.png](screen4.png)
 
 ## Summary
 
-I hope I don't have to convince you why type annotations are useful especially when it comes to working with software at a bigger scale. I hope you have also learned something new from this post. If you have any questions, feel free to ask 😉
+I hope I don't have to convince you why type annotations are useful especially when it comes to working with software at a bigger scale. 
+I hope you have also learned something new from this post. 
+If you have any questions, feel free to ask 😉
