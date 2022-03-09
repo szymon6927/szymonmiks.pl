@@ -3,6 +3,7 @@ title: About
 description: Few words about myself
 date: '2019-02-28'
 lastmod: '2022-02-27'
+image: sean-oulashin-KMn4VEeEPR8-unsplash.jpg
 menu:
     main: 
         weight: -90
@@ -54,3 +55,11 @@ I’m a big fan of martial arts. I used to train in high school and now decided 
 
 ![Martial arts photo 1](fight1.jpeg) ![Martial arts photo 2](fight2.jpeg)
 ![Martial arts photo 3](fight3.jpeg) ![Martial arts photo 4](fight4.jpeg)
+
+PS.
+I love sunny weather and the sea! :sunglasses: :sunny: :ocean:   
+I'm lucky man because my city is near to [Łeba](https://en.wikipedia.org/wiki/%C5%81eba) city
+so most of my free time during summer I sent there.
+
+![Łeba 1](457c3bf8-d875-46d5-b579-b28cc4368bfd.JPG) ![Łeba 2](IMG-1324.jpg)
+![Łeba 2](IMG-1358.jpg)
