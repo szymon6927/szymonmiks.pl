@@ -3,6 +3,7 @@ title: Books on my bookshelf
 description: 
 date: '2019-02-28'
 lastmod: '2020-10-09'
+image: matthew-feeney-Nwkh-n6l25w-unsplash.jpg
 menu:
     main: 
         weight: -80
