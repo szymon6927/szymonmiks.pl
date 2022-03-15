@@ -18,7 +18,7 @@ function goToByScroll(className) {
 }
 
 $(document).ready(function () {
-  let menuItems = $('.navbar-nav li');
+  let menuItems = $('.navbar-nav li').not('.blog');
   menuItems.first().addClass('active');
 
   menuItems.click((e) => {
@@ -52,7 +52,7 @@ $(document).ready(function () {
   });
 
   $('.scroll-btn').click(() => {
-    goToByScroll('.about-me')
+    goToByScroll('.01-about-me')
   });
 
   $(window).scroll(function (event) {
