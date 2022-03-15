@@ -1,6 +1,6 @@
 ---
 title: My knowledge sources
-description: List of newsletters, blogs, youtube channels, podcasts that I like
+description: List of newsletters, blogs, youtube channels and podcasts that I like
 image: img/tim-mossholder-WE_Kv_ZB1l0-unsplash.jpg
 menu:
     main:
@@ -58,3 +58,6 @@ Big thanks to the authors of them :wink:
 - [Ostra piła](https://ostrapila.pl/) :flag-pl:
 - [devtalk](https://devtalk.pl/) :flag-pl:
 - [Porozmawiajmy o IT](https://porozmawiajmyoit.pl/) :flag-pl:
+
+## Podcasts (non-IT) :microphone:
+- 

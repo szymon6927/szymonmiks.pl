@@ -167,6 +167,6 @@ comments: false
 ---
 
 List of open-source projects that look interesting to me. 
-This list includes projects from the various domains for example python, databases, developer tools, algorithms.
+This list includes projects from the various domains, for example: python, databases, developer tools and algorithms.
 
 :point_down: :point_down: :point_down:

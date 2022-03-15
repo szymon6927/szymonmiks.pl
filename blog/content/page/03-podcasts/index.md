@@ -13,5 +13,5 @@ comments: false
 I had the pleasure to do a few podcasts, here you can find links to them
 
 
-- https://codestories.fm/episodes/10 - About 10x developers (PL)
-- https://codestories.fm/episodes/11 - About refactoring (PL)
+- https://codestories.fm/episodes/10 - About 10x developers :flag-pl:
+- https://codestories.fm/episodes/11 - About refactoring :flag-pl:

@@ -98,6 +98,6 @@ menu:
 comments: false
 ---
 
-List of commercial projects that look interesting to me. Most of them has some kind of free plan :wink:
+List of commercial projects that look interesting to me. Most of them have some kind of free plan :wink:
 
 :point_down: :point_down: :point_down:

@@ -40,7 +40,7 @@ Here is the list of the IT books that are currently on my bookshelf :closed_book
 
 If you are interested in non-IT books you can check out my [goodreads.com profile](https://www.goodreads.com/user/show/103430015-szymon-miks)
 
-And here is how it looks like currently (there are no e-books that are on my Kindle of course :smile: )
+And here is what it looks like currently (there are no e-books that are on my Kindle of course :smile: )
 
 
 ![Books on my bookshelf](img/IMG-1793.jpg)

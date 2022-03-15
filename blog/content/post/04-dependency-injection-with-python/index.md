@@ -11,10 +11,11 @@ tags = [
     "python", "di", "dependency injection", "kink"
 ]
 draft = false
+canonicalUrl = "https://www.netguru.com/blog/dependency-injection-with-python-make-it-easy"
 +++
 
 As a software engineer, your objective is to built software in a way it is modular and easy to extend. 
-There are few general factors that one should take into consideration:
+There are a few general factors that one should take into consideration:
 
 - separation of concerns
 - low coupling
@@ -27,7 +28,7 @@ It is a known fact DI is not widely used inside Python mostly because of its scr
 but you as an experienced developer should already know that Python is not only a scripting language 
 but is widely used in professional software development as well. So give me a chance to convince you 😉
 
-**Dependency injection** is a technique build on the top of the **Inversion of Control**. 
+**Dependency injection** is a technique built on the top of the **Inversion of Control**. 
 The main idea is to separate the construction and usage of objects.
 
 Let's consider the following example:
@@ -40,17 +41,18 @@ class S3FileUploader(FileUploader):
         self._sdk_client = boto3.client("s3") # our dependency
 ```
 
-`S3FileUploader` is an implementation of `FileUploader` interface and is using `boto s3 sdk client` this relationship is called a **"dependency"**. 
+`S3FileUploader` is an implementation of `FileUploader` interface and is using `boto s3 sdk client`.
+This relationship is called a **"dependency"**. 
 
 In the given example `boto3.client("s3")` construction is hardcoded inside `S3FileUploader` initialiser. 
-This leads us to low **cohesion** and high **coupling** of our components, which might be an indication of a bad design.
+Which might be an indication of a bad design.
 
 The solution here is to delegate the responsibility related to initialising an object and inject the object initialised this way as our dependency.
 
 ## Global state
 
 Let’s be honest, the example above is not the worst-case scenario. 
-Many times I've seen examples where a class depended on something from a global state (being there, done that, learnt my lesson 😅 ).
+Many times I've seen examples where a class depended on something from a global state (been there, done that, learnt my lesson :sweat_smile: ).
 
 ```python
 # worst case scenario
@@ -67,12 +69,12 @@ class S3FileUploader(FileUploader):
             ...
 ```
 
-**Please do not rely on a global state**❗
+**Please do not rely on a global state** :exclamation:
 
-There are plenty of conversations on the internet treating about why this is bad. 
+There are plenty of conversations on the internet talking about why this is bad. 
 Allow me to explain why this is not a good idea:
 
-- it breaks encapsulation - any other objects can change the state of it
+- it breaks encapsulation - any other object can change the state of it
 - testing is much harder - requires a lot of mocks flying around
 
 ## Dependency injection library
@@ -86,10 +88,10 @@ class S3FileUploader(FileUploader):
         self._client = s3_sdk_client # this is injected now!
 ```
 
-Isn't it better? Now it clearly visible what is required for this class to work. 
+Isn't it better? Now it's clearly visible what is required for this class to work. 
 
 To achieve this we will need some dependency injection library. 
-In all of my projects I use kink ([https://github.com/kodemore/kink](https://github.com/kodemore/kink)) - it's a library created by my friend 😉
+In all of my projects I use kink ([https://github.com/kodemore/kink](https://github.com/kodemore/kink)) - it's a library created by my friend :wink:
 
 In my opinion, it's a very flexible, friendly, and easy-to-use Python library. 
 I encourage you to check out the GitHub page.
@@ -163,11 +165,10 @@ Mainly I'm using the second one because I'm a fan of typing in Python 😉
 
 As you have seen some of my definitions inside `bootstrap_di` function are using the lambda function. 
 It's because **kink** supports on-demand service creation. 
-It means that the creation of our dependency will not be executed until this is requested.
+It means that the creation of our dependency will not be executed until it is requested.
 
-  
 
-Ok, that's all in the case of setup our DIC, it's pretty simple, isn't it?
+Ok, that's all when it comes to setting up our DIC, it's pretty simple, isn't it?
 
 #### Usage
 
@@ -185,14 +186,12 @@ class S3FileReader(FileReader):
         self._logger = logger # this is injected now!
 ```
 
- 
-
 We used the `@inject` decorator which is doing auto wiring of our dependencies. 
-Generally speaking, auto wiring is functionality that checks what's inside the DIC, 
+Generally speaking, auto wiring is a functionality that checks what's inside the DIC, 
 and then if the type or name matches with what is defined inside the object's initialiser 
 then the **kink** will do the job and will inject exactly what is needed.
 
-Simple right? This is called `constructor injection` but with kink, we can do the same also with functions. 
+Simple, right? This is called `constructor injection` but with kink, we can also do the same with functions. 
 Let's consider another example.
 
 ```python
@@ -212,17 +211,15 @@ def example_lambda_handler(
     logger.debug(f"Context = {context}")
 ```
 
-  
-
 Again the rules are the same as for `constructor injection`, kink will do the job and will resolve our dependencies automatically.
 
 ## Benefits of using DI
 
-- it's much easier to follow SRP (Single Responsibility Principle)
-- the code is more reusable - you can inject your services in many places
-- it's much easier to test - you can inject mocks or test doubles of your dependencies
-- the code is more readable - you are looking only at behaviors of your components
-- it can improve the modularity of your application
+- It's much easier to follow SRP (Single Responsibility Principle)
+- The code is more reusable - you can inject your services in many places
+- It's much easier to test - you can inject mocks or test doubles of your dependencies
+- The code is more readable - you are looking only at behaviors of your components
+- It can improve the modularity of your application
 
 And much more ...
 
@@ -234,10 +231,10 @@ As a developer, you have to be aware of the responsibilities and roles of your c
 ### There are far too many dependencies.
 
 The main problem is the greed of our components. 
-So with an easy way to inject dependencies we are injecting "almost everything" to our component. 
+So with an easy way to inject dependencies we are injecting "almost everything" into our component. 
 What do you think, is this component doing only one thing? 
-I will tell you - if it needs to be aware of such many dependencies then it's definitely not doing one thing, this is against SRP. 
-That's another indicator of bad design but we don't see it at first look because we are happy with the ease of use of our **DIC**.
+I will tell you - if it needs to be aware of so many dependencies then it's definitely not doing one thing, this is against SRP. 
+That's another indicator of bad design but we don't see it at first glance because we are happy with the ease of use of our **DIC**.
 
 **Greedy components should be refactored!**
 
@@ -265,15 +262,15 @@ def example_lambda_handler(
 
 It's obvious, this controller does not have one responsibility, this is typical DI abuse. 
 The above controller needs to be aware of many dependencies and has to handle many aspects of the business logic. 
-Such examples should be considered as a bad design and DI misuse.
+Such example should be considered a bad design and DI misuse.
 
-As it is with everything in life if you will misuse the DI you can get your project in trouble. 
-So in the final, you will end up with less readable code, 
-it will be more difficult to manage and you will lose all of the benefits which I mentioned above. 
+As it is with everything in life if you misuse the DI you can get your project in trouble. 
+So in the end, you will end up with less readable code, 
+it will be more difficult to manage, and you will lose all the benefits that I mentioned above. 
 The final result will be counterproductive. 
 
 I would like to mention Uncle Bob's tweet, 
-pretty old but I think it explains it better than everything that I can bring you to the table.
+pretty old, but I think it explains it better than everything that I can bring you to the table.
 
 {{< twitter_simple 308980513929035776 >}}
 
@@ -295,11 +292,14 @@ On the Python market, there are few other libraries for DI which look promising.
 
 ## Summary
 
-I hope the main idea behind DI is more cleaner for you after this blog post. 
-And I hope you see the added value of this. I encourage you to try with **kink** and with DI 😎  
+I hope the main idea behind DI is more clear for you after this blog post. 
+And I hope you see the added value of this. I encourage you to try **kink** and DI 😎  
 If you have any question/thoughts/comments please don't hesitate to ping me 😉
 
-Most of the code examples I took either from my personal or commercial projects. 
+Most of the code examples above I took either from my personal or commercial projects. 
 But if you would like to check the DI usage in a wider context, and within some real problem, 
-then you can visit my project on GitHub 
+you can visit my project on GitHub 
 [https://github.com/szymon6927/surebets-finder/tree/master](https://github.com/szymon6927/surebets-finder/tree/master) - I used DI with **kink** there.
+
+**PS.**
+This post has been also published on my company's blog (https://www.netguru.com/blog/dependency-injection-with-python-make-it-easy)
