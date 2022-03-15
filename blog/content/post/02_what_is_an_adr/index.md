@@ -1,11 +1,11 @@
 +++
 author = "Szymon Miks"
 title = "What is an ADR?"
-description = ""
+description = "Architecture Decision Record - how to document architecture decisions in your project"
 date = "2021-04-09"
-image = "beatriz-perez-moya-XN4T2PVUUgk-unsplash.jpg"
+image = "img/beatriz-perez-moya-XN4T2PVUUgk-unsplash.jpg"
 categories = [
-    "Software Development", "Architecture"
+    "Software_Development", "Architecture"
 ]
 tags = [
     "architecture", "software development", "adr"
@@ -71,7 +71,7 @@ you will see this in the following examples.
 Mainly because I didn't feel the need to do this, and I didn't want to force it. 
 It should be easy to use for others and adjusted to our requirements.
 
-![adr1.png](adr1.png)
+![adr1.png](img/adr1.png)
 
 `adr-001-database_choice.md`
 

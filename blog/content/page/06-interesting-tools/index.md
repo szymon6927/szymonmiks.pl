@@ -1,6 +1,7 @@
 ---
 title: Interesting tools
-image: scott-graham-5fNmWej4tAA-unsplash.jpg
+description: List of commercial projects that look interesting to me
+image: img/scott-graham-5fNmWej4tAA-unsplash.jpg
 links:
   - title: Cloudcraft
     description: Visualize your cloud architecture like a pro. Create smart AWS diagrams

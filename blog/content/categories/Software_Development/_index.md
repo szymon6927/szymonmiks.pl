@@ -1,6 +1,6 @@
 ---
 title: "Software Development"
-description: ""
+description: "Blog posts round software development topic"
 slug: "software-development"
 image: "chris-ried-ieic5Tq8YMk-unsplash.jpg"
 style:

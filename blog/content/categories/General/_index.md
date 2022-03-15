@@ -1,6 +1,6 @@
 ---
 title: "General"
-description: ""
+description: "A general blog post without any specified category."
 slug: "general"
 image: "annie-spratt-QckxruozjRg-unsplash.jpg"
 style:

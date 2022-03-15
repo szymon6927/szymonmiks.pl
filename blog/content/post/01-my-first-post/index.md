@@ -3,7 +3,7 @@ author = "Szymon Miks"
 title = "Welcome on my blog!"
 description = "This is my first post 😉"
 date = "2021-04-05"
-image = "marvin-meyer-SYTO3xs06fU-unsplash.jpg"
+image = "img/marvin-meyer-SYTO3xs06fU-unsplash.jpg"
 categories = [
     "General"
 ]
@@ -20,7 +20,7 @@ Hi everyone, my name is Szymon and while writing this blog post I work as a Pyth
 
 ## Quick history
 
-I'm from a small city in the north of Poland next to Gdańsk - Lębork. 
+I'm from a small city in the north of Poland next to Gdańsk - **Lębork**. 
 A few months ago when I was studying at the Technical University of Gdańsk I had to commute to my university every week.
 And that time was very abundant to me because I had a lot of time for listening to podcasts. 
 Btw yeah I'm a huge fan of podcasts so if you would like to talk to me about it, please don't hesitate!
@@ -34,13 +34,11 @@ He was talking about blogging for programmers and how he started with his blog a
 
 Two key ideas remained in my memory.
 
-> Document. Don’t create.
-> 
+> **Document. Don’t create.**
 
 and the second one
 
-> Your English is good enough.
-> 
+> **Your English is good enough.**
 
 I was thinking about creating my blog for some time, 
 but when I was thinking about it then it scared me, 

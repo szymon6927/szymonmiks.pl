@@ -1,6 +1,7 @@
 ---
 title: Interesting projects
-image: dan-cristian-padure-noOXRT9gfQ8-unsplash.jpg
+image: img/dan-cristian-padure-noOXRT9gfQ8-unsplash.jpg
+description: List of open-source projects that look interesting to me
 links:
   - title: SQLFluff
     description: The SQL Linter for humans.
@@ -150,6 +151,10 @@ links:
     description: A specification for describing event data in a common way
     website: https://cloudevents.io/
     image: https://cloudevents.io/img/logos/cloudevents-icon-color.png
+  - title: Pumba
+    description: Pumba is a chaos testing command line tool for Docker containers. Pumba disturbs your containers by crashing containerized application, emulating network failures and stress-testing container resources (cpu, memory, fs, io, and others).
+    website: https://github.com/alexei-led/pumba
+    image: https://raw.githubusercontent.com/alexei-led/pumba/master/docs/img/pumba_logo.png
     
   
 

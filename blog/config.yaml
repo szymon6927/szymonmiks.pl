@@ -2,10 +2,10 @@ baseurl: https://blog.szymonmiks.pl
 languageCode: en-us
 theme: hugo-theme-stack
 paginate: 10
-title: Szymon Miks
+title: Szymon Miks - personal blog
 
 # Change it to your Disqus shortname before using
-disqusShortname:
+disqusShortname: blog-szymonmiks-pl
 
 # GA Tracking ID
 googleAnalytics:
@@ -29,7 +29,7 @@ params:
         - post
     featuredImageField: image
     rssFullContent: true
-    favicon: /img/favicon.png
+    favicon: /img/favicon.ico
 
     footer:
         since: 2022
@@ -140,7 +140,7 @@ params:
             - tag-cloud
 
         archives:
-            limit: 5
+            limit: 10
 
         tagCloud:
             limit: 10
@@ -155,9 +155,9 @@ params:
 
     defaultImage:
         opengraph:
-            enabled: false
+            enabled: true
             local: false
-            src:
+            src: /img/blog.szymonmiks.pl.jpg
 
     colorScheme:
         # Display toggle
@@ -204,6 +204,12 @@ menu:
           url: https://www.facebook.com/szymon.miks
           params:
               icon: brand-facebook
+
+        - identifier: homepage
+          name: szymonmiks.pl
+          url: https://szymonmiks.pl/
+          params:
+              icon: code
 
 related:
     includeNewer: true

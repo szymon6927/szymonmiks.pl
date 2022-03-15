@@ -1,7 +1,7 @@
 ---
-title: "Podcasts"
-slug: "spodcasts"
-image: will-francis-ZDNyhmgkZlQ-unsplash.jpg
+title: Podcasts
+description: Podcasts I had the opportunity to participate in
+image: img/will-francis-ZDNyhmgkZlQ-unsplash.jpg
 menu:
     main:
         weight: -70

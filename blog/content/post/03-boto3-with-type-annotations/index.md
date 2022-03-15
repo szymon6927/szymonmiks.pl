@@ -1,11 +1,11 @@
 +++
 author = "Szymon Miks"
 title = "boto3 with type annotations"
-description = ""
+description = "How to leverage types annotations when using the boto3 library"
 date = "2021-04-11"
-image = "annie-spratt-QckxruozjRg-unsplash.jpg"
+image = "img/annie-spratt-QckxruozjRg-unsplash.jpg"
 categories = [
-     "Software Development", "Python"
+     "Software_Development", "Python"
 ]
 tags = [
     "python", "boto3", "aws", "type-annotations"
@@ -66,17 +66,17 @@ I didn't think long, and I installed all of them
 poetry add mypy-boto3-dynamodb, mypy-boto3-s3, mypy-boto3-secretsmanager, mypy-boto3-stepfunctions
 ```
 
-![screenshoot1.png](screenshoot1.png)
+![screenshoot1.png](img/screenshoot1.png)
 
 And yeah 🎉 it's working as expected!
 
 With this approach there is no CPU problem inside PyCharm and I can enjoy this beautiful view 😄
 
-![screen2.png](screen2.png)
+![screen2.png](img/screen2.png)
 
-![screen3.png](screen3.png)
+![screen3.png](img/screen3.png)
 
-![screen4.png](screen4.png)
+![screen4.png](img/screen4.png)
 
 ## Summary
 

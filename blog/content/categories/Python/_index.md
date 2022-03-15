@@ -1,6 +1,6 @@
 ---
 title: "Python"
-description: ""
+description: "Blog posts about Python"
 slug: "python"
 image: "artturi-jalli-g5_rxRjvKmg-unsplash.jpg"
 style:

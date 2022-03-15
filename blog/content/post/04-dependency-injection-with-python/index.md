@@ -1,11 +1,11 @@
 +++
 author = "Szymon Miks"
 title = "Dependency injection with Python, make it easy!"
-description = ""
+description = "How to use dependency injection pattern with Python"
 date = "2021-04-14"
-image = "chris-ried-ieic5Tq8YMk-unsplash.jpg"
+image = "img/chris-ried-ieic5Tq8YMk-unsplash.jpg"
 categories = [
-     "Software Development", "Python"
+     "Software_Development", "Python"
 ]
 tags = [
     "python", "di", "dependency injection", "kink"

@@ -1,9 +1,9 @@
 ---
 title: Books on my bookshelf
-description: 
-date: '2019-02-28'
+description: List of the IT books that are currently on my bookshelf 
+date: '2020-10-09'
 lastmod: '2020-10-09'
-image: matthew-feeney-Nwkh-n6l25w-unsplash.jpg
+image: img/matthew-feeney-Nwkh-n6l25w-unsplash.jpg
 menu:
     main: 
         weight: -80
@@ -43,4 +43,4 @@ If you are interested in non-IT books you can check out my [goodreads.com profil
 And here is how it looks like currently (there are no e-books that are on my Kindle of course :smile: )
 
 
-![Books on my bookshelf](IMG-1793.jpg)
+![Books on my bookshelf](img/IMG-1793.jpg)
