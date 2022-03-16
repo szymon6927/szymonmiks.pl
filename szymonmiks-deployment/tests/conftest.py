@@ -51,3 +51,4 @@ def clean_up_sftp(ssh_client: SSHClient, ftp_config: FTPConfig) -> Generator[Non
     sftp = ssh_client.open_sftp()
 
     _sftp_rm(ftp_config.path, sftp)
+    sftp.close()

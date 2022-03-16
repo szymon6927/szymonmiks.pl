@@ -23,6 +23,8 @@ def test_can_get_file_from_the_sftp_server(ftp_config: FTPConfig, ssh_client: SS
     )
     sftp = ssh_client.open_sftp()
     sftp.put(str(upload_file), f"{ftp_config.path}/{upload_file.name}")
+    sftp.close()
+
     client = ParamikoFTPClient(ssh_client, ftp_config)
 
     # when

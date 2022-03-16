@@ -15,6 +15,12 @@ mypy:
 test:
 	poetry run pytest
 
+deploy_blog:
+	cd ../blog/ && hugo -D && cd ../szymonmiks-deployment && poetry run python deploy.py blog
+
+deploy_website:
+	poetry run python deploy.py website
+
 lint: isort black flake8 mypy
 
 tests: test

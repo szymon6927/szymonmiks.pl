@@ -1,12 +1,12 @@
 from pathlib import Path
 
-from szymonmiks_deployment.file_collector import FileCollector
+from szymonmiks_deployment.file_collector import WebsiteFileCollector
 
 
 def test_can_collect_files() -> None:
     # given
     base_dir = Path(__file__).parent
-    collector = FileCollector(base_dir)
+    collector = WebsiteFileCollector(base_dir)
     collector.EXCLUDED = []
 
     # when
@@ -20,7 +20,7 @@ def test_can_collect_files() -> None:
 def test_can_collect_files_if_excluded_defined() -> None:
     # given
     base_dir = Path(__file__).parent
-    collector = FileCollector(base_dir)
+    collector = WebsiteFileCollector(base_dir)
     collector.EXCLUDED = ["tests"]
 
     # when

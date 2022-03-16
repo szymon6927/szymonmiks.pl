@@ -12,7 +12,7 @@ def test_can_build_ftp_config_from_env(monkeypatch: MonkeyPatch) -> None:
     monkeypatch.setenv("FTP_PATH", "test/path/foo/bar")
 
     # when
-    config = FTPConfig.from_env()
+    config = FTPConfig.from_env_for_website()
 
     # then
     assert isinstance(config, FTPConfig)
@@ -31,7 +31,7 @@ def test_should_raise_an_exception_if_any_of_the_value_is_empty(monkeypatch: Mon
 
     # then
     with pytest.raises(FTPConfigError):
-        FTPConfig.from_env()
+        FTPConfig.from_env_for_website()
 
 
 def test_should_raise_an_exception_if_missing_env(monkeypatch: MonkeyPatch) -> None:
@@ -42,4 +42,4 @@ def test_should_raise_an_exception_if_missing_env(monkeypatch: MonkeyPatch) -> N
 
     # then
     with pytest.raises(FTPConfigError):
-        FTPConfig.from_env()
+        FTPConfig.from_env_for_website()

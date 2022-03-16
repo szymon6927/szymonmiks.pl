@@ -8,6 +8,7 @@ authors = ["Szymon Miks <miks.szymon@gmail.com>"]
 python = "^3.9"
 python-dotenv = "^0.19.2"
 paramiko = "^2.9.2"
+typer = "^0.4.0"
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.2"

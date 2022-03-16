@@ -1,10 +1,10 @@
-from szymonmiks_deployment.file_collector import FileCollector
+from szymonmiks_deployment.file_collector import IFileCollector
 from szymonmiks_deployment.ftp_client import IFTPClient
 from szymonmiks_deployment.logger import LoggerFactory
 
 
 class DeploymentManager:
-    def __init__(self, client: IFTPClient, file_collector: FileCollector) -> None:
+    def __init__(self, client: IFTPClient, file_collector: IFileCollector) -> None:
         self._client = client
         self._file_collector = file_collector
         self._logger = LoggerFactory.create(__name__)

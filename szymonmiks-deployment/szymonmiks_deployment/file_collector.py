@@ -1,9 +1,21 @@
+from abc import ABC, abstractmethod
 from pathlib import Path
 from typing import List
 
 
-class FileCollector:
-    EXCLUDED = ["szymonmiks-deployment", ".git", ".idea", ".gitignore", "README.md"]
+class IFileCollector(ABC):
+    @property
+    @abstractmethod
+    def base_dir(self) -> Path:
+        pass
+
+    @abstractmethod
+    def collect(self) -> List[Path]:
+        pass
+
+
+class WebsiteFileCollector(IFileCollector):
+    EXCLUDED = ["szymonmiks-deployment", ".git", ".idea", ".gitignore", "README.md", "blog"]
 
     def __init__(self, base_dir: Path) -> None:
         self._base_dir = base_dir
@@ -23,5 +35,23 @@ class FileCollector:
                 continue
 
             file_list.append(p)
+
+        return file_list
+
+
+class BlogFileCollector(IFileCollector):
+    def __init__(self, base_dir: Path) -> None:
+        self._base_dir = base_dir
+
+    @property
+    def base_dir(self) -> Path:
+        return self._base_dir
+
+    def collect(self) -> List[Path]:
+        file_list = []
+
+        for p in self._base_dir.rglob("*"):
+            if "public" in p.parts:
+                file_list.append(p)
 
         return file_list
