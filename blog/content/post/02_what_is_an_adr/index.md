@@ -91,7 +91,7 @@ Each time when you want to run Santander API or integration tests you have to ha
 APPROVED
 
 ### Comment
-Contact @lukasz-ratajczyk-ng and ask him to provide the VPN config file to you.
+Contact XYZ and ask him to provide the VPN config file to you.
 
 ```
 

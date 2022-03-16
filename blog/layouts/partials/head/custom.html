@@ -1,6 +1,7 @@
 <style>
     :root {
         --body-text-color: #525252;
+        --card-text-color-secondary: #595959;
     }
     .article-list--compact article .article-image img {
         height: auto;
@@ -11,7 +12,10 @@
         font-size: 2.4rem;
     }
 
-    .menu li svg {
+    :root[data-scheme=light] .menu li svg {
         stroke: #525252;
+    }
+    :root[data-scheme=dark] .menu li svg {
+        stroke: #fff;
     }
 </style>
