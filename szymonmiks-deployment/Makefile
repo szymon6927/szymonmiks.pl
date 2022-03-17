@@ -21,6 +21,8 @@ deploy_blog:
 deploy_website:
 	poetry run python deploy.py website
 
+deploy_all: deploy_blog deploy_website
+
 lint: isort black flake8 mypy
 
 tests: test
