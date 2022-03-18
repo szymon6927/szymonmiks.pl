@@ -59,5 +59,3 @@ Big thanks to the authors of them :wink:
 - [devtalk](https://devtalk.pl/) :flag-pl:
 - [Porozmawiajmy o IT](https://porozmawiajmyoit.pl/) :flag-pl:
 
-## Podcasts (non-IT) :microphone:
-- 
