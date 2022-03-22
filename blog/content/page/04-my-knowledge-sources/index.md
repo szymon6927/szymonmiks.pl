@@ -34,8 +34,9 @@ Big thanks to the authors of them :wink:
 - https://sobolevn.me/
 - https://dddinpython.com/
 - https://www.infoq.com/articles/
+- http://www.kamilgrzybek.com/
 
-## Youtube channels :video_camera:
+## YouTube channels :video_camera:
 
 - [CodeOpinion](https://www.youtube.com/channel/UC3RKA4vunFAfrfxiJhPEplw)
 - [DevMentors](https://www.youtube.com/c/DevMentors)
