@@ -155,6 +155,14 @@ links:
     description: Pumba is a chaos testing command line tool for Docker containers. Pumba disturbs your containers by crashing containerized application, emulating network failures and stress-testing container resources (cpu, memory, fs, io, and others).
     website: https://github.com/alexei-led/pumba
     image: https://raw.githubusercontent.com/alexei-led/pumba/master/docs/img/pumba_logo.png
+  - title: ddd-by-examples
+    description: ddd-by-examples
+    website: https://github.com/ddd-by-examples
+    image: https://avatars.githubusercontent.com/u/37220248?s=200&v=4
+  - title: awesome-eventstorming
+    description: Awesome EventStorming
+    website: https://github.com/mariuszgil/awesome-eventstorming
+    image: https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png
     
   
 
