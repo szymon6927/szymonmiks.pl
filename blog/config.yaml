@@ -190,26 +190,37 @@ menu:
         - identifier: github
           name: GitHub
           url: https://github.com/szymon6927
+          weight: -100
           params:
               icon: brand-github
 
         - identifier: linkedin
           name: LinkedIn
           url: https://www.linkedin.com/in/szymon-miks/
+          weight: -90
           params:
               icon: brand-linkedin
-
-        - identifier: facebook
-          name: Facebook
-          url: https://www.facebook.com/szymon.miks
-          params:
-              icon: brand-facebook
 
         - identifier: homepage
           name: szymonmiks.pl
           url: https://szymonmiks.pl/
+          weight: -80
           params:
               icon: code
+
+        - identifier: facebook
+          name: Facebook
+          url: https://www.facebook.com/szymon.miks
+          weight: -70
+          params:
+              icon: brand-facebook
+
+        - identifier: rss
+          name: RSS
+          url: https://blog.szymonmiks.pl/index.xml
+          weight: -60
+          params:
+              icon: rss
 
 related:
     includeNewer: true
