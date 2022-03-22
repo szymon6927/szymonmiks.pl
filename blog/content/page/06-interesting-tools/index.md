@@ -87,6 +87,10 @@ links:
     description: The internal tool. You don't have to build.
     website: https://www.basedash.com/
     image: https://assets.website-files.com/60ec98eefbc67309bb552ab8/60f1e324e14c1d66aaa847fe_Lockup%20-%20Primary.svg
+  - title: CodeScene
+    description: CodeScene is a multi-purpose tool bridging code, business and people. See hidden risks and social patterns in your code. Prioritize and reduce technical debt.
+    website: https://codescene.com/
+    image: https://avatars.githubusercontent.com/u/17876045?s=280&v=4
 
 
 
