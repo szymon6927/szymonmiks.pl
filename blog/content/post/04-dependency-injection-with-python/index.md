@@ -26,7 +26,7 @@ I will try to explain why this is the case and how to use dependency injection w
 
 It is a known fact DI is not widely used inside Python mostly because of its scripting nature 
 but you as an experienced developer should already know that Python is not only a scripting language 
-but is widely used in professional software development as well. So give me a chance to convince you 😉
+but is widely used in professional software development as well. So give me a chance to convince you :wink:
 
 **Dependency injection** is a technique built on the top of the **Inversion of Control**. 
 The main idea is to separate the construction and usage of objects.
@@ -161,7 +161,7 @@ di["s3_sdk_client"] = aws_factory.s3_sdk_client()
 di[S3SdkClient] = aws_factory.s3_sdk_client()
 ```
 
-Mainly I'm using the second one because I'm a fan of typing in Python 😉
+Mainly I'm using the second one because I'm a fan of typing in Python :wink:
 
 As you have seen some of my definitions inside `bootstrap_di` function are using the lambda function. 
 It's because **kink** supports on-demand service creation. 
@@ -293,8 +293,9 @@ On the Python market, there are few other libraries for DI which look promising.
 ## Summary
 
 I hope the main idea behind DI is more clear for you after this blog post. 
-And I hope you see the added value of this. I encourage you to try **kink** and DI 😎  
-If you have any question/thoughts/comments please don't hesitate to ping me 😉
+And I hope you see the added value of this. I encourage you to try **kink** and DI :sunglasses:
+
+If you have any question/thoughts/comments please don't hesitate to ping me :wink:
 
 Most of the code examples above I took either from my personal or commercial projects. 
 But if you would like to check the DI usage in a wider context, and within some real problem, 

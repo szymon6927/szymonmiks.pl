@@ -4,3 +4,4 @@ node_modules
 .hugo_build.lock
 blog/resources
 blog/public
+.pytest_cache
