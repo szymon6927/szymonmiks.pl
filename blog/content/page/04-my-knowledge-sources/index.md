@@ -35,6 +35,8 @@ Big thanks to the authors of them :wink:
 - https://dddinpython.com/
 - https://www.infoq.com/articles/
 - http://www.kamilgrzybek.com/
+- http://bottega.com.pl/artykuly-i-prezentacje :flag-pl:
+- https://blog.pragmaticengineer.com/
 
 ## YouTube channels :video_camera:
 
