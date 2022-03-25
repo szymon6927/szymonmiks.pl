@@ -59,7 +59,8 @@ Examples below, I decided to mix them.
 Some of them have been taken from my projects. 
 Some of them have been figured out by myself for purpose of this blog post. :sunglasses:
 
-All of them, together with unit tests are available on my GitHub <link here>.
+All of them, together with unit tests are available on my 
+GitHub :rocket: - https://github.com/szymon6927/szymonmiks.pl/tree/master/blog/content/post/06-value-objects-with-python/value-object-examples.
 
 ```python
 from dataclasses import dataclass
