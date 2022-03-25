@@ -1,9 +1,9 @@
 +++
 author = "Szymon Miks"
 title = "Value objects with Python"
-description = "Value objects explained with Python code examples"
+description = "Value objects explained with Python examples"
 date = "2022-03-19"
-image = "img/joshua-reddekopp-SyYmXSDnJ54-unsplash.jpeg"
+image = "img/marketing-branding-creativity-business-values.jpeg"
 categories = [
      "Python", "Software_Development"
 ]
@@ -13,51 +13,50 @@ tags = [
 draft = true
 +++
 
-**Value object** is basic building block from tactical DDD (Domain Driven Design).
+A **Value object** is a basic building block from tactical DDD (Domain Driven Design).
 
-In today's blog post, I will show you, how you can build value objects with **Python** :snake:
+In today's blog post, I will show you how to build value objects with **Python** :snake:
 
 ## Definition
 
 [As wikipedia says](https://en.wikipedia.org/wiki/Value_object):
 > In computer science, a value object is a small object that represents a simple entity whose equality is not based on identity: i.e. two value objects are equal when they have the same value, not necessarily being the same object.
 
-The best explanation about it, you will find in these two books:
+More detailed explanation can be found in those two books:
 - [Domain-Driven Design: Tackling Complexity in the Heart of Software](https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/)
 - [Implementing Domain-Driven Design](https://www.amazon.com/Implementing-Domain-Driven-Design-Vaughn-Vernon/dp/0321834577)
 
-I really recommend them :point_up: &nbsp;, especially the second one.
+I can’t recommend them enough :point_up: &nbsp;, especially the second one.
 
 
-## Characteristics of value object
-- describes the features of a specific domain concept
-- binds many attributes into a logical business concept
-- has no identity, it's identified by the values of the attributes
-- comparison is done through comparing values of the attributes
-- it's immutable
-- has no methods that will change the object's state (if such method is needed new object should be returned)
-- side effect free behavior
+## Characteristics of a value object
+- Describes the features of a specific domain concept
+- Binds many attributes into a logical business concept
+- Has no identity; it's identified by the values of the attributes
+- Comparison is done through comparing values of the attributes
+- It's immutable
+- Has no methods that can change the object's state (if such a method is needed a new object should be returned instead)
+- Side effect free behavior
 
 
 ## Benefits
-- builtin validation
-- internal implementation is easy to change because we have the stable interface of our object
-- encapsulates the logic, for example: validation
-- improves code readability
-- helps you fight with [Primitive Obsession](https://refactoring.guru/smells/primitive-obsession)
-- easy to unit test
+- Built-in validation
+- Internal implementation is easy to change because our object has a stable interface
+- Encapsulates the logic, for example: validation
+- Improves code readability
+- Helps you fight with [Primitive Obsession](https://refactoring.guru/smells/primitive-obsession)
+- Easy to unit test
 
 ## Examples
 
-Before we go to the examples. I decided to use [dataclasses](https://docs.python.org/3/library/dataclasses.html) due to:
-- `frozen=True` guarantees the immutability
-- `eq=True` is setup by default which means that `__eq__()` method will be generated automatically
+I decided to use [dataclasses](https://docs.python.org/3/library/dataclasses.html) in my examples due to the following reasons:
+- `frozen=True` guarantees the object's immutability
+- by default dataclasses are shipped with `__eq__()` method (`eq=True`) which enables objects comparison 
 
-You can use pure python classes, but then you have to take care of the above things by yourself.
+Using pure python classes is possible but inefficient as you have to take care of the above by yourself.
 
-Examples below, I decided to mix them. 
-Some of them have been taken from my projects. 
-Some of them have been figured out by myself for purpose of this blog post. :sunglasses:
+Some examples in this blog post may be perceived as half-baked. The reason for that is the fact that 
+some of them are taken from my projects, and others written explicitly for the purpose of this blog post :sunglasses:.
 
 All of them, together with unit tests are available on my 
 GitHub :rocket: - https://github.com/szymon6927/szymonmiks.pl/tree/master/blog/content/post/06-value-objects-with-python/value-object-examples.
@@ -208,13 +207,13 @@ class AnalysisParameters:
 
 ## Summary
 
-I hope you enjoy it :wink:
+I hope you enjoyed it :wink:
 
-A value object is a great starting point to make your code more clean and readable.
-When it comes to refactorization - it's also an excellent technique if you struggle with:
+A value object is a great starting point to improve readability of your code and make it cleaner.
+It's also an excellent technique if you struggle with refactorization, as it may fix the following issues:
 - duplicated validation
 - multiplied representation of the same concept
-- too large `utils` file :smile: 
+- a large `utils` file :smile: 
 
 I hope you see the benefits of using value objects after reading this blog post. 
 Please let me know, I would love to hear your opinion!
