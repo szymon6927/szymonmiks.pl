@@ -37,6 +37,7 @@ Big thanks to the authors of them :wink:
 - http://www.kamilgrzybek.com/
 - http://bottega.com.pl/artykuly-i-prezentacje :flag-pl:
 - https://blog.pragmaticengineer.com/
+- https://itlibrium.com/blog :flag-pl:
 
 ## YouTube channels :video_camera:
 

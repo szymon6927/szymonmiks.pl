@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from decimal import Decimal
+from decimal import Decimal, getcontext, ROUND_UP
 from typing import Union
 
 
@@ -10,6 +10,9 @@ class Price:
     def __post_init__(self) -> None:
         if self.value < 0:
             raise ValueError("Price can not be smaller than 0")
+
+        getcontext().prec = 5
+        getcontext().rounding = ROUND_UP
 
     @classmethod
     def zero(cls) -> "Price":
