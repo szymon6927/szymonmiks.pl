@@ -54,6 +54,7 @@ Big thanks to the authors of them :wink:
 - [GynvaelColdwind](https://www.youtube.com/user/GynvaelColdwind/featured)
 - [Kacper Szurek](https://www.youtube.com/c/KacperSzurek/featured) :flag-pl:
 - [PyWaw](https://www.youtube.com/user/PyWaw) :flag-pl:
+- [ContinuousDelivery](https://www.youtube.com/c/ContinuousDelivery/videos)
 
 ## Podcasts :microphone:
 
