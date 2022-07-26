@@ -91,6 +91,10 @@ links:
     description: CodeScene is a multi-purpose tool bridging code, business and people. See hidden risks and social patterns in your code. Prioritize and reduce technical debt.
     website: https://codescene.com/
     image: https://avatars.githubusercontent.com/u/17876045?s=280&v=4
+  - title: Unleash
+    description: Unleash is an open source feature management solution. It improves the workflow of your development team and leads to quicker software delivery. 
+    website: https://www.getunleash.io/
+    image: https://www.getunleash.io/logos/unleash_pos.svg
 
 
 

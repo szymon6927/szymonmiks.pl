@@ -163,6 +163,10 @@ links:
     description: Awesome EventStorming
     website: https://github.com/mariuszgil/awesome-eventstorming
     image: https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png
+  - title: rocketry
+    description: Rocketry is a modern scheduling framework for Python applications. It is simple, clean and extensive. It is the automation engine that sets your Python programs alive.
+    website: https://github.com/Miksus/rocketry
+    image: https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png
     
   
 
