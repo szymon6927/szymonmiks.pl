@@ -1,5 +1,6 @@
 import pytest
-from value_object_examples.email_address import EmailAddress
+
+from src.value_object_examples.email_address import EmailAddress
 
 
 def test_can_validate_email_address() -> None:

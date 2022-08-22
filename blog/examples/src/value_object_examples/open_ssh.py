@@ -5,7 +5,7 @@ from dataclasses import dataclass
 class OpenSSHPublicKey:
     key: str
 
-    def __post_init__(self):
+    def __post_init__(self) -> None:
         if "ssh-rsa" not in self.key:
             raise ValueError("Provided OpenSSH key has incorrect format!")
 

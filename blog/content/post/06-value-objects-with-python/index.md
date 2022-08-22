@@ -10,7 +10,7 @@ categories = [
 tags = [
     "python", "value objects", "DDD", "software development"
 ]
-draft = true
+draft = false
 +++
 
 A **Value object** is a basic building block from tactical DDD (Domain Driven Design).
@@ -59,7 +59,7 @@ Some examples in this blog post may be perceived as half-baked. The reason for t
 some of them are taken from my projects, and others written explicitly for the purpose of this blog post :sunglasses:.
 
 All of them, together with unit tests are available on my 
-GitHub :rocket: - https://github.com/szymon6927/szymonmiks.pl/tree/master/blog/content/post/06-value-objects-with-python/value-object-examples.
+GitHub :rocket: - https://github.com/szymon6927/szymonmiks.pl/tree/master/blog/examples/src/value_object_example
 
 ```python
 from dataclasses import dataclass

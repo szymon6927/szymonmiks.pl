@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from decimal import Decimal, getcontext, ROUND_UP
+from decimal import ROUND_UP, Decimal, getcontext
 from typing import Union
 
 

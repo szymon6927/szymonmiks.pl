@@ -1,6 +1,8 @@
-import pytest
-from value_object_examples.price import Price
 from decimal import Decimal
+
+import pytest
+
+from src.value_object_examples.price import Price
 
 
 def test_can_not_create_price_with_value_smaller_than_0() -> None:
