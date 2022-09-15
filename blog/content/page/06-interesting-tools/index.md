@@ -44,7 +44,7 @@ links:
     image: https://mms.businesswire.com/media/20210610005503/en/884410/22/posthog-logo-800x155.jpg
   - title: WebSequenceDiagrams
     description: Create sequence diagrams in seconds.
-    website: https://posthog.com/
+    website: https://www.websequencediagrams.com/
   - title: Python Feature Flags
     description: Python Feature Flag Resources/Solutions
     website: https://featureflags.io/python-feature-flags/
