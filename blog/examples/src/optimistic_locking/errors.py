@@ -1,0 +1,32 @@
+class InsufficientBalance(Exception):
+    pass
+
+
+class WrongCurrency(Exception):
+    pass
+
+
+class RepositoryError(Exception):
+    @classmethod
+    def create_operation_failed(cls) -> "RepositoryError":
+        return cls("An error occurred during adding a wallet to the database!")
+
+    @classmethod
+    def update_operation_failed(cls) -> "RepositoryError":
+        return cls("An error occurred during the update operation for a wallet!")
+
+    @classmethod
+    def get_operation_failed(cls) -> "RepositoryError":
+        return cls("An error occurred while retrieving the wallet!")
+
+
+class WalletNotFound(Exception):
+    @classmethod
+    def build(cls, wallet_id: str) -> "WalletNotFound":
+        return cls(f"Wallet with id={wallet_id} was not found!")
+
+
+class OptimisticLockingError(Exception):
+    @classmethod
+    def build(cls, wallet_id: str) -> "OptimisticLockingError":
+        return cls(f"Wallet {wallet_id} must have been updated in the meantime!")
