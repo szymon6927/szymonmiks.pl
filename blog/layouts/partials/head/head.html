@@ -25,5 +25,13 @@
     <link rel="shortcut icon" href="{{ . }}" />
 {{ end }}
 
+{{ if (.Params.mermaid) }}
+<!-- MermaidJS support -->
+<script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+<script>
+    mermaid.initialize({ startOnLoad: true, theme: "dark" });
+</script>
+{{ end }}
+
 {{- template "_internal/google_analytics.html" . -}}
 {{- partial "head/custom.html" . -}}
