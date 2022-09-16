@@ -24,7 +24,7 @@ class DynamoDBWalletRepository(IWalletRepository):
 
     def get(self, wallet_id: str) -> Wallet:
         try:
-            response = self._table.query(KeyConditionExpression=Key("id").eq(wallet_id))
+            response = self._table.query(KeyConditionExpression=Key("id").eq(wallet_id), ConsistentRead=True)
 
             if response["ResponseMetadata"]["HTTPStatusCode"] != 200:
                 raise RepositoryError.get_operation_failed()
