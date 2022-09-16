@@ -2,7 +2,7 @@
 author = "Szymon Miks"
 title = "Optimistic locking with Python"
 description = "Optimistic offline lock pattern explained with Python examples"
-date = "2022-04-09"
+date = "2022-09-15"
 image = "img/fly-d-mT7lXZPjk7U-unsplash.jpeg"
 categories = [
      "Python", "Software_Development"
@@ -20,7 +20,7 @@ Applications that we create are used by many end-users at the same time. It is c
 This may cause problems with data consistency - especially when it comes to saving data to the database.
 When two concurrent requests are made there is a risk that we **lose** our data and have inconsistent read operations.
 This is especially true when one user is updating the data and the other wants to read it at the same time.
-In today's article I would like to show you how to apply one pattern called **Optimistic offline lock** which
+In today's article, I would like to show you how to apply one pattern called **Optimistic offline lock** which
 can help us in such situations.
 
 The shorter name of this pattern is **optimistic locking**. So if you find such a name somewhere on the internet, it is the same pattern.
@@ -63,20 +63,19 @@ sequenceDiagram
 
 ## Lost Update problem
 
-One of the concurrent access anomaly is **Lost Update** problem. 
+One of the concurrent access anomalies is **Lost Update** problem. 
 
-Two users in the same time do the read operation and update operation on the application side in one cycle. 
+Two users at the same time do the read operation and update operation on the application side in one cycle. 
 
-For example, we want to increase the wallet balance. Let's assume that initial wallet balance is **10**. 
+For example, we want to increase the wallet balance. Let's assume that the initial wallet balance is **10**. 
 We have two concurrent requests to our application. 
-The first one is retrieving the wallet from the DB and increasing the balance by **5**. Wallet balance is now **15**.
-The second one is also retrieving the wallet from the DB and increasing the balance by **10**. Wallet balance is **20** which
+The first one is retrieving the wallet from the DB and increasing the balance by **5**. The wallet balance is now **15**.
+The second one is also retrieving the wallet from the DB and increasing the balance by **10**. The wallet balance is **20** which
 is incorrect because it should be **25**.
 
-This is how it looks like on the diagram.
+This is how it looks on the diagram.
 
-(*I used SQL expressions but for the purpose of this technique the DB engine does not matter. You can see it later on
-in my examples*)
+(*I used SQL expressions but the DB engine does not matter. You can see it later on in my examples*)
 
 {{<mermaid>}}
 sequenceDiagram
@@ -98,9 +97,7 @@ The **optimistic offline lock** pattern is a way to prevent such situations.
 
 ## Examples
 
-For the purpose of this artilce I have figured out the simple *Wallet* object, where we can increase and decrease the balance.
-
-For the purpose of this article, I have figured out the simple Wallet object, where we can increase and decrease the balance.
+For this article, I have figured out the simple *Wallet* object, where we can increase and decrease the balance.
 
 The requirements look like that:
 
@@ -181,6 +178,30 @@ class SQLiteWalletRepository(IWalletRepository):
 
 ```
 
+And this is what the test example test for DynamoDB looks like:
+```python
+def test_optimistic_locking_works(wallet_dynamodb_table_mock: Table, wallet: Wallet) -> None:
+    # given
+    repository = DynamoDBWalletRepository(wallet_dynamodb_table_mock)
+    repository.create_new(wallet)
+
+    # when
+    wallet = repository.get(wallet.id)
+
+    # and
+    someone_modified_the_wallet_in_the_meantime(repository, wallet.id)
+
+    # and
+    wallet.increase_balance(Decimal(52), Currency.GBP)
+
+    # then
+    with pytest.raises(OptimisticLockingError):
+        repository.update(wallet)
+```
+
+I encourage you to check the whole code on my [GitHub](https://github.com/szymon6927/szymonmiks.pl/tree/master/blog/examples/src/optimistic_locking). 
+In case of any questions, please let me know :wink:
+
 ## Summary
 
 An optimistic offline lock pattern is not a silver bullet. 
@@ -198,7 +219,8 @@ I would like to mention other patterns/solutions that you can use if you feel th
 ## Appendix
 
 A short side note at the end of this article for you.
-From my experience, many of these problems may be solved by a discussion with our lovely business. 
-Problems with concurrent data access, it is not always a technical issue. It may be a problem with how we understand and implement our business logic.
+From my experience, many of these problems may be solved by a discussion with our business experts. 
+Problems with concurrent data access, it is not always a technical issue. 
+It may be a problem with how we understand and implement our business logic.
 So please do not be scared. 
 Ask questions to business people.
