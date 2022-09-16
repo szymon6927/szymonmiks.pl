@@ -11,7 +11,7 @@ class SQLiteWalletRepository(IWalletRepository):
     def __init__(self, connection: Connection):
         self._connection = connection
 
-    def create_new(self, wallet: Wallet) -> Wallet:
+    def create(self, wallet: Wallet) -> Wallet:
         snapshot = wallet.to_snapshot()
         snapshot["balance"] = str(snapshot["balance"])
 

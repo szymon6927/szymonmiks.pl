@@ -12,7 +12,7 @@ from tests.test_optimistic_locking.conftest import someone_modified_the_wallet_i
 def test_can_get_wallet(mongodb_mock: Database, wallet: Wallet) -> None:
     # given
     repository = MongoDBWalletRepository(mongodb_mock)
-    repository.create_new(wallet)
+    repository.create(wallet)
 
     # when
     fetched_wallet = repository.get(wallet.id)
@@ -34,7 +34,7 @@ def test_should_raise_an_error_if_wallet_not_found(mongodb_mock: Database) -> No
 def test_can_update_wallet(mongodb_mock: Database, wallet: Wallet) -> None:
     # given
     repository = MongoDBWalletRepository(mongodb_mock)
-    repository.create_new(wallet)
+    repository.create(wallet)
 
     # when
     wallet.increase_balance(Decimal(122), Currency.GBP)
@@ -52,7 +52,7 @@ def test_can_save_wallet(mongodb_mock: Database, wallet: Wallet) -> None:
     repository = MongoDBWalletRepository(mongodb_mock)
 
     # when
-    repository.create_new(wallet)
+    repository.create(wallet)
 
     # then
     assert mongodb_mock["wallets"].count_documents({}) == 1
@@ -61,7 +61,7 @@ def test_can_save_wallet(mongodb_mock: Database, wallet: Wallet) -> None:
 def test_optimistic_locking_works(mongodb_mock: Database, wallet: Wallet) -> None:
     # given
     repository = MongoDBWalletRepository(mongodb_mock)
-    repository.create_new(wallet)
+    repository.create(wallet)
 
     # when
     wallet = repository.get(wallet.id)

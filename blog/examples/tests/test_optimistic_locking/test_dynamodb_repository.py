@@ -12,7 +12,7 @@ from tests.test_optimistic_locking.conftest import someone_modified_the_wallet_i
 def test_can_get_wallet(wallet_dynamodb_table_mock: Table, wallet: Wallet) -> None:
     # given
     repository = DynamoDBWalletRepository(wallet_dynamodb_table_mock)
-    repository.create_new(wallet)
+    repository.create(wallet)
 
     # when
     fetched_wallet = repository.get(wallet.id)
@@ -34,7 +34,7 @@ def test_should_raise_an_error_if_wallet_not_found(wallet_dynamodb_table_mock: T
 def test_can_update_wallet(wallet_dynamodb_table_mock: Table, wallet: Wallet) -> None:
     # given
     repository = DynamoDBWalletRepository(wallet_dynamodb_table_mock)
-    repository.create_new(wallet)
+    repository.create(wallet)
 
     # when
     wallet.increase_balance(Decimal(100), Currency.GBP)
@@ -52,7 +52,7 @@ def test_can_save_wallet(wallet_dynamodb_table_mock: Table, wallet: Wallet) -> N
     repository = DynamoDBWalletRepository(wallet_dynamodb_table_mock)
 
     # when
-    repository.create_new(wallet)
+    repository.create(wallet)
 
     # then
     assert wallet_dynamodb_table_mock.scan()["Count"] == 1
@@ -62,7 +62,7 @@ def test_can_save_wallet(wallet_dynamodb_table_mock: Table, wallet: Wallet) -> N
 def test_optimistic_locking_works(wallet_dynamodb_table_mock: Table, wallet: Wallet) -> None:
     # given
     repository = DynamoDBWalletRepository(wallet_dynamodb_table_mock)
-    repository.create_new(wallet)
+    repository.create(wallet)
 
     # when
     wallet = repository.get(wallet.id)

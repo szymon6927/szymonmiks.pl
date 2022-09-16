@@ -12,7 +12,7 @@ class MongoDBWalletRepository(IWalletRepository):
     def __init__(self, database: Database):
         self._collection = database.get_collection("wallets")
 
-    def create_new(self, wallet: Wallet) -> Wallet:
+    def create(self, wallet: Wallet) -> Wallet:
         snapshot = wallet.to_snapshot()
         snapshot["_id"] = snapshot["id"]
         del snapshot["id"]

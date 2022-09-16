@@ -12,7 +12,7 @@ class DynamoDBWalletRepository(IWalletRepository):
     def __init__(self, wallet_table: Table) -> None:
         self._table = wallet_table
 
-    def create_new(self, wallet: Wallet) -> Wallet:
+    def create(self, wallet: Wallet) -> Wallet:
         snapshot = wallet.to_snapshot()
 
         try:

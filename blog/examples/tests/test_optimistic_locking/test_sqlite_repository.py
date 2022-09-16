@@ -12,7 +12,7 @@ from tests.test_optimistic_locking.conftest import someone_modified_the_wallet_i
 def test_can_get_wallet(sqlite_mock_connection: Connection, wallet: Wallet) -> None:
     # given
     repository = SQLiteWalletRepository(sqlite_mock_connection)
-    repository.create_new(wallet)
+    repository.create(wallet)
 
     # when
     fetched_wallet = repository.get(wallet.id)
@@ -34,7 +34,7 @@ def test_should_raise_an_error_if_wallet_not_found(sqlite_mock_connection: Conne
 def test_can_update_wallet(sqlite_mock_connection: Connection, wallet: Wallet) -> None:
     # given
     repository = SQLiteWalletRepository(sqlite_mock_connection)
-    repository.create_new(wallet)
+    repository.create(wallet)
 
     # when
     wallet.increase_balance(Decimal(122), Currency.GBP)
@@ -52,7 +52,7 @@ def test_can_save_wallet(sqlite_mock_connection: Connection, wallet: Wallet) -> 
     repository = SQLiteWalletRepository(sqlite_mock_connection)
 
     # when
-    repository.create_new(wallet)
+    repository.create(wallet)
 
     # then
     cursor = sqlite_mock_connection.cursor()
@@ -62,7 +62,7 @@ def test_can_save_wallet(sqlite_mock_connection: Connection, wallet: Wallet) -> 
 def test_optimistic_locking_works(sqlite_mock_connection: Connection, wallet: Wallet) -> None:
     # given
     repository = SQLiteWalletRepository(sqlite_mock_connection)
-    repository.create_new(wallet)
+    repository.create(wallet)
 
     # when
     wallet = repository.get(wallet.id)

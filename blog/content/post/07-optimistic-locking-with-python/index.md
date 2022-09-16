@@ -43,14 +43,14 @@ We can do such verification by checking whether, since we fetched our data from 
 The most popular implementation is adding the `version` property to our database record/document.
 
 When we fetch our record/document the `version` value is saved locally in the memory together with other record data.
-Then, if we want to add our modifications, all we need to do is to check our local `version` value with the `version` value that is currently in the database. 
+Then, if we want to add our modifications, all we need to do is to check our local `version` value with the `version` value that is currently in the database.
 If the values are the same it means that we can apply our changes together with incrementing the `version` value.
 
 I can imagine this description may be tough to get the wider context. Let me show you this on the diagram:
 
 {{<mermaid>}}
 sequenceDiagram
-    User A->>+Database: Get wallet with id=1 
+    User A->>+Database: Get wallet with id=1
     Database ->>+ User A: Returns wallet with id=1
     User B ->>+ Database: Get wallet with id=1
     Database ->>+ User B: Returns wallet with id=1
@@ -63,12 +63,12 @@ sequenceDiagram
 
 ## Lost Update problem
 
-One of the concurrent access anomalies is **Lost Update** problem. 
+One of the concurrent access anomalies is **Lost Update** problem.
 
-Two users at the same time do the read operation and update operation on the application side in one cycle. 
+Two users at the same time do the read operation and update operation on the application side in one cycle.
 
-For example, we want to increase the wallet balance. Let's assume that the initial wallet balance is **10**. 
-We have two concurrent requests to our application. 
+For example, we want to increase the wallet balance. Let's assume that the initial wallet balance is **10**.
+We have two concurrent requests to our application.
 The first one is retrieving the wallet from the DB and increasing the balance by **5**. The wallet balance is now **15**.
 The second one is also retrieving the wallet from the DB and increasing the balance by **10**. The wallet balance is **20** which
 is incorrect because it should be **25**.
@@ -79,7 +79,7 @@ This is how it looks on the diagram.
 
 {{<mermaid>}}
 sequenceDiagram
-    User A->>+Database: SELECT wallet.balance FROM wallet WHERE id = 1 
+    User A->>+Database: SELECT wallet.balance FROM wallet WHERE id = 1
     Database ->>+ User A: 10
     User B ->>+ Database: SELECT wallet.balance FROM wallet WHERE id = 1
     Database ->>+ User B: 10
@@ -93,7 +93,7 @@ sequenceDiagram
 
 Do you see the problem?
 
-The **optimistic offline lock** pattern is a way to prevent such situations. 
+The **optimistic offline lock** pattern is a way to prevent such situations.
 
 ## Examples
 
@@ -113,7 +113,7 @@ https://github.com/szymon6927/szymonmiks.pl/tree/master/blog/examples/src/optimi
 ```python
 class DynamoDBWalletRepository(IWalletRepository):
     ...
-    
+
     def update(self, wallet: Wallet) -> None:
         try:
             update_expression = "set balance=:balance_value, version=:version_value"
@@ -132,7 +132,7 @@ class DynamoDBWalletRepository(IWalletRepository):
             )
         except ClientError as error:
             if error.response["Error"]["Code"] == "ConditionalCheckFailedException":
-                raise OptimisticLockingError.build(wallet.id)
+                raise OptimisticLockingError(wallet.id)
 
             raise RepositoryError.update_operation_failed() from error
 
@@ -151,7 +151,7 @@ class MongoDBWalletRepository(IWalletRepository):
             )
 
             if result.modified_count == 0:
-                raise OptimisticLockingError.build(wallet.id)
+                raise OptimisticLockingError(wallet.id)
         except PyMongoError as error:
             raise RepositoryError.update_operation_failed() from error
 
@@ -161,7 +161,7 @@ class MongoDBWalletRepository(IWalletRepository):
 ```python
 class SQLiteWalletRepository(IWalletRepository):
     ...
-    
+
     def update(self, wallet: Wallet) -> None:
         cursor = self._connection.cursor()
 
@@ -172,18 +172,19 @@ class SQLiteWalletRepository(IWalletRepository):
             result = cursor.execute(sql, params)
 
             if result.rowcount == 0:
-                raise OptimisticLockingError.build(wallet.id)
+                raise OptimisticLockingError(wallet.id)
         except sqlite3.Error as error:
             raise RepositoryError.update_operation_failed() from error
 
 ```
 
 And this is what the test example test for DynamoDB looks like:
+
 ```python
 def test_optimistic_locking_works(wallet_dynamodb_table_mock: Table, wallet: Wallet) -> None:
     # given
     repository = DynamoDBWalletRepository(wallet_dynamodb_table_mock)
-    repository.create_new(wallet)
+    repository.create(wallet)
 
     # when
     wallet = repository.get(wallet.id)
@@ -199,14 +200,14 @@ def test_optimistic_locking_works(wallet_dynamodb_table_mock: Table, wallet: Wal
         repository.update(wallet)
 ```
 
-I encourage you to check the whole code on my [GitHub](https://github.com/szymon6927/szymonmiks.pl/tree/master/blog/examples/src/optimistic_locking). 
+I encourage you to check the whole code on my [GitHub](https://github.com/szymon6927/szymonmiks.pl/tree/master/blog/examples/src/optimistic_locking).
 In case of any questions, please let me know :wink:
 
 ## Summary
 
-An optimistic offline lock pattern is not a silver bullet. 
+An optimistic offline lock pattern is not a silver bullet.
 It will not solve all the problems related to the concurrent data access for us.
-But in comparison to other patterns, it is quite easy to implement and maintain. 
+But in comparison to other patterns, it is quite easy to implement and maintain.
 In my opinion, it should be a default implementation when it comes to concurrent data access.
 
 I would like to mention other patterns/solutions that you can use if you feel that optimistic locking is not enough for you:
@@ -219,8 +220,8 @@ I would like to mention other patterns/solutions that you can use if you feel th
 ## Appendix
 
 A short side note at the end of this article for you.
-From my experience, many of these problems may be solved by a discussion with our business experts. 
-Problems with concurrent data access, it is not always a technical issue. 
+From my experience, many of these problems may be solved by a discussion with our business experts.
+Problems with concurrent data access, it is not always a technical issue.
 It may be a problem with how we understand and implement our business logic.
-So please do not be scared. 
+So please do not be scared.
 Ask questions to business people.

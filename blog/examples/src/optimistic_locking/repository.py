@@ -5,7 +5,7 @@ from src.optimistic_locking.wallet import Wallet
 
 class IWalletRepository(ABC):
     @abstractmethod
-    def create_new(self, wallet: Wallet) -> Wallet:
+    def create(self, wallet: Wallet) -> Wallet:
         pass
 
     @abstractmethod
