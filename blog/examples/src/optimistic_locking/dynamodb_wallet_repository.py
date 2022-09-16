@@ -30,7 +30,7 @@ class DynamoDBWalletRepository(IWalletRepository):
                 raise RepositoryError.get_operation_failed()
 
             if not response["Count"]:
-                raise WalletNotFound.build(wallet_id)
+                raise WalletNotFound(wallet_id)
 
             wallet = WalletMapper.from_db_response(response["Items"][0])
 
@@ -56,6 +56,6 @@ class DynamoDBWalletRepository(IWalletRepository):
             )
         except ClientError as error:
             if error.response["Error"]["Code"] == "ConditionalCheckFailedException":
-                raise OptimisticLockingError.build(wallet.id)
+                raise OptimisticLockingError(wallet.id)
 
             raise RepositoryError.update_operation_failed() from error

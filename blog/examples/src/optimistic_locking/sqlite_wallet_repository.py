@@ -38,7 +38,7 @@ class SQLiteWalletRepository(IWalletRepository):
             result = cursor.execute(sql, params)
 
             if result.rowcount == 0:
-                raise OptimisticLockingError.build(wallet.id)
+                raise OptimisticLockingError(wallet.id)
         except sqlite3.Error as error:
             raise RepositoryError.update_operation_failed() from error
 
@@ -52,7 +52,7 @@ class SQLiteWalletRepository(IWalletRepository):
         try:
             result = cursor.execute(sql, params).fetchone()
             if not result:
-                raise WalletNotFound.build(wallet_id)
+                raise WalletNotFound(wallet_id)
 
             return WalletMapper.from_db_response(dict(result))
         except sqlite3.Error as error:

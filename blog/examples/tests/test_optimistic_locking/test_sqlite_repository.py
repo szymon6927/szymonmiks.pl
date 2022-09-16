@@ -3,7 +3,7 @@ from sqlite3 import Connection
 
 import pytest
 
-from src.optimistic_locking.errors import OptimisticLockingError
+from src.optimistic_locking.errors import OptimisticLockingError, WalletNotFound
 from src.optimistic_locking.sqlite_wallet_repository import SQLiteWalletRepository
 from src.optimistic_locking.wallet import Currency, Wallet
 from tests.test_optimistic_locking.conftest import someone_modified_the_wallet_in_the_meantime
@@ -20,6 +20,15 @@ def test_can_get_wallet(sqlite_mock_connection: Connection, wallet: Wallet) -> N
     # then
     assert isinstance(wallet, Wallet)
     assert fetched_wallet.to_snapshot() == wallet.to_snapshot()
+
+
+def test_should_raise_an_error_if_wallet_not_found(sqlite_mock_connection: Connection) -> None:
+    # given
+    repository = SQLiteWalletRepository(sqlite_mock_connection)
+
+    # expect
+    with pytest.raises(WalletNotFound):
+        repository.get("12345")
 
 
 def test_can_update_wallet(sqlite_mock_connection: Connection, wallet: Wallet) -> None:

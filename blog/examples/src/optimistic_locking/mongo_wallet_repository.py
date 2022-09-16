@@ -33,7 +33,7 @@ class MongoDBWalletRepository(IWalletRepository):
             )
 
             if result.modified_count == 0:
-                raise OptimisticLockingError.build(wallet.id)
+                raise OptimisticLockingError(wallet.id)
         except PyMongoError as error:
             raise RepositoryError.update_operation_failed() from error
 
@@ -42,7 +42,7 @@ class MongoDBWalletRepository(IWalletRepository):
             document = self._collection.find_one({"_id": wallet_id})
 
             if not document:
-                raise WalletNotFound.build(wallet_id)
+                raise WalletNotFound(wallet_id)
 
             return WalletMapper.from_mongo_document(document)
         except PyMongoError as error:

@@ -4,7 +4,7 @@ import pytest
 from mypy_boto3_dynamodb.service_resource import Table
 
 from src.optimistic_locking.dynamodb_wallet_repository import DynamoDBWalletRepository
-from src.optimistic_locking.errors import OptimisticLockingError
+from src.optimistic_locking.errors import OptimisticLockingError, WalletNotFound
 from src.optimistic_locking.wallet import Currency, Wallet
 from tests.test_optimistic_locking.conftest import someone_modified_the_wallet_in_the_meantime
 
@@ -20,6 +20,15 @@ def test_can_get_wallet(wallet_dynamodb_table_mock: Table, wallet: Wallet) -> No
     # then
     assert isinstance(wallet, Wallet)
     assert fetched_wallet.to_snapshot() == wallet.to_snapshot()
+
+
+def test_should_raise_an_error_if_wallet_not_found(wallet_dynamodb_table_mock: Table) -> None:
+    # given
+    repository = DynamoDBWalletRepository(wallet_dynamodb_table_mock)
+
+    # expect
+    with pytest.raises(WalletNotFound):
+        repository.get("12345")
 
 
 def test_can_update_wallet(wallet_dynamodb_table_mock: Table, wallet: Wallet) -> None:

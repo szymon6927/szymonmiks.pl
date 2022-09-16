@@ -21,12 +21,10 @@ class RepositoryError(Exception):
 
 
 class WalletNotFound(Exception):
-    @classmethod
-    def build(cls, wallet_id: str) -> "WalletNotFound":
-        return cls(f"Wallet with id={wallet_id} was not found!")
+    def __init__(self, wallet_id: str) -> None:
+        super().__init__(f"Wallet with id={wallet_id} was not found!")
 
 
 class OptimisticLockingError(Exception):
-    @classmethod
-    def build(cls, wallet_id: str) -> "OptimisticLockingError":
-        return cls(f"Wallet {wallet_id} must have been updated in the meantime!")
+    def __init__(self, wallet_id: str) -> None:
+        super().__init__(f"Wallet {wallet_id} must have been updated in the meantime!")

@@ -3,7 +3,7 @@ from decimal import Decimal
 import pytest
 from pymongo.database import Database
 
-from src.optimistic_locking.errors import OptimisticLockingError
+from src.optimistic_locking.errors import OptimisticLockingError, WalletNotFound
 from src.optimistic_locking.mongo_wallet_repository import MongoDBWalletRepository
 from src.optimistic_locking.wallet import Currency, Wallet
 from tests.test_optimistic_locking.conftest import someone_modified_the_wallet_in_the_meantime
@@ -20,6 +20,15 @@ def test_can_get_wallet(mongodb_mock: Database, wallet: Wallet) -> None:
     # then
     assert isinstance(wallet, Wallet)
     assert fetched_wallet.to_snapshot() == wallet.to_snapshot()
+
+
+def test_should_raise_an_error_if_wallet_not_found(mongodb_mock: Database) -> None:
+    # given
+    repository = MongoDBWalletRepository(mongodb_mock)
+
+    # expect
+    with pytest.raises(WalletNotFound):
+        repository.get("12345")
 
 
 def test_can_update_wallet(mongodb_mock: Database, wallet: Wallet) -> None:
