@@ -44,16 +44,16 @@ The most popular implementation is adding the `version` property to our database
 
 When we fetch our record/document the `version` value is saved locally in the memory together with other record data.
 Then, if we want to add our modifications, all we need to do is to check our local `version` value with the `version` value that is currently in the database.
-If the values are the same it means that we can apply our changes together with incrementing the `version` value.
+If the values are the same it means that we can apply our changes together with `version` value incremented.
 
-I can imagine this description may be tough to get the wider context. Let me show you this on the diagram:
+I can imagine that the above description might make it tough to understand the wider context. Let me show you this using a diagram:
 
 {{<mermaid>}}
 sequenceDiagram
     User A->>+Database: Get wallet with id=1
-    Database ->>+ User A: Returns wallet with id=1
+    Database ->>+ User A: Return wallet with id=1
     User B ->>+ Database: Get wallet with id=1
-    Database ->>+ User B: Returns wallet with id=1
+    Database ->>+ User B: Return wallet with id=1
     User A ->>+ Database: Edit wallet's data
     Database ->>+ User A:  Successfully edited wallet's data
     User B ->>+ Database: Edit wallet's data
@@ -63,19 +63,19 @@ sequenceDiagram
 
 ## Lost Update problem
 
-One of the concurrent access anomalies is **Lost Update** problem.
+One of the concurrent access anomalies is a **Lost Update** problem.
 
-Two users at the same time do the read operation and update operation on the application side in one cycle.
+It is when two users at the same time do the read operation and update operation on the application side in one cycle.
 
-For example, we want to increase the wallet balance. Let's assume that the initial wallet balance is **10**.
+For example, let's say we want to increase the wallet balance. Let's assume that the initial wallet balance is **10**.
 We have two concurrent requests to our application.
 The first one is retrieving the wallet from the DB and increasing the balance by **5**. The wallet balance is now **15**.
 The second one is also retrieving the wallet from the DB and increasing the balance by **10**. The wallet balance is **20** which
 is incorrect because it should be **25**.
 
-This is how it looks on the diagram.
+This is how it looks using a diagram.
 
-(*I used SQL expressions but the DB engine does not matter. You can see it later on in my examples*)
+(*I used SQL expressions but the DB engine does not matter. You can see it below in my examples*)
 
 {{<mermaid>}}
 sequenceDiagram
@@ -101,11 +101,11 @@ For this article, I have figured out the simple *Wallet* object, where we can in
 
 The requirements look like that:
 
-![project equirements](img/project_requirements.png)
+![project requirements](img/project_requirements.png)
 
 The Wallet object is the one that we want to store in our database and protect using optimistic locking.
 
-The code with tests you can find on my GitHub :rocket:
+You can find the code with tests on my GitHub :rocket:
 
 https://github.com/szymon6927/szymonmiks.pl/tree/master/blog/examples/src/optimistic_locking
 
@@ -178,7 +178,7 @@ class SQLiteWalletRepository(IWalletRepository):
 
 ```
 
-And this is what the test example test for DynamoDB looks like:
+And this is what the example test for DynamoDB looks like:
 
 ```python
 def test_optimistic_locking_works(wallet_dynamodb_table_mock: Table, wallet: Wallet) -> None:
@@ -200,15 +200,15 @@ def test_optimistic_locking_works(wallet_dynamodb_table_mock: Table, wallet: Wal
         repository.update(wallet)
 ```
 
-I encourage you to check the whole code on my [GitHub](https://github.com/szymon6927/szymonmiks.pl/tree/master/blog/examples/src/optimistic_locking).
-In case of any questions, please let me know :wink:
+I encourage you to check the entire code on my [GitHub](https://github.com/szymon6927/szymonmiks.pl/tree/master/blog/examples/src/optimistic_locking).
+In case you have any questions, please let me know :wink:
 
 ## Summary
 
 An optimistic offline lock pattern is not a silver bullet.
-It will not solve all the problems related to the concurrent data access for us.
-But in comparison to other patterns, it is quite easy to implement and maintain.
-In my opinion, it should be a default implementation when it comes to concurrent data access.
+It will not solve all the problems related to the concurrent data access, 
+but in comparison to other patterns, it is quite easy to implement and maintain.
+In my opinion, it should be the default solution when it comes to concurrent data access.
 
 I would like to mention other patterns/solutions that you can use if you feel that optimistic locking is not enough for you:
 - Pessimistic offline lock
@@ -219,9 +219,9 @@ I would like to mention other patterns/solutions that you can use if you feel th
 
 ## Appendix
 
-A short side note at the end of this article for you.
-From my experience, many of these problems may be solved by a discussion with our business experts.
-Problems with concurrent data access, it is not always a technical issue.
-It may be a problem with how we understand and implement our business logic.
+Here is a short side note for you.
+From my experience, many of these problems may be solved through a discussion with the business experts.
+Problems with concurrent data access are not always a technical issue.
+It may be a problem with how we understand and implement the business logic.
 So please do not be scared.
-Ask questions to business people.
+Ask the business people questions.
