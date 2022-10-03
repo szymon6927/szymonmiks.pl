@@ -1,29 +1,71 @@
+[build-system]
+build-backend = "poetry.core.masonry.api"
+requires = ["poetry-core>=1.0.0"]
+
+[tool.black]
+line-length = 120
+target-version = ["py39"]
+
+[tool.coverage.report]
+exclude_lines = [
+    "pragma: no cover",
+    "def __repr__",
+    "raise AssertionError",
+    "raise NotImplementedError",
+    "pass",
+    "if 0:",
+    "if __name__ == .__main__.:",
+    "nocov",
+    "if TYPE_CHECKING:",
+]
+fail_under = 80
+show_missing = true
+
+[tool.coverage.run]
+branch = true
+omit = [
+    "tests/*"
+]
+
+[tool.isort]
+combine_as_imports = "true"
+force_grid_wrap = 0
+include_trailing_comma = "true"
+known_first_party = "src"
+line_length = 120
+multi_line_output = 3
+
+[tool.mypy]
+disallow_untyped_defs = true
+follow_imports = "silent"
+ignore_missing_imports = true
+python_version = "3.9"
+warn_return_any = true
+warn_unused_configs = true
+
 [tool.poetry]
+authors = ["Szymon Miks <miks.szymon@gmail.com>"]
+description = "Code examples for blog posts purpose"
 name = "examples"
 version = "0.1.0"
-description = "Code examples for blog posts purpose"
-authors = ["Szymon Miks <miks.szymon@gmail.com>"]
 
 [tool.poetry.dependencies]
-python = "^3.9"
-pytest = "^7.1.2"
 mypy-boto3-dynamodb = "^1.24.55"
 pymongo = "^4.2.0"
+pytest = "^7.1.2"
+python = "^3.9"
 
 [tool.poetry.dev-dependencies]
 black = "^22.6.0"
 flake8 = "^5.0.4"
 isort = "^5.10.1"
+mongomock = "^4.1.2"
+moto = "^4.0.0"
 mypy = "^0.971"
 pre-commit = "^2.20.0"
 pytest-cov = "^3.0.0"
-moto = "^4.0.0"
-mongomock = "^4.1.2"
+toml-sort = "^0.20.1"
 
-[build-system]
-requires = ["poetry-core>=1.0.0"]
-build-backend = "poetry.core.masonry.api"
-
-[tool.black]
-line-length = 120
-target-version = ["py39"]
+[tool.pytest.ini_options]
+addopts = "-v --cov=src --cov-report term-missing --no-cov-on-fail"
+testpaths = ["tests"]

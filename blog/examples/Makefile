@@ -1,5 +1,8 @@
 .DEFAULT_GOAL := all
 
+toml_sort:
+	toml-sort pyproject.toml --all --in-place
+
 isort:
 	poetry run isort .
 
