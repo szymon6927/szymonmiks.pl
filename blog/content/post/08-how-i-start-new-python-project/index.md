@@ -1,6 +1,6 @@
 +++
 author = "Szymon Miks"
-title = "How I start a new Python backend API project"
+title = "How I start every new Python backend API project"
 description = "How to setup everything and focus only on the implementation of our lovely business logic"
 date = "2022-09-27"
 image = "img/la-rel-easter-KuCGlBXjH_o-unsplash.jpg"
@@ -15,7 +15,7 @@ draft = true
 
 ## Intro
 
-In today's blog post I would like to show you how I approach a new Python **backend API** project setup.
+In today's blog post I would like to show you how I approach every new Python **backend API** project setup.
 
 This blog post includes:
 - project structure
@@ -79,25 +79,25 @@ I will explain the purpose of each directory, starting from the top.
 
 ### :file_folder: .docker
 
-If my project uses docker, I put all docker-related files there.
+If my project uses docker, I put all docker-related files here.
 For example: init scripts for [localstack](https://github.com/localstack/localstack).
 
 ### :file_folder: docs
 
 Inside this directory, I keep all things related to the project's documentation.
 
-The `openapi.yaml` file resits inside `api` sub-directory.
+The `openapi.yaml` file resides inside `api` sub-directory.
 
 Inside the `adr` sub-directory, I keep the project's ADRs.
-About the ADRs I wrote a separate article, you can read it [here](https://blog.szymonmiks.pl/p/what-is-an-adr/).
+I wrote a separate article about the ADRs, you can read it [here](https://blog.szymonmiks.pl/p/what-is-an-adr/).
 
 ### :file_folder: http_requests
 
 I use [IntelliJ HTTP Client](https://www.jetbrains.com/help/idea/http-client-in-product-code-editor.html)
-here is where I keep requests definition.
+and here is where I keep request's definitions.
 
-If you have not heard about this tool, I recommend you to check it out. Having this, you do not have to have any
-additional API clients like: [postman](https://www.postman.com/) or [insomnia](https://insomnia.rest/).
+If you have not heard about this tool, I recommend you check it out. Having this, you do not have to have any
+additional API clients like [postman](https://www.postman.com/) or [insomnia](https://insomnia.rest/).
 
 ### :file_folder: iac
 
@@ -110,19 +110,19 @@ Here I keep the code responsible for the application itself. This directory cont
 I do not like splitting the project into technical layers. In opposition to that, I follow the convention
 where each module is named accordingly and responsible for the business domain that it belongs to.
 
-One of the benefits of it is that each module can have a different type of application architecture. 
-As you can see in the `domain_module_a` the separation is done by **hexagonal architecture** rules. 
+One of the benefits of it is that each module can have a different type of application architecture.
+As you can see in the `domain_module_a` the separation is done by **hexagonal architecture** rules.
 It has no impact on the other modules where such separation is not needed.
 
 You can see there is a module called `building_blocks`.
-Inside it, I keep all the utilities needed in the project, like a logger, serializers, and so on. 
-This name - I did not think up it, I've borrowed this name from this [repo](https://github.com/kgrzybek/modular-monolith-with-ddd/tree/master/src/BuildingBlocks).
+Inside it, I keep all the utilities needed in the project, like a logger, serializers, and so on.
+I did not make up this name, I borrowed it from this [repo](https://github.com/kgrzybek/modular-monolith-with-ddd/tree/master/src/BuildingBlocks).
 
 
 ## README.md
 
 It is very important to take care of the README file because:
-- it is the first thing that will be presented after opening the project's repo
+- it is the first thing that will be shown after opening the project's repo
 - it allows new members of the team to start working with the project more smoothly
 
 Here is my proposition for the `README` file
@@ -130,7 +130,7 @@ Here is my proposition for the `README` file
 ```markdown
 # <project_name>
 
-Quick project description
+Quick project description.
 
 ## Table of contents
 
@@ -170,7 +170,7 @@ Description of how to run the tests.
 
 ## CI/CD
 
-Description of what the CI/CD process looks like and how it works. What is the deployment strategy etc?
+Description of what the CI/CD process looks like and how it works. What is the deployment strategy, etc.
 
 ## Monitoring
 
@@ -178,15 +178,15 @@ Information about tools used to monitor the application, how to use them, what i
 
 ## ADR
 
-Information about ADRs
+Information about ADRs.
 
 ## HTTP requests
 
-Information about InteliJ HTTP client.
+Information about IntelliJ HTTP client.
 
 ```
 
-The complete **README** with some example descriptions for each section you can find here:
+You can find the complete **README** with some example descriptions for each section here:
 https://github.com/szymon6927/szymonmiks.pl/tree/master/blog/examples/exmaple-project
 
 
@@ -206,11 +206,11 @@ Here is the list of tools that I always add while creating a new project:
 - [responses](https://github.com/getsentry/responses)
 - [ipython](https://ipython.org/)
 
-If my project uses **AWS** services, I install [moto](https://github.com/spulec/moto) library.
+If my project uses **AWS** services, I also install [moto](https://github.com/spulec/moto) library.
 
 I use `pyproject.toml` file to keep the config for each of them in one place.
 
-This is how it looks like:
+This is what it looks like:
 ```toml
 [tool.black]
 line-length = 120
@@ -295,7 +295,7 @@ max-line-length = 120
 
 [pre-commit](https://pre-commit.com/) allows you to add git hooks that will execute before you add your commit.
 
-That is the config file that I use in my projects:
+This is the config file that I use in my projects:
 
 ```yaml
 repos:
@@ -335,9 +335,9 @@ repos:
 
 ### Makefile
 
-I like using [Make](https://www.gnu.org/software/make/manual/make.html) to automate stuff in my project.
+I like using [Make](https://www.gnu.org/software/make/manual/make.html) to automate stuff in my projects.
 
-Below you can see the Makefile that I use in my projects.
+Below you can see the Makefile that I use.
 
 ```makefile
 
@@ -388,13 +388,13 @@ all: lint audit tests
 
 ## Complete example
 
-The complete example you can find it on my GitHub :rocket:
+You can find the complete example on my GitHub :rocket:
 
 https://github.com/szymon6927/szymonmiks.pl/tree/master/blog/examples/exmaple-project
 
 
 ## Summary
 
-I hope it was useful to you, and after reading this article you adopt some concepts for your project.
+I hope it was useful to you, and I hope that after reading this article you adopt some concepts for your project.
 
 If you have a different opinion, please let me know. I would like to know what you think about it.
