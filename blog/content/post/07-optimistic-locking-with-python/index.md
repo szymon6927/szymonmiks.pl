@@ -10,7 +10,7 @@ categories = [
 tags = [
     "python", "software development", "optimistic locking", "concurrency control"
 ]
-draft = true
+draft = false
 mermaid = true
 +++
 
