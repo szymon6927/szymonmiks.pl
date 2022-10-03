@@ -1,11 +1,11 @@
 ---
 title: Books on my bookshelf
-description: List of the IT books that are currently on my bookshelf 
+description: List of the IT books that are currently on my bookshelf
 date: '2020-10-09'
 lastmod: '2020-10-09'
 image: img/matthew-feeney-Nwkh-n6l25w-unsplash.jpg
 menu:
-    main: 
+    main:
         weight: -80
         params:
             icon: book
@@ -38,6 +38,7 @@ Here is the list of the IT books that are currently on my bookshelf :closed_book
 - [Implementing the Clean Architecture](https://leanpub.com/implementing-the-clean-architecture)
 - [Building Microservices: Designing Fine-Grained Systems](https://www.amazon.com/Building-Microservices-Designing-Fine-Grained-Systems/dp/1492034029/)
 - [Domain-Driven Design: Tackling Complexity in the Heart of Software](https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215)
+- [Learning Domain-Driven Design](https://www.amazon.com/gp/product/B09J2CMJZY)
 
 
 If you are interested in non-IT books you can check out my [goodreads.com profile](https://www.goodreads.com/user/show/103430015-szymon-miks)
