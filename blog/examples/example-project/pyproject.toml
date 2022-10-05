@@ -46,7 +46,7 @@ warn_unused_configs = true
 [tool.poetry]
 authors = ["Szymon Miks <miks.szymon@gmail.com>"]
 description = ""
-name = "exmaple-project"
+name = "example-project"
 version = "0.1.0"
 
 [tool.poetry.dependencies]

@@ -7,7 +7,7 @@ servers:
 info:
   description: Short description about the project
   version: "1.0.0"
-  title: exmaple-project
+  title: example-project
 
 paths:
   # define your paths here

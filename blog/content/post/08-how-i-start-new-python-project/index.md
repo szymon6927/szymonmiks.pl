@@ -187,7 +187,7 @@ Information about IntelliJ HTTP client.
 ```
 
 You can find the complete **README** with some example descriptions for each section here:
-https://github.com/szymon6927/szymonmiks.pl/tree/master/blog/examples/exmaple-project
+https://github.com/szymon6927/szymonmiks.pl/tree/master/blog/examples/example-project
 
 
 ## Tools
@@ -362,7 +362,7 @@ dockerfile_linter:
 	docker run --rm -i hadolint/hadolint < Dockerfile
 
 validate_openapi_schema:
-	poetry run openapi-spec-validator exmaple-project/docs/api/openapi.yaml
+	poetry run openapi-spec-validator example-project/docs/api/openapi.yaml
 
 mypy:
 	poetry run mypy --install-types --non-interactive .
@@ -390,7 +390,7 @@ all: lint audit tests
 
 You can find the complete example on my GitHub :rocket:
 
-https://github.com/szymon6927/szymonmiks.pl/tree/master/blog/examples/exmaple-project
+https://github.com/szymon6927/szymonmiks.pl/tree/master/blog/examples/example-project
 
 
 ## Summary

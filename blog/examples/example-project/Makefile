@@ -19,7 +19,7 @@ dockerfile_linter:
 	docker run --rm -i hadolint/hadolint < Dockerfile
 
 validate_openapi_schema:
-	poetry run openapi-spec-validator exmaple-project/docs/api/openapi.yaml
+	poetry run openapi-spec-validator example-project/docs/api/openapi.yaml
 
 mypy:
 	poetry run mypy --install-types --non-interactive .
