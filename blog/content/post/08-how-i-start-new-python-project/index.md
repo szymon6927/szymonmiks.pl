@@ -10,7 +10,7 @@ categories = [
 tags = [
     "python", "software development", "project setup"
 ]
-draft = true
+draft = false
 +++
 
 ## Intro
