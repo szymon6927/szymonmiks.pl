@@ -19,10 +19,10 @@ Here is the list of the IT books that are currently on my bookshelf :closed_book
 - To read
 
 ## Currently reading
-- [Implementing the Clean Architecture](https://leanpub.com/implementing-the-clean-architecture)
+- [Learning Domain-Driven Design](https://www.amazon.com/gp/product/B09J2CMJZY)
 
 ## Read
-
+- [Implementing the Clean Architecture](https://leanpub.com/implementing-the-clean-architecture)
 - [Fundamentals of Software Architecture: An Engineering Approach](https://www.amazon.com/Fundamentals-Software-Architecture-Engineering-Approach/dp/B08X8H15BW/)
 - [Monolith to Microservices: Evolutionary Patterns to Transform Your Monolith](https://www.amazon.com/Monolith-Microservices-Evolutionary-Patterns-Transform/dp/1492047848/)
 - [Patterns of Enterprise Application Architecture](https://www.amazon.com/Patterns-Enterprise-Application-Architecture-Martin/dp/0321127420/)
@@ -38,7 +38,6 @@ Here is the list of the IT books that are currently on my bookshelf :closed_book
 ## To read
 - [Building Microservices: Designing Fine-Grained Systems](https://www.amazon.com/Building-Microservices-Designing-Fine-Grained-Systems/dp/1492034029/)
 - [Domain-Driven Design: Tackling Complexity in the Heart of Software](https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215)
-- [Learning Domain-Driven Design](https://www.amazon.com/gp/product/B09J2CMJZY)
 
 
 If you are interested in non-IT books you can check out my [goodreads.com profile](https://www.goodreads.com/user/show/103430015-szymon-miks)
