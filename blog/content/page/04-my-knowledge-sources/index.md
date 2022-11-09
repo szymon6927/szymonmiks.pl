@@ -5,12 +5,12 @@ image: img/tim-mossholder-WE_Kv_ZB1l0-unsplash.jpg
 menu:
     main:
         weight: -60
-        params: 
+        params:
             icon: code
 comments: false
 ---
 
-The list of my knowledge sources - allows me to be up to date with the technology news and also learn new things. 
+The list of my knowledge sources - allows me to be up to date with the technology news and also learn new things.
 Big thanks to the authors of them :wink:
 
 
@@ -22,7 +22,7 @@ Big thanks to the authors of them :wink:
 - [Django News](https://django-news.com/)
 - [Refactoring](https://refactoring.fm/)
 - [unknowNews](https://news.mrugalski.pl/) :flag-pl:
-- [Architecture Weekly](https://www.architecture-weekly.com/) 
+- [Architecture Weekly](https://www.architecture-weekly.com/)
 - [PSF Newsletter](https://www.python.org/psf/newsletter/)
 
 ## Blogs :books:
@@ -38,6 +38,9 @@ Big thanks to the authors of them :wink:
 - http://bottega.com.pl/artykuly-i-prezentacje :flag-pl:
 - https://blog.pragmaticengineer.com/
 - https://itlibrium.com/blog :flag-pl:
+- https://refactoring.guru/
+- https://serverlessland.com/
+
 
 ## YouTube channels :video_camera:
 
@@ -63,4 +66,3 @@ Big thanks to the authors of them :wink:
 - [Ostra piła](https://ostrapila.pl/) :flag-pl:
 - [devtalk](https://devtalk.pl/) :flag-pl:
 - [Porozmawiajmy o IT](https://porozmawiajmyoit.pl/) :flag-pl:
-
