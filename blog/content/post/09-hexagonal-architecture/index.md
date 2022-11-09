@@ -1,7 +1,7 @@
 +++
 author = "Szymon Miks"
-title = "Hexagonal architecture explained with Python examples"
-description = "What is hexagonal architecture? How to start with it? Let me smoothly show you a hands-on example using our lovely Python language."
+title = "Hexagonal architecture in Python"
+description = "Let me smoothly show you a hands-on example using our lovely Python language (FastAPI example included)."
 date = "2022-10-07"
 image = "img/james-hon-zmFOpLrgBn4-unsplash.jpg"
 categories = [
@@ -78,11 +78,53 @@ It's another separation of concerns but on the lowest level.
 
 ## Example
 
-Here is my approach for the hexagonal architecture in Python.
+For the purpose of this article I created a separate project on my GitHub. You can find it here:
+https://github.com/szymon6927/hexagonal-architecture-python
 
-<image_here>
+This project is a simplified gym management software. We have clients, gym classes and gym passes.
 
-The full code you can find it on my GitHub
+The project consists of four modules:
+
+![project-structure](img/project-structure.png)
+
+- **building_blocks** - contains all utilities used across different modules
+- **clients** - module responsible for clients, there is no complicated business logic there, but we have a lot of integrations
+that's why we use hexagonal architecture there
+- **gym_classes** - simple CRUD responsible for gym classes management, no business logic there, no neeed to use hexagonal architecture there
+- **gym_passes** - gym passes management, core of our business. This is where our business is making money.
+
+![project-structure](img/project-strucutre-all.png)
+
+There is no fancy structure for the gym_classes module. The answer is simple - there is no need for that.
+We should use hexagonal architecture only where it's really needed.
+
+I developed this example specifically to show you that using hexagonal architecture doesn't mean using it everywhere.
+Not every module has to have it.
+
+This is also visible in tests.
+
+![tests](img/tests.png)
+
+There are no unit tests for the gym classes module because unit tests for it will have no sense.
+All we do there are CRUD operations.
+
+When it comes to modules that were built using hexagonal architecture. They follow such structure:
+- **application** - contains our use cases together with [DTOs](https://en.wikipedia.org/wiki/Data_transfer_object)
+and other classes that responsible for coordinating the business process.
+- **domain** - contains all domain objects like entities, [value objects](https://blog.szymonmiks.pl/p/value-objects-with-python/), etc.
+The objects there are not [anemic](https://martinfowler.com/bliki/AnemicDomainModel.html),
+they follow the principle of the **rich domain model** which means that we encapsulate data
+and behaviors together.
+You can check it by looking at [src/gym_passes/domain/gym_pass.py](https://github.com/szymon6927/hexagonal-architecture-python/blob/master/src/gym_passes/domain/gym_pass.py).
+- **infrastructure** - contains output adapters, so objects responsible for communication with external world. For example database.
+- **bootstrap.py** - contains the definition of our DI container. About the DI I wrote a separate article.
+If you have not heard about a technique called "dependency injection" you can read it
+[here](https://blog.szymonmiks.pl/p/dependency-injection-with-python-make-it-easy/)
+- **controllers.py** - definition of our rest endpoints
+- **facade.py** (optional) - if your module needs to expose some behaviors for other modules then I use a facade to achieve it.
+It is the public API of our module
+
+
 
 ## Pros and Cons
 
@@ -113,13 +155,14 @@ in such a scenario, there will be no benefits of hexagonal architecture, and it 
 
 - [Alistair Cockburn’s original paper on Hexagonal Architecture](https://alistair.cockburn.us/hexagonal-architecture/)
 - [Robert C. Martin's book "Clean Architecture"](https://www.amazon.com/Clean-Architecture-Craftsmans-Software-Structure/dp/0134494164)
+- [Implementing the Clean Architecture](https://leanpub.com/implementing-the-clean-architecture)
 
 ## Summary
 
 I hope you enjoyed it.
 As with everything in our industry, hexagonal architecture is not a silver bullet.
 It will not solve all the problems for you.
-But it's a great way to improve things in our project especially when it comes to for example testability or the possibility to postpone some decisions.
+But it's a great way to improve things in our project especially when it comes to testability or the possibility to postpone some decisions.
 If applied correctly it may boost your project and make your life easier.
 
 Let me know what do you think, I would love to hear your opinion.
