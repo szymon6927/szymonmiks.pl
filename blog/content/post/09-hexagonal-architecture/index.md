@@ -1,7 +1,7 @@
 +++
 author = "Szymon Miks"
 title = "Hexagonal architecture in Python"
-description = "Let me smoothly show you a hands-on example using our lovely Python language (FastAPI example included)."
+description = "Let me show you a hands-on example using our lovely Python language (FastAPI example included)."
 date = "2022-10-07"
 image = "img/james-hon-zmFOpLrgBn4-unsplash.jpg"
 categories = [
@@ -15,65 +15,60 @@ tags = [
     "clean architecture",
     "ports and adapters"
 ]
-draft = true
+draft = false
 +++
 
 ## Intro
 
-Hexagonal architecture is one of the style of application architecture that you can use in your project.
-In today's blog post I would like to show you, how you can build your application using hexagonal architecture with Python.
+Hexagonal architecture is one of the styles of application architecture that you can use in your project.
+In today’s blog post I would like to show you how you can build your application using a hexagonal architecture with Python.
 
-I don't want to focus on the theoretical side of it - there are many such materials on the internet.
-Instead, I would like to show it to you from a practical perspective.
+Instead of focusing on the theoretical side (there are already enough of these articles on the web), we will take a more practical approach.
 
 ## History
 
 Originally **hexagonal architecture** was invented by [Alistair Cockburn](https://en.wikipedia.org/wiki/Alistair_Cockburn) in 2005.
+Then around 2008, Jeffrey Palermo invented something very similar called **onion architecture**.
+And then, as the last one, around 2011, [Robert C. Martin](https://en.wikipedia.org/wiki/Robert_C._Martin) came up with his idea called **clean architecture**.
 
-Then around 2008, Jeffrey Palermo invented something very similar that he called **onion architecture**.
-
-And then as the last one, around 2011 [Robert C. Martin](https://en.wikipedia.org/wiki/Robert_C._Martin) came up with his idea called **clean architecture**.
-
-So if you heard terms like:
+So if you hear the following terms:
 - hexagonal architecture (aka. ports and adapters)
 - onion architecture
 - clean architecture
 - screaming architecture
 
-It’s all about the same idea. Of course, there are some details that are different but in general, the idea is the same.
-
+It’s generally about the same idea, with some minor variations.
 
 ## Quick intro
 
-Here is how it looks on the diagram:
+Please consider the following diagram:
 
 ![hexagonal-architecture-diagram](img/hexagonal-architecture-diagram.jpg)
 
-I will not go in-depth with the explanation of it.
-Instead, I will give you a quick intro to all the concepts from the diagram.
-I believe the best explanation will be a real example where I apply all of it.
-You can find it in the section below.
+Let me quickly introduce you to all the concepts included in the diagram.
+The best explanation will be a code example where all these concepts are applied simultaneously.
+For the example please have a look at the section below.
 
-In general, ports are responsible for communication with the outside world.
-Usually, they are implemented as interfaces.
-Adapters are concrete implementations of our ports.
+Generally speaking, ports are responsible for communication with the outside world.
+Usually, they are implemented as interfaces, whereas adapters are concrete implementations of our ports.
 
-**input port (aka. driver port or primary port)** - it exposes the application feature to the outside world, it’s an entry point to our business logic
+**input port (aka. driver port or primary port)** - exposes the application features to the outside world. It’s an entry point to our business logic.
 
-**input adapter** - it's a concrete implementation of how we want to enter our application, for example via REST endpoint
+**input adapter** - is a concrete implementation of how we want to enter our application, for example via REST endpoint etc.
 
-**output port (aka. driven or secondary)** - it is used to interact with outbound things, for example, reading/writing data from a database
+**output port (aka. driven or secondary)** - it is used to interact with outbound things, for example, reading/writing data from/to a database.
 
-**output adapter** - it is a concrete implementation of the above. For example, implementation of communication with a specific database, eg MySQL
+**output adapter** - it is the concrete implementation of the above. For example, implementation of communication with a specific database, e.g. MySQL.
 
-**use case (aka. application layer)** - this layer answers the question “what to do”, it controls the flow
+**use case (aka. application layer)** - this layer answers the question "what to do". It controls the flow.
 
-**domain** - in opposition to the above layer, this one answers the question “how to do”, here our business logic lives, this is the place where our application makes money, it's the heart of our app
+**domain** - in contrast to the above layer, this one answers the question "how to do".
+Here our business logic lives. This is the place where our application makes money. This is the heart of our app.
 
 As you can see on the diagram the use case layer knows what to do but is not aware of how to do it.
 The use case layer delegates it to the domain layer.
-Having that the domain layer is not aware of any ports or adapters.
-It's another separation of concerns but on the lowest level.
+Because of this, the domain layer is not aware of any ports or adapters.
+The domain layer should not have any dependencies to the layers above it.
 
 
 ## Example
@@ -88,10 +83,10 @@ The project consists of four modules:
 ![project-structure](img/project-structure.png)
 
 - **building_blocks** - contains all utilities used across different modules
-- **clients** - module responsible for clients, there is no complicated business logic there, but we have a lot of integrations
-that's why we use hexagonal architecture there
-- **gym_classes** - simple CRUD responsible for gym classes management, no business logic there, no neeed to use hexagonal architecture there
-- **gym_passes** - gym passes management, core of our business. This is where our business is making money.
+- **clients** - module responsible for clients. There is no complicated business logic here, but we have a lot of integrations
+that's why we use hexagonal architecture here
+- **gym_classes** - simple CRUD responsible for management of gym classes. No business logic here, therefore there is no need to use hexagonal architecture here
+- **gym_passes** - management of gym passes, which is the core of our business. This is where our business is making money
 
 ![project-structure](img/project-strucutre-all.png)
 
@@ -105,38 +100,37 @@ This is also visible in tests.
 
 ![tests](img/tests.png)
 
-There are no unit tests for the gym classes module because unit tests for it will have no sense.
-All we do there are CRUD operations.
+There are no unit tests for the gym classes module because unit tests for it would make no sense.
+All we do here are CRUD operations.
 
 When it comes to modules that were built using hexagonal architecture. They follow such structure:
 - **application** - contains our use cases together with [DTOs](https://en.wikipedia.org/wiki/Data_transfer_object)
-and other classes that responsible for coordinating the business process.
+and other classes that are responsible for coordinating the business processes
 - **domain** - contains all domain objects like entities, [value objects](https://blog.szymonmiks.pl/p/value-objects-with-python/), etc.
 The objects there are not [anemic](https://martinfowler.com/bliki/AnemicDomainModel.html),
-they follow the principle of the **rich domain model** which means that we encapsulate data
-and behaviors together.
-You can check it by looking at [src/gym_passes/domain/gym_pass.py](https://github.com/szymon6927/hexagonal-architecture-python/blob/master/src/gym_passes/domain/gym_pass.py).
-- **infrastructure** - contains output adapters, so objects responsible for communication with external world. For example database.
-- **bootstrap.py** - contains the definition of our DI container. About the DI I wrote a separate article.
-If you have not heard about a technique called "dependency injection" you can read it
+but they follow the principle of the **rich domain model** which means that we encapsulate data
+and behaviours together.
+You can check it by looking at [src/gym_passes/domain/gym_pass.py](https://github.com/szymon6927/hexagonal-architecture-python/blob/master/src/gym_passes/domain/gym_pass.py)
+- **infrastructure** - contains output adapters, which are objects responsible for communication with external world, for example database
+- **bootstrap.py** - contains the definition of our DI container. I wrote a separate article about the DI.
+If you have not heard about a technique called "dependency injection" you can read about it
 [here](https://blog.szymonmiks.pl/p/dependency-injection-with-python-make-it-easy/)
-- **controllers.py** - definition of our rest endpoints
-- **facade.py** (optional) - if your module needs to expose some behaviors for other modules then I use a facade to achieve it.
-It is the public API of our module
-
+- **controllers.py** - definition of our REST endpoints
+- **facade.py** (optional) - if your module needs to expose some behaviours for other modules then I recommend using a facade to achieve it.
+It is the public API of your module
 
 
 ## Pros and Cons
 
 **Pros:**
 - testability - you can test your domain logic without any dependencies
-- ability to postpone some decisions - when your project starts you don't have to know which database you will use, you can make this decision later on
+- ability to postpone some decisions - when your project starts you don't have to know which database you will use. You can make this decision later on
 - it supports easy technology change - you can change your REST adapter to a gRPC adapter without touching your business logic/core domain
 
 **Cons:**
-- if your project has multiple adapters it means that you will have more integration tests, this may impact the total execution time of your test suite
-- it’s harder to navigate through the project with such architecture, mostly you will encounter interfaces instead of real implementation
-- additional effort is needed to config the adapters, you need to have some mechanism that will specify: this adapter on prod env, this on local env, etc
+- if your project has multiple adapters it means that you will have more integration tests. This may impact the total execution time of your test suite
+- it’s harder to navigate through the project with such architecture. You will mostly encounter interfaces instead of real implementation
+- additional effort is needed to configure the adapters. You need to have some mechanism that will specify: this adapter is on prod env, this on local env, etc
 
 ## When to use / when not to use
 
@@ -161,9 +155,9 @@ in such a scenario, there will be no benefits of hexagonal architecture, and it 
 
 I hope you enjoyed it.
 As with everything in our industry, hexagonal architecture is not a silver bullet.
-It will not solve all the problems for you.
-But it's a great way to improve things in our project especially when it comes to testability or the possibility to postpone some decisions.
-If applied correctly it may boost your project and make your life easier.
+It will not solve all the problems for you,
+but it's a great way to improve things in your project especially when it comes to testability or the possibility to postpone some decisions.
+If applied correctly it may improve your project and make your life easier.
 
-Let me know what do you think, I would love to hear your opinion.
-Also, if you have experience with hexagonal architecture let me know what are your thoughts/feelings about it.
+Let me know what you think, I would love to hear your opinion.
+Also, if you have experience with hexagonal architecture let me know what your thoughts/feelings are about it.
