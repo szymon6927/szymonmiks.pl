@@ -77,4 +77,3 @@ class SqlAlchemyMessageOutbox(IMessageOutbox):
                 processed_on=datetime.utcnow(),
             )
         )
-        self._session.flush()

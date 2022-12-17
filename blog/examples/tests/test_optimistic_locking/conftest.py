@@ -1,7 +1,7 @@
 import sqlite3
-from collections import Iterator
 from decimal import Decimal
 from sqlite3 import Connection
+from typing import Iterator
 
 import boto3
 import pytest

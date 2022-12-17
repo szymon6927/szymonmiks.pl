@@ -77,5 +77,4 @@ class SqlAlchemyLibraryCardRepository(ILibraryCardRepository):
 
     def save(self, library_card: LibraryCard) -> None:
         self._session.merge(library_card)
-        self._session.flush()
         library_card.clear_domain_events()
