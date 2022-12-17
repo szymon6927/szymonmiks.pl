@@ -167,18 +167,28 @@ links:
     description: Rocketry is a modern scheduling framework for Python applications. It is simple, clean and extensive. It is the automation engine that sets your Python programs alive.
     website: https://github.com/Miksus/rocketry
     image: https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png
-    
-  
+  - title: python-ftfy
+    description: ftfy fixes Unicode that’s broken in various ways. The goal of ftfy is to take in bad Unicode and output good Unicode, for use in your Unicode-aware code.
+    website: https://github.com/rspeer/python-ftfy
+    image: https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png
+  - title: testcontainers-python
+    description: Python port for testcontainers-java that allows using docker containers for functional and integration testing. Testcontainers-python provides capabilities to spin up docker containers (such as a database, Selenium web browser, or any other container) for testing.
+    website: https://github.com/testcontainers/testcontainers-python
+    image: https://avatars.githubusercontent.com/u/13393021
+  - title: stockholm
+    description: Library for formatting and performing arithmetic and comparison operations on monetary amounts. Also with support for currency handling, rates, exchange and serialization + deserialization for when transporting monetary amount data across network layers (built-in data generation and parsing). 💰
+    website: https://github.com/kalaspuff/stockholm
+    image: https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png
 
 menu:
-    main: 
+    main:
         weight: -50
         params:
             icon: link
 comments: false
 ---
 
-List of open-source projects that look interesting to me. 
+List of open-source projects that look interesting to me.
 This list includes projects from the various domains, for example: python, databases, developer tools and algorithms.
 
 :point_down: :point_down: :point_down:
