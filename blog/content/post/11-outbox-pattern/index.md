@@ -41,7 +41,7 @@ sequenceDiagram
 
 The above diagram shows that after the end of the transaction we can’t guarantee that events will be delivered.
 
-The problem is also presented in the following code. Please pay attention to line 54.
+The problem is also presented in the following code. Please pay attention to line 14.
 
 ```python
 class LibraryCardService:
@@ -254,7 +254,7 @@ class IMessageOutbox(ABC):
 
 ```
 
-I decided to go with a SQLAlchemy implementation:
+I decided to go with an SQLAlchemy implementation:
 
 ```python
 # blog/examples/src/outbox_pattern/outbox/sql_alchemy_message_outbox.py
@@ -398,7 +398,7 @@ The procedure is as follows:
 3. Publish the event using some messaging library. For this article, I used apos
 4. Save this message as published, so it won’t be processed during the next execution.
 
-If anything went wrong during point the 3 the message won’t be marked as processed.
+If anything went wrong during point 3 the message won’t be marked as processed.
 `OutboxProcessor` will try to process it again during the next execution.
 
 As I mentioned before `OutboxProcessor` needs to run periodically
