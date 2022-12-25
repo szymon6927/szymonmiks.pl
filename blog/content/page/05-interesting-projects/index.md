@@ -179,6 +179,12 @@ links:
     description: Library for formatting and performing arithmetic and comparison operations on monetary amounts. Also with support for currency handling, rates, exchange and serialization + deserialization for when transporting monetary amount data across network layers (built-in data generation and parsing). 💰
     website: https://github.com/kalaspuff/stockholm
     image: https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png
+  - title: networkx
+    description: NetworkX is a Python package for the creation, manipulation, and study of the structure, dynamics, and functions of complex networks.
+    website: https://networkx.org/
+    image: https://networkx.org/_static/networkx_logo.svg
+
+
 
 menu:
     main:
