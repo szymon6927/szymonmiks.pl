@@ -157,4 +157,4 @@ class LibraryCard:
         return vars_copy == other_vars_copy
 
     def __str__(self) -> str:
-        return f"LibraryCard(id={self._id}), owner_by={self._owner_id}, rentals={self._rentals}, status={self._status}"
+        return f"LibraryCard(id={self._id}, owner_by={self._owner_id}, rentals={self._rentals}, status={self._status})"

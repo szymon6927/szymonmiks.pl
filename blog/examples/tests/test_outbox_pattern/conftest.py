@@ -10,7 +10,6 @@ from src.outbox_pattern.shared.event import Event
 
 @pytest.fixture()
 def db() -> Db:
-    # db_url = "sqlite:///db.sqlite"
     db_url = "sqlite://"
     db = Db(db_url)
     return db
@@ -21,7 +20,6 @@ def session(db: Db) -> Iterator[Session]:
     session = db.session
     yield session
     session.close()
-    # return session
 
 
 @dataclass(frozen=True)

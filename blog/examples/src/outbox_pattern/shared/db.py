@@ -1,8 +1,7 @@
 from sqlalchemy import MetaData, create_engine
-from sqlalchemy.orm import Session, declarative_base, registry, sessionmaker
+from sqlalchemy.orm import Session, declarative_base, sessionmaker
 
 metadata = MetaData()
-mapper_registry = registry(metadata=metadata)
 Base = declarative_base(metadata=metadata)
 
 
