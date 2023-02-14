@@ -8,15 +8,15 @@ target-version = ["py39"]
 
 [tool.coverage.report]
 exclude_lines = [
-    "pragma: no cover",
-    "def __repr__",
-    "raise AssertionError",
-    "raise NotImplementedError",
-    "pass",
-    "if 0:",
-    "if __name__ == .__main__.:",
-    "nocov",
-    "if TYPE_CHECKING:",
+  "def __repr__",
+  "if 0:",
+  "if TYPE_CHECKING:",
+  "if __name__ == .__main__.:",
+  "nocov",
+  "pass",
+  "pragma: no cover",
+  "raise AssertionError",
+  "raise NotImplementedError"
 ]
 fail_under = 80
 show_missing = true
@@ -24,7 +24,7 @@ show_missing = true
 [tool.coverage.run]
 branch = true
 omit = [
-    "tests/*"
+  "tests/*"
 ]
 
 [tool.isort]
@@ -37,14 +37,14 @@ multi_line_output = 3
 
 [tool.mypy]
 disallow_untyped_defs = true
+exclude = [
+  "example-project"
+]
 follow_imports = "silent"
 ignore_missing_imports = true
 python_version = "3.9"
 warn_return_any = true
 warn_unused_configs = true
-exclude = [
-    "example-project"
-]
 
 [tool.poetry]
 authors = ["Szymon Miks <miks.szymon@gmail.com>"]
@@ -53,27 +53,26 @@ name = "examples"
 version = "0.1.0"
 
 [tool.poetry.dependencies]
-mypy-boto3-dynamodb = "^1.24.55"
-pymongo = "^4.2.0"
-pytest = "^7.1.2"
-python = "^3.9"
-sqlalchemy = "^1.4.44"
-chili = "^1.8.0"
-pymitter = "^0.4.0"
 apos = "^0.2.1.2"
+chili = "^1.8.0"
+mypy-boto3-dynamodb = "^1.26"
+pymongo = "^4.3"
+python = "^3.9"
 rocketry = "^2.5.1"
+sqlalchemy = "^1.4.44"
 structlog = "^22.3.0"
 
 [tool.poetry.dev-dependencies]
-black = "^22.6.0"
-flake8 = "^5.0.4"
-isort = "^5.10.1"
+black = "^23.1"
+flake8 = "^6.0"
+isort = "^5.12"
 mongomock = "^4.1.2"
-moto = "^4.0.0"
-mypy = "^0.971"
-pre-commit = "^2.20.0"
-pytest-cov = "^3.0.0"
-toml-sort = "^0.20.1"
+moto = "^4.1"
+mypy = "^1.0"
+pre-commit = "^3.0"
+pytest = "^7.2"
+pytest-cov = "^4.0"
+toml-sort = "^0.22"
 
 [tool.pytest.ini_options]
 addopts = "-v --cov=src --cov-report term-missing --no-cov-on-fail"
