@@ -40,6 +40,7 @@ Big thanks to the authors of them :wink:
 - https://itlibrium.com/blog :flag-pl:
 - https://refactoring.guru/
 - https://serverlessland.com/
+- https://vladikk.com/
 
 
 ## YouTube channels :video_camera:
