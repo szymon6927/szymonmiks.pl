@@ -19,9 +19,10 @@ Here is the list of the IT books that are currently on my bookshelf :closed_book
 - To read
 
 ## Currently reading
-- [Learning Domain-Driven Design](https://www.amazon.com/gp/product/B09J2CMJZY)
+- [The Clean Coder: A Code of Conduct for Professional Programmers](https://www.amazon.com/Clean-Coder-Conduct-Professional-Programmers/dp/0137081073)
 
 ## Read
+- [Learning Domain-Driven Design](https://www.amazon.com/gp/product/B09J2CMJZY)
 - [Implementing the Clean Architecture](https://leanpub.com/implementing-the-clean-architecture)
 - [Fundamentals of Software Architecture: An Engineering Approach](https://www.amazon.com/Fundamentals-Software-Architecture-Engineering-Approach/dp/B08X8H15BW/)
 - [Monolith to Microservices: Evolutionary Patterns to Transform Your Monolith](https://www.amazon.com/Monolith-Microservices-Evolutionary-Patterns-Transform/dp/1492047848/)
