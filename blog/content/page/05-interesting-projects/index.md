@@ -183,6 +183,23 @@ links:
     description: NetworkX is a Python package for the creation, manipulation, and study of the structure, dynamics, and functions of complex networks.
     website: https://networkx.org/
     image: https://networkx.org/_static/networkx_logo.svg
+  - title: apischema
+    description: JSON (de)serialization, GraphQL and JSON schema generation using Python typing.
+    website: https://github.com/wyfo/apischema
+    image: https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png
+  - title: mimesis
+    description: Mimesis is a high-performance fake data generator for Python, which provides data for a variety of purposes in a variety of languages. The fake data could be used to populate a testing database, create fake API endpoints, create JSON and XML files of arbitrary structure, anonymize data taken from production and etc.
+    website: https://github.com/lk-geimfari/mimesis
+    image: https://raw.githubusercontent.com/lk-geimfari/mimesis/master/.github/images/logo-white-bg.png
+  - title: Trio
+    description: The Trio project’s goal is to produce a production-quality, permissively licensed, async/await-native I/O library for Python.
+    website: https://github.com/python-trio/trio
+    image: https://raw.githubusercontent.com/python-trio/trio/9b0bec646a31e0d0f67b8b6ecc6939726faf3e17/logo/logo-with-background.svg
+  - title: Slidev
+    description: Slidev is a web-based slides maker and presenter. It's designed for developers to focus on writing content in Markdown while also having the power of HTML and Vue components to deliver pixel-perfect layouts and designs with embedded interactive demos in your presentations.
+    website: https://sli.dev/
+    image: https://d33wubrfki0l68.cloudfront.net/273aa82ec83b3e4357492a201fb68048af1c3e6a/8f657/logo.svg
+
 
 
 
