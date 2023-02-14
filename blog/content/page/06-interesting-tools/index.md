@@ -103,6 +103,19 @@ links:
     description: Momento is a truly serverless cache that instantly scales to handle spikes and hot keys, while maintaining cache hit rates and low latencies.
     website: https://www.gomomento.com/
     image: https://assets.website-files.com/628d16c8f032727a38e90c10/628fe4f7a046701389a7d47e_logo-momento-typ.svg
+  - title: lumigo
+    description: Monitoring and Debugging for Modern Cloud Applications With one-click distributed tracing, Lumigo lets developers effortlessly find and fix issues in serverless and containerized environments
+    website: https://lumigo.io/
+    image: https://lumigo.io/wp-content/themes/lumigo/images/lumigo-header-logo.svg
+  - title: codecov
+    description: Codecov gives companies actionable coverage insights when and where they need them to ensure they are shipping quality code.
+    website: https://about.codecov.io/
+    image: https://about.codecov.io/wp-content/themes/codecov/assets/brand/icons/codecov/codecov-circle.svg
+  - title: IcePanel
+    description: Collaborative C4 modelling. Share knowledge about your systems with a lightweight modelling approach, designed for technical and non-technical teammates.
+    website: https://icepanel.io/
+    image: https://icepanel.io/img/logo-full.28d42596.svg
+
 
 
 menu:
