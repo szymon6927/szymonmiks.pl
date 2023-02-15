@@ -2,7 +2,7 @@
 author = "Szymon Miks"
 title = "Domain model with SQLAlchemy"
 description = "Different ways of persistence of our domain models"
-date = "2022-12-17"
+date = "2022-01-14"
 image = "img/campaign-creators-IKHvOlZFCOg-unsplash.jpg"
 categories = [
      "Python", "Software_Development", "Architecture"
@@ -34,7 +34,7 @@ So, let's dive in and see how we can bring our domains to life!
 
 ## Domain model
 
-Before we jump straight to the code let's define what domain model is, so we are on the same page.
+Before we jump straight to the code let's define what the domain model is, so we are on the same page.
 
 **Domain Model** is a representation of the concepts and relationships that exist in a particular business or problem domain.
 
@@ -43,7 +43,7 @@ Before we jump straight to the code let's define what domain model is, so we are
 The purpose of a domain model is to provide a **common language and understanding of the problem domain**, between the developers and stakeholders.
 A well-designed domain model helps to bridge the gap between the **technical and business perspectives**, and provides a clear and concise representation of the system's requirements and behavior.
 
-Domain model highlights the importance of focusing on the **behavior and interactions** of the objects in the domain, rather than on the **implementation details**.
+The domain model highlights the importance of focusing on the **behavior and interactions** of the objects in the domain, rather than on the **implementation details**.
 
 ## Ways of persisting domain models
 
@@ -241,9 +241,9 @@ As you can see on the first listing we defined the tables and the mapping.
 
 The entity itself is not aware of anything related to the database!
 
-The only things that is needed and comes directly from SQLAlchemy is `__composite_values__` and this is needed to persist value objects.
+The only thing that is needed and comes directly from SQLAlchemy is `__composite_values__` and this is needed to persist value objects.
 
-Before I show you the code exmaple, let me try to explain what `__composite_values__` is :wink:.
+Before I show you the code example, let me try to explain what `__composite_values__` is :wink:.
 
 In SQLAlchemy, `__composite_values__` is a special method that can be defined on a custom composite type class to define how instances of the composite type are serialized and deserialized.
 
@@ -251,7 +251,7 @@ A composite type is a custom data type that can be used to represent a group of 
 For example, a composite type could be used to represent a physical address as a combination of street, city, state, and zip code.
 In our case we use it to represent `EntityId` or `DateRange`.
 
-When you define a composite type in SQLAlchemy, you can define the attributes of the composite type and their data types, and you can also define various methods and properties on the class to customize its behavior.
+When you define a composite type in SQLAlchemy, you can define the attributes of the composite type and its data types, and you can also define various methods and properties on the class to customize its behavior.
 
 It is a method that should return a tuple of values that represent the attributes of the composite type.
 When an instance of the composite type is serialized (for example, when it is written to a database), SQLAlchemy calls the `__composite_values__` method to obtain the values that should be stored.
