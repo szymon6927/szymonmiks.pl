@@ -70,7 +70,6 @@ class LibraryCard:
         rental.prolong(days)
 
     def give_back(self, resource_id: EntityId) -> None:
-        print(self._rentals)
         rental = next((rental for rental in self._rentals if rental.resource_id == resource_id), None)
 
         if not rental:
