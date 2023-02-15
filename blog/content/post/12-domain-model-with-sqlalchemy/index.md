@@ -2,7 +2,7 @@
 author = "Szymon Miks"
 title = "Domain model with SQLAlchemy"
 description = "Different ways of persistence of our domain models"
-date = "2022-01-14"
+date = "2023-01-14"
 image = "img/campaign-creators-IKHvOlZFCOg-unsplash.jpg"
 categories = [
      "Python", "Software_Development", "Architecture"
@@ -254,8 +254,8 @@ In our case we use it to represent `EntityId` or `DateRange`.
 When you define a composite type in SQLAlchemy, you can define the attributes of the composite type and its data types, and you can also define various methods and properties on the class to customize its behavior.
 
 It is a method that should return a tuple of values that represent the attributes of the composite type.
-When an instance of the composite type is serialized (for example, when it is written to a database), SQLAlchemy calls the `__composite_values__` method to obtain the values that should be stored.
-When an instance of the composite type is deserialized (for example, when it is read from a database), SQLAlchemy calls the constructor of the composite type with the tuple of values obtained from `__composite_values__`.
+When an instance of the composite type is serialized (when it is written to a database), SQLAlchemy calls the `__composite_values__` method to obtain the values that should be stored.
+When an instance of the composite type is deserialized (when it is read from a database), SQLAlchemy calls the constructor of the composite type with the tuple of values obtained from `__composite_values__`.
 
 You can read more about it [here](https://docs.sqlalchemy.org/en/14/orm/composites.html).
 
@@ -535,9 +535,9 @@ Again the entity itself is not aware of anything related to the database!
 
 We discussed how to use SQLAlchemy to persist domain models to the database.
 
-The post starts by introducing the concept of a domain model and explaining why it's important to separate domain logic from persistence logic.
+We started by introducing the concept of a domain model and explaining why it's important to separate domain logic from persistence logic.
 
-The post then goes on to discuss different ways of persisting domain models with SQLAlchemy.
+Then we discussed different ways of persisting domain models with SQLAlchemy.
 
 Code examples for each of these approaches, demonstrated how to define domain models and how to persist them to a database using SQLAlchemy.
 It also discusses the pros and cons of each approach.
@@ -548,4 +548,4 @@ SQLAlchemy provides a powerful toolkit for building domain models and persisting
 
 I hope you enjoyed it.
 
-Let me know which technique you use :wink:.
+Let me know, how you approach the domain model and persistence. which technique do you use? I would love to hear your opinion :wink:.
