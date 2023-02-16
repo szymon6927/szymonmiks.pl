@@ -21,7 +21,7 @@ draft = false
 
 ## Intro
 
-Welcome to the world of databases and domain modeling!
+Welcome to the world of databases and domain modelling!
 
 In this blog post, we will explore the power of [SQLAlchemy](https://www.sqlalchemy.org/), a popular ORM library in Python, to model our domain objects.
 
@@ -34,22 +34,24 @@ So, let's dive in and see how we can bring our domains to life!
 
 ## Domain model
 
-Before we jump straight to the code let's define what the domain model is, so we are on the same page.
+Before we jump straight into the code let's define what the domain model is, so we are on the same page.
 
 **Domain Model** is a representation of the concepts and relationships that exist in a particular business or problem domain.
 
-[According to Fowler](https://martinfowler.com/eaaCatalog/domainModel.html), a domain model is an object-oriented model that **encapsulates the behavior and data** of the objects in the domain, and provides a clear and concise representation of the problem being solved.
+[According to Fowler](https://martinfowler.com/eaaCatalog/domainModel.html), a domain model is an object-oriented model that **encapsulates the behaviour and data** of the objects in the domain, and provides a clear and concise representation of the problem being solved.
 
 The purpose of a domain model is to provide a **common language and understanding of the problem domain**, between the developers and stakeholders.
-A well-designed domain model helps to bridge the gap between the **technical and business perspectives**, and provides a clear and concise representation of the system's requirements and behavior.
+A well-designed domain model helps to bridge the gap between the **technical and business perspectives**, and provides a clear and concise representation of the system's requirements and behaviour.
 
-The domain model highlights the importance of focusing on the **behavior and interactions** of the objects in the domain, rather than on the **implementation details**.
+The domain model highlights the importance of focusing on the **behaviour and interactions** of the objects in the domain, rather than on the **implementation details**.
 
 ## Ways of persisting domain models
 
 I will use the domain model from one of the previous posts. This is a simple representation of a library card.
 
-This class is a good candidate, it is complex enough. It has some related objects and quite a lot of value objects.
+This class is a good candidate.
+It is complex enough.
+It has some related objects and quite a lot of value objects.
 Only business methods are exposed, and implementation details are hidden.
 
 Our goal is simple: **save the object to the database, but the object itself should know nothing about the database**.
@@ -251,9 +253,9 @@ A composite type is a custom data type that can be used to represent a group of 
 For example, a composite type could be used to represent a physical address as a combination of street, city, state, and zip code.
 In our case we use it to represent `EntityId` or `DateRange`.
 
-When you define a composite type in SQLAlchemy, you can define the attributes of the composite type and its data types, and you can also define various methods and properties on the class to customize its behavior.
+When you define a composite type in SQLAlchemy, you can define the attributes of the composite type and its data types, and you can also define various methods and properties on the class to customize its behaviour.
 
-It is a method that should return a tuple of values that represent the attributes of the composite type.
+It is a method that should return a tuple of values which represents the attributes of the composite type.
 When an instance of the composite type is serialized (when it is written to a database), SQLAlchemy calls the `__composite_values__` method to obtain the values that should be stored.
 When an instance of the composite type is deserialized (when it is read from a database), SQLAlchemy calls the constructor of the composite type with the tuple of values obtained from `__composite_values__`.
 
@@ -309,8 +311,8 @@ class DateRange:
 
 ### Separate model
 
-Another technique, I like to call "separate model". The idea is to create a SQLAlchemy models and map them manually
-on to the entity on the repository level.
+Another technique, I like to call "separate model". The idea is to create SQLAlchemy models and map them manually
+onto the entity, on the repository level.
 
 ```python
 # blog/examples/src/domain_model_with_sqlalchemy/separate_model/infrastructure/sql_alchemy_library_card_repository.py
@@ -539,8 +541,8 @@ We started by introducing the concept of a domain model and explaining why it's 
 
 Then we discussed different ways of persisting domain models with SQLAlchemy.
 
-Code examples for each of these approaches, demonstrated how to define domain models and how to persist them to a database using SQLAlchemy.
-It also discusses the pros and cons of each approach.
+Code examples for each of these approaches demonstrated how to define domain models and how to persist them to a database using SQLAlchemy.
+They also discussed the pros and cons of each approach.
 
 The techniques we discussed can be used to implement architecture patterns like Domain-Driven Design (DDD) and hexagonal architecture.
 By separating domain logic from persistence logic, you can create more modular and maintainable systems that are easier to test and evolve over time.
@@ -548,4 +550,4 @@ SQLAlchemy provides a powerful toolkit for building domain models and persisting
 
 I hope you enjoyed it.
 
-Let me know, how you approach the domain model and persistence. which technique do you use? I would love to hear your opinion :wink:.
+Let me know, how you approach the domain model and persistence. Which technique do you use? I would love to hear your opinion :wink:.
