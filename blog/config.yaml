@@ -4,6 +4,10 @@ theme: hugo-theme-stack
 paginate: 10
 title: Szymon Miks - personal blog
 
+#module:
+#  imports:
+#    - path: github.com/CaiJimmy/hugo-theme-stack/v3
+
 # Change it to your Disqus shortname before using
 disqusShortname: blog-szymonmiks-pl
 
@@ -32,7 +36,7 @@ params:
     favicon: /img/favicon.ico
 
     footer:
-        since: 2022
+        since: 2023
         customText: © All rights reserved
 
     dateFormat:
@@ -134,21 +138,28 @@ params:
             host:
             id:
     widgets:
-        enabled:
-            - search
-            - archives
-            - tag-cloud
+        homepage:
+            - type: search
+            - type: archives
+              params:
+                  limit: 5
+            - type: categories
+              params:
+                  limit: 10
+            - type: tag-cloud
+              params:
+                  limit: 10
 
         archives:
             limit: 10
 
         tagCloud:
-            limit: 10
+            limit: 15
 
     opengraph:
         twitter:
             # Your Twitter username
-            site:
+            site: miks_szymon
 
             # Available values: summary, summary_large_image
             card: summary_large_image

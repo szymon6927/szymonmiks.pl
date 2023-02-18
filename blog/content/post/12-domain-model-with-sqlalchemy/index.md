@@ -15,6 +15,7 @@ tags = [
     "design patterns",
     "P of EAA",
     "persistence",
+    "SQLAlchemy"
 ]
 draft = false
 +++
