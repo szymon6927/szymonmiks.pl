@@ -59,6 +59,7 @@ Big thanks to the authors of them :wink:
 - [Kacper Szurek](https://www.youtube.com/c/KacperSzurek/featured) :flag-pl:
 - [PyWaw](https://www.youtube.com/user/PyWaw) :flag-pl:
 - [ContinuousDelivery](https://www.youtube.com/c/ContinuousDelivery/videos)
+- [DDD WAW](https://www.youtube.com/@dddwaw8729) :flag-pl:
 
 ## Podcasts :microphone:
 
