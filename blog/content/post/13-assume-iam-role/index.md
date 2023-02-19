@@ -42,7 +42,8 @@ Instead, I will jump straight to the code.
 
 I will use the example from the `intro` section. We want to delete a secret from the secrets manager on a different AWS account.
 
-The code together with the tests is also available on my GitHub [here](https://github.com/szymon6927/szymonmiks.pl/tree/master/blog/examples/src/assume_iam_role) :rocket:.
+The code together with the [tests](https://github.com/szymon6927/szymonmiks.pl/blob/master/blog/examples/tests/test_assume_iam_role/test_delete_secret.py)
+is also available on my GitHub [here](https://github.com/szymon6927/szymonmiks.pl/blob/master/blog/examples/src/assume_iam_role/delete_secret.py) :rocket:.
 
 ```python
 # blog/examples/src/assume_iam_role/delete_secret.py

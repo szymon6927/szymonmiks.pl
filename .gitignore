@@ -5,3 +5,4 @@ node_modules
 blog/resources
 blog/public
 .pytest_cache
+blog/.python-version
