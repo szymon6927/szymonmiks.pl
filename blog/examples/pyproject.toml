@@ -61,6 +61,9 @@ python = "^3.9"
 rocketry = "^2.5.1"
 sqlalchemy = "^1.4.44"
 structlog = "^22.3.0"
+boto3 = "^1.26.74"
+mypy-boto3-sts = "^1.26.57"
+mypy-boto3-secretsmanager = "^1.26.49"
 
 [tool.poetry.dev-dependencies]
 black = "^23.1"

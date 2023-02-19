@@ -46,14 +46,14 @@ uvloop = ["uvloop (>=0.15.2)"]
 
 [[package]]
 name = "boto3"
-version = "1.26.70"
+version = "1.26.74"
 description = "The AWS SDK for Python"
-category = "dev"
+category = "main"
 optional = false
 python-versions = ">= 3.7"
 
 [package.dependencies]
-botocore = ">=1.29.70,<1.30.0"
+botocore = ">=1.29.74,<1.30.0"
 jmespath = ">=0.7.1,<2.0.0"
 s3transfer = ">=0.6.0,<0.7.0"
 
@@ -62,9 +62,9 @@ crt = ["botocore[crt] (>=1.21.0,<2.0a0)"]
 
 [[package]]
 name = "botocore"
-version = "1.29.70"
+version = "1.29.74"
 description = "Low-level, data-driven core of boto 3."
-category = "dev"
+category = "main"
 optional = false
 python-versions = ">= 3.7"
 
@@ -308,7 +308,7 @@ i18n = ["Babel (>=2.7)"]
 name = "jmespath"
 version = "1.0.1"
 description = "JSON Matching Expressions"
-category = "dev"
+category = "main"
 optional = false
 python-versions = ">=3.7"
 
@@ -406,6 +406,28 @@ reports = ["lxml"]
 name = "mypy-boto3-dynamodb"
 version = "1.26.24"
 description = "Type annotations for boto3.DynamoDB 1.26.24 service generated with mypy-boto3-builder 7.11.11"
+category = "main"
+optional = false
+python-versions = ">=3.7"
+
+[package.dependencies]
+typing-extensions = ">=4.1.0"
+
+[[package]]
+name = "mypy-boto3-secretsmanager"
+version = "1.26.49"
+description = "Type annotations for boto3.SecretsManager 1.26.49 service generated with mypy-boto3-builder 7.12.3"
+category = "main"
+optional = false
+python-versions = ">=3.7"
+
+[package.dependencies]
+typing-extensions = ">=4.1.0"
+
+[[package]]
+name = "mypy-boto3-sts"
+version = "1.26.57"
+description = "Type annotations for boto3.STS 1.26.57 service generated with mypy-boto3-builder 7.12.3"
 category = "main"
 optional = false
 python-versions = ">=3.7"
@@ -674,7 +696,7 @@ test = ["pytest", "pytest-asyncio"]
 name = "s3transfer"
 version = "0.6.0"
 description = "An Amazon S3 Transfer Manager"
-category = "dev"
+category = "main"
 optional = false
 python-versions = ">= 3.7"
 
@@ -814,7 +836,7 @@ python-versions = ">=3.7"
 name = "urllib3"
 version = "1.26.14"
 description = "HTTP library with thread-safe connection pooling, file post, and more."
-category = "dev"
+category = "main"
 optional = false
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*, !=3.5.*"
 
@@ -865,7 +887,7 @@ python-versions = ">=3.4"
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.9"
-content-hash = "69b7e4506d3d8ed75de81dcba0a74b39bd6c1859754d7cd42f1f911387bd7c67"
+content-hash = "de3897ed78a726216ebeda785726037ecdb07780dd8a411de70ed012191a4757"
 
 [metadata.files]
 apos = [
@@ -904,12 +926,12 @@ black = [
     {file = "black-23.1.0.tar.gz", hash = "sha256:b0bd97bea8903f5a2ba7219257a44e3f1f9d00073d6cc1add68f0beec69692ac"},
 ]
 boto3 = [
-    {file = "boto3-1.26.70-py3-none-any.whl", hash = "sha256:5324c2a9dbc271d2b25eb79f7469b422de411665f9ab1c0b410e8ac820859b1a"},
-    {file = "boto3-1.26.70.tar.gz", hash = "sha256:123cf34f3cc58772b4f806dfbb1ae9ffae47459de5088e971be9d3cd2b198975"},
+    {file = "boto3-1.26.74-py3-none-any.whl", hash = "sha256:57f1696cbf5927180521ddabc37f10eb6650ccedc2b784dfb04502193bb65df9"},
+    {file = "boto3-1.26.74.tar.gz", hash = "sha256:a3cf126d18194e5d350ec46f99f1fff15beacdf091d1979e8471681688e14ba1"},
 ]
 botocore = [
-    {file = "botocore-1.29.70-py3-none-any.whl", hash = "sha256:7d9abef42846c1c2f31dacaa559f8450f6fbda74c2c9e3dc6630e06e882ad026"},
-    {file = "botocore-1.29.70.tar.gz", hash = "sha256:caaa144f49ef0d01b5e8812c9afa729def2c3358d9c4d9204789be2b56c5e849"},
+    {file = "botocore-1.29.74-py3-none-any.whl", hash = "sha256:cb1e1a584c0bea3b1bcf39710eb7b2e58add56945598d95356bf9f6d4cc8b6ae"},
+    {file = "botocore-1.29.74.tar.gz", hash = "sha256:bf1515908c8ffdffa249e112fd9bbb54d919ce8fb5ee88baf9c198dda6172fd5"},
 ]
 certifi = [
     {file = "certifi-2022.12.7-py3-none-any.whl", hash = "sha256:4ad3232f5e926d6718ec31cfc1fcadfde020920e278684144551c91769c7bc18"},
@@ -1366,6 +1388,14 @@ mypy = [
 mypy-boto3-dynamodb = [
     {file = "mypy-boto3-dynamodb-1.26.24.tar.gz", hash = "sha256:94d059f692189fa3f1315df4e16f02b94018b09b61e3a54bd56c9715f5bfe418"},
     {file = "mypy_boto3_dynamodb-1.26.24-py3-none-any.whl", hash = "sha256:41fc3303eb9b7153e2726f948a952cf7a1344cad5e44e0c225e3c6c3decfe2a6"},
+]
+mypy-boto3-secretsmanager = [
+    {file = "mypy-boto3-secretsmanager-1.26.49.tar.gz", hash = "sha256:bd5bda2a8b65bf799793bad67c66bcb2662b182b8632ae1561aecc1bd30ac04d"},
+    {file = "mypy_boto3_secretsmanager-1.26.49-py3-none-any.whl", hash = "sha256:2adbf9b5a32975c97479f12bbb5d98ceea30feb6a16012d308eee46fc3dd8b17"},
+]
+mypy-boto3-sts = [
+    {file = "mypy-boto3-sts-1.26.57.tar.gz", hash = "sha256:947ae27e5b6fa3fbef0dea2592508b784c75ff0bf45e9c65f3815c054d4dc922"},
+    {file = "mypy_boto3_sts-1.26.57-py3-none-any.whl", hash = "sha256:e7345877cac4282224f82bbd97af79ad87f6b58b9ec5a263ba4304a3235bb15d"},
 ]
 mypy-extensions = [
     {file = "mypy_extensions-1.0.0-py3-none-any.whl", hash = "sha256:4392f6c0eb8a5668a69e23d168ffa70f0be9ccfd32b5cc2d26a34ae5b844552d"},

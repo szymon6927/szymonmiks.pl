@@ -1,0 +1,2 @@
+class SecretsDeletionError(Exception):
+    pass
