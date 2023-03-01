@@ -24,6 +24,7 @@ Big thanks to the authors of them :wink:
 - [unknowNews](https://news.mrugalski.pl/) :flag-pl:
 - [Architecture Weekly](https://www.architecture-weekly.com/)
 - [PSF Newsletter](https://www.python.org/psf/newsletter/)
+- [pythoneer.guru](https://pythoneer.substack.com/)
 
 ## Blogs :books:
 
