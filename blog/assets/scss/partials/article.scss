@@ -1,5 +1,12 @@
 @import "../../../themes/hugo-theme-stack/assets/scss/partials/article";
 
+img[src$='#center'] {
+  display: block;
+  margin: 1.0rem auto;
+  max-width: 100%;
+  height: auto;
+}
+
 .article-title {
   @include respond(xl) {
     font-size: 3.2rem;
