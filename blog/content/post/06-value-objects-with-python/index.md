@@ -5,7 +5,7 @@ description = "Value objects explained with Python examples"
 date = "2022-03-19"
 image = "img/marketing-branding-creativity-business-values.jpeg"
 categories = [
-     "Python", "Software_Development"
+     "Python", "Software_Development", "DDD"
 ]
 tags = [
     "python", "value objects", "DDD", "software development"
@@ -51,14 +51,14 @@ I can’t recommend them enough :point_up: &nbsp;, especially the second one.
 
 I decided to use [dataclasses](https://docs.python.org/3/library/dataclasses.html) in my examples due to the following reasons:
 - `frozen=True` guarantees the object's immutability
-- by default dataclasses are shipped with `__eq__()` method (`eq=True`) which enables objects comparison 
+- by default dataclasses are shipped with `__eq__()` method (`eq=True`) which enables objects comparison
 
 Using pure python classes is possible but inefficient as you have to take care of the above by yourself.
 
-Some examples in this blog post may be perceived as half-baked. The reason for that is the fact that 
+Some examples in this blog post may be perceived as half-baked. The reason for that is the fact that
 some of them are taken from my projects, and others written explicitly for the purpose of this blog post :sunglasses:.
 
-All of them, together with unit tests are available on my 
+All of them, together with unit tests are available on my
 GitHub :rocket: - https://github.com/szymon6927/szymonmiks.pl/tree/master/blog/examples/src/value_object_example
 
 ```python
@@ -213,7 +213,7 @@ A value object is a great starting point to improve readability of your code and
 It's also an excellent technique if you struggle with refactorization, as it may fix the following issues:
 - duplicated validation
 - multiplied representation of the same concept
-- a large `utils` file :smile: 
+- a large `utils` file :smile:
 
-I hope you see the benefits of using value objects after reading this blog post. 
+I hope you see the benefits of using value objects after reading this blog post.
 Please let me know, I would love to hear your opinion!
