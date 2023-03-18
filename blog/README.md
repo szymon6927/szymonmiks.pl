@@ -1,5 +1,12 @@
 # blog
 
+## To start
+
+```bash
+git submodule init
+git submodule update
+```
+
 ## Theme documentation
 https://docs.stack.jimmycai.com/
 
