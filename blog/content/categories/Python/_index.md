@@ -4,6 +4,6 @@ description: "Blog posts about Python"
 slug: "python"
 image: "artturi-jalli-g5_rxRjvKmg-unsplash.jpg"
 style:
-    background: "#2a9d8f"
+    background: "#4584b6"
     color: "#fff"
 ---

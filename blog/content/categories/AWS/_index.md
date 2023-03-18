@@ -4,6 +4,6 @@ description: "Blog posts about Python"
 slug: "aws"
 image: "sunrise-king-HIctpU2PA8E-unsplash.jpg"
 style:
-    background: "#2a9d8f"
+    background: "#f49200"
     color: "#fff"
 ---
