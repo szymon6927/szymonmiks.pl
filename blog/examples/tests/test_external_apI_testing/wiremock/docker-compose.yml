@@ -1,0 +1,7 @@
+version: "3.7"
+
+services:
+  wiremock:
+    image: wiremock/wiremock
+    ports:
+      - "8080:8080"
