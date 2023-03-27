@@ -18,4 +18,7 @@ def wiremock(wiremock_base_url: str) -> None:
         response = requests.get(wiremock_admin_url)
         response.raise_for_status()
     except RequestException:
-        pytest.fail("You forget to run wiremock! Please run the container from `docker-compose.yml` file")
+        pytest.fail(
+            "You forget to run wiremock docker instance! "
+            "Use `docker-compose up -d` and run the container from `docker-compose.yml` file"
+        )
