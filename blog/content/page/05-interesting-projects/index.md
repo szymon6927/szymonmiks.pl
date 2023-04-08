@@ -203,6 +203,10 @@ links:
     description: Taskiq is an asynchronous distributed task queue for python.
     website: https://github.com/taskiq-python/taskiq
     image: https://raw.githubusercontent.com/taskiq-python/taskiq/master/imgs/logo.svg
+  - title: lagom
+    description: Lagom is a dependency injection container designed to give you "just enough" help with building your dependencies.
+    website: https://lagom-di.readthedocs.io/en/latest/
+    image: https://lagom-di.readthedocs.io/en/latest/images/logo_and_text.png
 
 
 
