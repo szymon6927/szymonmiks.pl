@@ -199,6 +199,10 @@ links:
     description: Slidev is a web-based slides maker and presenter. It's designed for developers to focus on writing content in Markdown while also having the power of HTML and Vue components to deliver pixel-perfect layouts and designs with embedded interactive demos in your presentations.
     website: https://sli.dev/
     image: https://d33wubrfki0l68.cloudfront.net/273aa82ec83b3e4357492a201fb68048af1c3e6a/8f657/logo.svg
+  - title: Taskiq
+    description: Taskiq is an asynchronous distributed task queue for python.
+    website: https://github.com/taskiq-python/taskiq
+    image: https://raw.githubusercontent.com/taskiq-python/taskiq/master/imgs/logo.svg
 
 
 
