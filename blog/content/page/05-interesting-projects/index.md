@@ -207,6 +207,10 @@ links:
     description: Lagom is a dependency injection container designed to give you "just enough" help with building your dependencies.
     website: https://lagom-di.readthedocs.io/en/latest/
     image: https://lagom-di.readthedocs.io/en/latest/images/logo_and_text.png
+  - title: httpstat.us
+    description: This is a super simple service for generating different HTTP codes. It's useful for testing how your own scripts deal with varying responses.
+    website: https://httpstat.us/
+    image: https://raw.githubusercontent.com/taskiq-python/taskiq/master/imgs/logo.svg
 
 
 

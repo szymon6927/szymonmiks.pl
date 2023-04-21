@@ -42,6 +42,7 @@ Big thanks to the authors of them :wink:
 - https://refactoring.guru/
 - https://serverlessland.com/
 - https://vladikk.com/
+- https://hakibenita.com/
 
 
 ## YouTube channels :video_camera:
@@ -69,3 +70,4 @@ Big thanks to the authors of them :wink:
 - [Ostra piła](https://ostrapila.pl/) :flag-pl:
 - [devtalk](https://devtalk.pl/) :flag-pl:
 - [Porozmawiajmy o IT](https://porozmawiajmyoit.pl/) :flag-pl:
+- [patoarchitekci](https://patoarchitekci.io/) :flag-pl:
