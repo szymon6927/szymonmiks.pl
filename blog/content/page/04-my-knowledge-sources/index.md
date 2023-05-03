@@ -43,6 +43,7 @@ Big thanks to the authors of them :wink:
 - https://serverlessland.com/
 - https://vladikk.com/
 - https://hakibenita.com/
+- https://michaelfeathers.silvrback.com/
 
 
 ## YouTube channels :video_camera:
