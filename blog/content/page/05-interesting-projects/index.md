@@ -215,6 +215,10 @@ links:
     description: A library that generates an interactive radar, inspired by thoughtworks.com/radar.
     website: https://github.com/thoughtworks/build-your-own-radar
     image: https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png
+  - title: awesome-software-architecture
+    description: Curated list of awesome articles and resources to learn and practice software architecture, patterns and principles. This repository will be updated continuously, keep yourself up to date.
+    website: https://awesome-architecture.com/
+    image: https://raw.githubusercontent.com/mehdihadeli/awesome-software-architecture/main/banner.png
 
 
 
