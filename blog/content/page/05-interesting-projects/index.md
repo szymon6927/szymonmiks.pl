@@ -210,11 +210,11 @@ links:
   - title: httpstat.us
     description: This is a super simple service for generating different HTTP codes. It's useful for testing how your own scripts deal with varying responses.
     website: https://httpstat.us/
-    image: https://raw.githubusercontent.com/taskiq-python/taskiq/master/imgs/logo.svg
+    image: https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png
   - title: build-your-own-radar
     description: A library that generates an interactive radar, inspired by thoughtworks.com/radar.
     website: https://github.com/thoughtworks/build-your-own-radar
-    image: https://raw.githubusercontent.com/taskiq-python/taskiq/master/imgs/logo.svg
+    image: https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png
 
 
 
