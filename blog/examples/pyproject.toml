@@ -65,6 +65,7 @@ python = "^3.9"
 rocketry = "^2.5.1"
 sqlalchemy = "^1.4.44"
 structlog = "^22.3.0"
+tenacity = "^8.2.2"
 
 [tool.poetry.group.dev.dependencies]
 black = "^23.1"
