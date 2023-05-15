@@ -15,7 +15,7 @@ class IFileCollector(ABC):
 
 
 class WebsiteFileCollector(IFileCollector):
-    EXCLUDED = ["szymonmiks-deployment", ".git", ".idea", ".gitignore", "README.md", "blog"]
+    EXCLUDED = ["szymonmiks-deployment", ".git", ".idea", ".gitignore", "README.md", "blog", ".mypy_cache"]
 
     def __init__(self, base_dir: Path) -> None:
         self._base_dir = base_dir
