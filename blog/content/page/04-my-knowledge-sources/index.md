@@ -29,7 +29,7 @@ Big thanks to the authors of them :wink:
 ## Blogs :books:
 
 - https://realpython.com/
-- https://event-driven.io/en/s
+- https://event-driven.io/en/
 - https://breadcrumbscollector.tech/
 - https://lukeonpython.blog/
 - https://sobolevn.me/
