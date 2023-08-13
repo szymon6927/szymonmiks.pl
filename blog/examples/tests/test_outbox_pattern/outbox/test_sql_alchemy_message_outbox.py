@@ -1,7 +1,7 @@
 import uuid
 from datetime import datetime
 
-from chili import asdict
+from chili import encode
 from sqlalchemy.orm import Session
 
 from src.outbox_pattern.outbox.message import MessageType
@@ -21,7 +21,7 @@ def test_can_save_event(session: Session) -> None:
     messages = message_outbox.to_publish()
     assert len(messages) == 1
     assert isinstance(messages[0].type, MessageType)
-    assert messages[0].data == asdict(event)
+    assert messages[0].data == encode(event)
 
 
 def test_can_get_messages_to_publish(session: Session) -> None:

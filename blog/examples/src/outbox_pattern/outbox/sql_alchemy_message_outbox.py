@@ -1,6 +1,6 @@
 from datetime import datetime
 
-from chili import asdict
+from chili import encode
 from sqlalchemy import CHAR, Column, DateTime, String, null, select
 from sqlalchemy.dialects.sqlite.json import JSON
 from sqlalchemy.orm import Session
@@ -42,7 +42,7 @@ class SqlAlchemyMessageOutbox(IMessageOutbox):
         )
 
     def save(self, event: Event) -> None:
-        data = asdict(event)
+        data = encode(event)
         outbox_message = OutboxMessageModel(
             id=str(EntityId.new_one()),
             occurred_on=datetime.utcnow(),
