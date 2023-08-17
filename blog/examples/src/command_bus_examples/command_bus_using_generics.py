@@ -1,4 +1,3 @@
-from dataclasses import dataclass
 from typing import Dict, Type
 
 from src.command_bus_examples.command import Command
@@ -6,16 +5,6 @@ from src.command_bus_examples.command_bus import CommandBus
 from src.command_bus_examples.custom_types import HandlerType
 from src.command_bus_examples.errors import CommandAlreadyRegistered, HandlerNotFound
 from src.command_bus_examples.generic_handler import Handler
-
-
-@dataclass(frozen=True)
-class RegisterUser(Command):
-    email: str
-
-
-class RegisterUserHandler(Handler[RegisterUser]):
-    def __call__(self, command: RegisterUser) -> None:
-        print(f"Registering {command.email}")
 
 
 class CommandBusUsingGenerics(CommandBus):
