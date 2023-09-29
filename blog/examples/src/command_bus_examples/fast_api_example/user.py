@@ -1,4 +1,4 @@
-from src.command_bus_examples.fast_api_example.entity_id import EntityId
+from src.entity_id import EntityId
 
 
 class User:

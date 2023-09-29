@@ -1,7 +1,7 @@
 from dataclasses import dataclass
 
 from src.command_bus_examples.command import Command
-from src.command_bus_examples.fast_api_example.entity_id import EntityId
+from src.entity_id import EntityId
 
 
 @dataclass(frozen=True)

@@ -1,9 +1,9 @@
 import copy
 from abc import ABC, abstractmethod
 
-from src.command_bus_examples.fast_api_example.entity_id import EntityId
 from src.command_bus_examples.fast_api_example.errors import UserAlreadyExist, UserNotFound
 from src.command_bus_examples.fast_api_example.user import User
+from src.entity_id import EntityId
 
 
 class UserRepository(ABC):

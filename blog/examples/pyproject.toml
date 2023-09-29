@@ -38,7 +38,8 @@ multi_line_output = 3
 [tool.mypy]
 disallow_untyped_defs = true
 exclude = [
-  "example-project"
+  "example-project",
+  "kaizen"
 ]
 follow_imports = "silent"
 ignore_missing_imports = true
