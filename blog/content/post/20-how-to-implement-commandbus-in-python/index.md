@@ -367,7 +367,7 @@ from pydantic import BaseModel
 from src.command_bus_examples.command_bus import CommandBus
 from src.command_bus_examples.fast_api_example.bootstrap import get_command_bus, get_user_repository
 from src.command_bus_examples.fast_api_example.commands import RegisterUser
-from src.command_bus_examples.fast_api_example.entity_id import EntityId
+from src.entity_id import EntityId
 from src.command_bus_examples.fast_api_example.errors import UserAlreadyExist, UserNotFound, ValidationError
 from src.command_bus_examples.fast_api_example.repository import UserRepository
 
