@@ -5,7 +5,7 @@ description = "Different ways of persistence of our domain models"
 date = "2023-01-14"
 image = "img/campaign-creators-IKHvOlZFCOg-unsplash.jpg"
 categories = [
-     "Python", "Software_Development", "Architecture"
+     "Python", "Software_Development", "Architecture", "Testing"
 ]
 tags = [
     "python",
