@@ -70,13 +70,14 @@ tenacity = "^8.2.2"
 kink = "^0.6.6"
 fastapi = "^0.100.0"
 uvicorn = {extras = ["standard"], version = "^0.23.1"}
+mypy-boto3-athena = "^1.28.36"
 
 [tool.poetry.group.dev.dependencies]
 black = "^23.1"
 flake8 = "^6.0"
 isort = "^5.12"
 mongomock = "^4.1.2"
-moto = "^4.1"
+moto = {extras = ["server"], version = "^4.1"}
 mypy = "^1.0"
 pre-commit = "^3.0"
 pytest = "^7.2"
@@ -88,4 +89,5 @@ wiremock = "^2.3.1"
 
 [tool.pytest.ini_options]
 addopts = "-v --cov=src --cov-report term-missing --no-cov-on-fail"
+#log_cli = 1
 testpaths = ["tests"]

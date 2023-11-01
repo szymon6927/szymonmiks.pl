@@ -1,0 +1,83 @@
+{
+  "region": "eu-west-1",
+  "results": [
+    {
+      "column_info": [
+        {
+          "CaseSensitive": true,
+          "CatalogName": "hive",
+          "Label": "column_1",
+          "Name": "column_1",
+          "Nullable": "UNKNOWN",
+          "Precision": 2147483647,
+          "Scale": 0,
+          "SchemaName": "",
+          "TableName": "",
+          "Type": "varchar"
+        },
+        {
+          "CaseSensitive": true,
+          "CatalogName": "hive",
+          "Label": "column_2",
+          "Name": "column_2",
+          "Nullable": "UNKNOWN",
+          "Precision": 2147483647,
+          "Scale": 0,
+          "SchemaName": "",
+          "TableName": "",
+          "Type": "varchar"
+        }
+      ],
+      "rows": [
+        {
+          "Data": [
+            {
+              "VarCharValue": "column_1"
+            },
+            {
+              "VarCharValue": "column_2"
+            }
+          ]
+        },
+        {
+          "Data": [
+            {
+              "VarCharValue": "value 1"
+            },
+            {
+              "VarCharValue": "value 2"
+            }
+          ]
+        },
+        {
+          "Data": [
+            {
+              "VarCharValue": "value 3"
+            },
+            {
+              "VarCharValue": "value 4"
+            }
+          ]
+        },
+        {
+          "Data": [
+            {
+              "VarCharValue": "value 5"
+            },
+            {
+              "VarCharValue": "value 6"
+            }
+          ]
+        },
+        {
+          "Data": [
+            {
+              "VarCharValue": "value 7"
+            },
+            {}
+          ]
+        }
+      ]
+    }
+  ]
+}
