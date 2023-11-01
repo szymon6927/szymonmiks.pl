@@ -223,6 +223,18 @@ links:
     description: API Mock servers and Contract Testing
     website: https://github.com/stoplightio/prism
     image: https://avatars.githubusercontent.com/u/10767217
+  - title: FastStream
+    description: FastStream simplifies the process of writing producers and consumers for message queues, handling all the parsing, networking and documentation generation automatically.
+    website: https://github.com/airtai/faststream
+    image: https://avatars.githubusercontent.com/u/84014356
+  - title: The Fuck
+    description: The Fuck is a magnificent app, inspired by a @liamosaur tweet, that corrects errors in previous console commands.
+    website: https://github.com/nvbn/thefuck
+    image: https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png
+  - title: PyParsing
+    description: The pyparsing module is an alternative approach to creating and executing simple grammars, vs. the traditional lex/yacc approach, or the use of regular expressions. The pyparsing module provides a library of classes that client code uses to construct the grammar directly in Python code.
+    website: https://github.com/pyparsing/pyparsing
+    image: https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png
 
 
 
