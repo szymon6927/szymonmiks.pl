@@ -11,6 +11,7 @@ tags = [
     "python",
     "software development",
     "unit testing",
+    "testing",
     "Classical school of unit testing",
     "London school of unit testing"
 ]
