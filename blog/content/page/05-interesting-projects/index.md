@@ -235,6 +235,14 @@ links:
     description: The pyparsing module is an alternative approach to creating and executing simple grammars, vs. the traditional lex/yacc approach, or the use of regular expressions. The pyparsing module provides a library of classes that client code uses to construct the grammar directly in Python code.
     website: https://github.com/pyparsing/pyparsing
     image: https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png
+  - title: poltergeist
+    description: Rust-like error handling in Python, with type-safety in mind.
+    website: https://github.com/alexandermalyga/poltergeist
+    image: https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png
+  - title: poltergeist
+    description: A Python tool to enforce a modular, decoupled package architecture.
+    website: https://github.com/Never-Over/modguard
+    image: https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png
 
 
 

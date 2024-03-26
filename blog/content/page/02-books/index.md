@@ -20,6 +20,7 @@ Here is the list of the IT books that are currently on my bookshelf :closed_book
 
 ## Currently reading
 - [Strategic Monoliths and Microservices: Driving Innovation Using Purposeful Architecture](https://www.amazon.com/Strategic-Monoliths-Microservices-Addison-Wesley-Signature/dp/0137355467)
+- [Software Architecture: The Hard Parts: Modern Trade-Off Analyses for Distributed Architectures](https://www.amazon.com/Software-Architecture-Trade-Off-Distributed-Architectures/dp/1492086894)
 
 ## Read
 - [The Phoenix Project: A Novel about IT, DevOps, and Helping Your Business Win](https://www.amazon.com/Phoenix-Project-DevOps-Helping-Business/dp/0988262592)
@@ -41,7 +42,6 @@ Here is the list of the IT books that are currently on my bookshelf :closed_book
 ## To read
 - [Building Microservices: Designing Fine-Grained Systems](https://www.amazon.com/Building-Microservices-Designing-Fine-Grained-Systems/dp/1492034029/)
 - [Domain-Driven Design: Tackling Complexity in the Heart of Software](https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215)
-- [Software Architecture: The Hard Parts: Modern Trade-Off Analyses for Distributed Architectures](https://www.amazon.com/Software-Architecture-Trade-Off-Distributed-Architectures/dp/1492086894)
 - [Cracking the Coding Interview](https://www.amazon.com/Cracking-Coding-Interview-Programming-Questions/dp/0984782850)
 - [Designing Data-Intensive Applications](https://www.amazon.pl/Designing-Data-Intensive-Applications-Reliable-Maintainable/dp/1449373321)
 
